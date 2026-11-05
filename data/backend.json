@@ -1,0 +1,6 @@
+{
+  "_comment": "Shared with watch-radar. The site saves the daily search scope to Supabase (row id car_focus); the routine reads it back. URL and publishable key are public by design; writes need the password, checked server-side.",
+  "supabase_url": "https://xyilyuhwyrgxkcfbmayz.supabase.co",
+  "supabase_key": "sb_publishable_gIfEfHK3uvXfuliY9BPCIw_6R9oN-nw",
+  "setting_id": "car_focus"
+}

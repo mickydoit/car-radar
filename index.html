@@ -43,6 +43,10 @@ select,input{width:100%;padding:9px 10px;border:1px solid var(--line);background
 .bar2 div{height:100%;background:#3a9a4f;width:0;transition:width 1s linear}
 a{color:inherit}
 .empty{padding:40px 0;color:var(--mute)}
+.focus{border:1px solid var(--line);background:var(--panel);border-radius:8px;padding:12px;margin:4px 0 6px}
+.save{width:100%;padding:10px;border:0;border-radius:6px;background:var(--green);color:var(--bg);font:inherit;font-weight:500;cursor:pointer;margin-top:8px}
+#pwRow{display:grid;grid-template-columns:1fr auto;gap:6px;margin-top:8px}
+#pwRow[hidden]{display:none}
 </style>
 </head>
 <body>
@@ -52,6 +56,12 @@ a{color:inherit}
 <div class="bar2" id="bar" hidden><div></div></div></header>
 <main>
 <aside>
+<div class="focus" id="focusBox">
+ <div class="meta" id="focusNow">Daily search: loading…</div>
+ <button class="save" id="saveBtn" type="button">Save these filters as the daily search</button>
+ <div id="pwRow" hidden><input id="pw" type="password" placeholder="Password" autocomplete="current-password"><button class="chip" id="pwGo" type="button">Save</button></div>
+ <div class="meta" id="saveMsg"></div>
+</div>
 <label>Make <span class="meta" id="mkN"></span></label><div class="chips" id="makes"></div>
 <label>Model <span class="meta" id="mdN"></span></label><div id="models"><span class="meta">Pick a make first</span></div>
 <label>Body type</label><div class="chips" id="bodies"></div>
@@ -70,6 +80,7 @@ a{color:inherit}
 <label>Gearbox</label><select id="trans"><option value="">Any</option><option>Auto</option><option>Manual</option></select>
 <div class="chips" style="margin-top:14px"><button class="chip" id="deals" type="button">Below market only (3%+)</button></div>
 <button class="reset" id="reset">Reset filters</button>
+<div style="margin-top:14px"><button class="save" type="button" onclick="document.getElementById('saveBtn').click();document.getElementById('focusBox').scrollIntoView({behavior:'smooth'})">Save these filters as the daily search</button></div>
 </aside>
 <section>
 <div class="bar"><b id="count"></b><span id="med" class="meta"></span>
@@ -196,6 +207,40 @@ $('brackets').onclick=e=>{const b=e.target.closest('button');if(!b)return;const 
  const on=(num($('pMin').value)||0)===a&&(num($('pMax').value)||0)===z;
  $('pMin').value=on?'':(a||'');$('pMax').value=on?'':(z||'');render()};
 $('deals').onclick=()=>{$('deals').classList.toggle('on');render()};
+// ---- daily search (focus) save/load via Supabase ----
+let BE=null;
+fetch('data/backend.json').then(r=>r.json()).then(b=>{BE=b;loadFocusNow()}).catch(()=>{$('focusNow').textContent='Daily search: backend not configured'});
+function focusFromFilters(){const f=state();const models={};MODELS.forEach(k=>{const [m,n]=k.split('|');(models[m]=models[m]||[]).push(n)});
+ return {makes:MAKES.size?[...MAKES].sort():(FOCUS.makes||[]),models,body_types:[...BODIES].sort(),
+  year_min:f.yFrom?+f.yFrom:null,year_max:f.yTo?+f.yTo:null,km_min:f.kmMin?+f.kmMin:null,km_max:f.kmMax?+f.kmMax:null,
+  price_min_aud:f.pMin?+f.pMin:null,price_max_aud:f.pMax?+f.pMax:null,
+  near:f.near&&f.near!=='My location'?f.near:null,near_latlng:f.near==='My location'&&GEO?GEO:null,radius_km:f.radius?+f.radius:null,
+  seller_type:f.seller||null,transmission:f.trans||null,state:f.state||null,saved_at:new Date().toISOString()}}
+function summarise(x){if(!x)return 'nothing saved yet';const a=[];
+ a.push(x.makes&&x.makes.length?x.makes.length+' makes':'any make');
+ const mc=Object.values(x.models||{}).reduce((s,v)=>s+v.length,0);if(mc)a.push(mc+' models');
+ if(x.body_types&&x.body_types.length)a.push(x.body_types.map(b=>b==='suv'?'SUV':b).join('/'));
+ if(x.year_min||x.year_max)a.push((x.year_min||'')+'–'+(x.year_max||''));
+ if(x.km_max)a.push('≤'+x.km_max.toLocaleString('en-AU')+' km');
+ if(x.price_min_aud||x.price_max_aud)a.push((x.price_min_aud?fmt(x.price_min_aud):'')+'–'+(x.price_max_aud?fmt(x.price_max_aud):''));
+ if(x.radius_km&&(x.near||x.near_latlng))a.push('within '+x.radius_km+' km of '+(x.near||'your location'));
+ if(x.state)a.push(x.state);if(x.seller_type)a.push(x.seller_type);if(x.transmission)a.push(x.transmission);
+ return a.join(' · ')}
+async function loadFocusNow(){try{const r=await fetch(`${BE.supabase_url}/rest/v1/watch_radar_settings?id=eq.${BE.setting_id}&select=data,updated_at`,{headers:{apikey:BE.supabase_key}});
+ const rows=await r.json();const row=rows&&rows[0];
+ $('focusNow').textContent='Daily search: '+(row?summarise(row.data)+' · saved '+new Date(row.updated_at).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short',timeZone:'Australia/Brisbane'}):'nothing saved yet (using the repo default: '+summarise(FOCUS)+')')}
+ catch(e){$('focusNow').textContent='Daily search: could not read saved search'}}
+$('saveBtn').onclick=()=>{const pw=localStorage.getItem('car-radar-pw');if(pw){doSave(pw)}else{$('pwRow').hidden=false;$('pw').focus()}};
+$('pwGo').onclick=()=>doSave($('pw').value);$('pw').addEventListener('keydown',e=>{if(e.key==='Enter')doSave($('pw').value)});
+async function doSave(pw){if(!BE){$('saveMsg').textContent='Backend not configured.';return}if(!pw){$('saveMsg').textContent='Enter the password.';return}
+ $('saveMsg').textContent='Saving…';const data=focusFromFilters();
+ try{const r=await fetch(`${BE.supabase_url}/rest/v1/rpc/watch_radar_save`,{method:'POST',headers:{apikey:BE.supabase_key,Authorization:'Bearer '+BE.supabase_key,'Content-Type':'application/json'},body:JSON.stringify({p_password:pw,p_id:BE.setting_id,p_data:data})});
+  const j=await r.json().catch(()=>({}));
+  if(!r.ok){const m=String(j.message||j.hint||r.status);
+   $('saveMsg').textContent=/password/i.test(m)?'Wrong password.':/unknown setting/i.test(m)?'Backend not ready: the car_focus SQL has not been applied yet.':'Save failed: '+m;
+   if(/password/i.test(m))localStorage.removeItem('car-radar-pw');$('pwRow').hidden=false;return}
+  localStorage.setItem('car-radar-pw',pw);$('pwRow').hidden=true;$('saveMsg').textContent='Saved. The next run will search for: '+summarise(data);loadFocusNow()}
+ catch(e){$('saveMsg').textContent='Save failed: network error.'}}
 $('reset').onclick=()=>{MAKES.clear();MODELS.clear();BODIES.clear();ORIGIN=null;$('nearMsg').textContent='';IDS.forEach(i=>{if(i!=='sort')$(i).value=''});$('deals').classList.remove('on');render()};
 </script>
 </body>
