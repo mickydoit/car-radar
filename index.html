@@ -165,18 +165,22 @@ function render(){if(!READY)return;save();brackets();drawMakes();
  <div class="meta">${d.km!=null?d.km.toLocaleString('en-AU')+' km':'km unknown'} · ${d.body?esc(d.body==='suv'?'SUV':d.body)+' · ':''}${esc(d.transmission||'')} ·${esc(d.suburb||'')}, ${esc(d.state||'')}${d.dist!=null&&$('radius').value&&ORIGIN?' ('+Math.round(d.dist)+' km away)':''} · ${esc(d.source)} (${esc(d.seller_type||'')})</div>
  <div class="meta">${(d.flags||[]).includes('verify')?'<span class="tag v">Verify</span>':''}${d.first_seen_at>=D.cut?'<span class="tag">New</span>':''}${d.url?'':'<span class="tag">No direct link</span>'}</div></div>
  <div class="price">${fmt(d.price_aud)}${bm>=3?`<small>${bm}% under market</small>`:''}</div></a>`}catch(e){return ''}}).join(''):'<div class="empty">Nothing matches. Loosen a filter.</div>'}
-fetch('data/latest.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{
+let CUR_UPDATED=null;
+function loadData(first){return fetch('data/latest.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{
+ if(!first&&(j.updated||'')===CUR_UPDATED)return;const changed=!first;CUR_UPDATED=j.updated||'';
  D=(j.listings||[]).filter(d=>d&&!['sold','removed'].includes(d.status)).map(d=>({...d,
   make:String(d.make||'Unknown'),model:String(d.model||''),year:num(d.year),km:num(d.km),price_aud:num(d.price_aud),
   below_market_pct:num(d.below_market_pct),first_seen_at:String(d.first_seen_at||''),body:String(d.body||'').toLowerCase()||null})).filter(d=>d.price_aud!=null);
  const c=new Date(Date.now()-864e5*2).toISOString().slice(0,10);D.cut=c;
  $('demo').hidden=!j.demo;LAST=j.demo?null:Date.parse(j.updated);runStat();
  $('upd').textContent=j.updated?`Updated ${new Date(j.updated).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short',timeZone:'Australia/Brisbane'})+' AEST'} · ${D.length} listings`:'';
+ if(changed){$('upd').textContent+=' · just refreshed';$('upd').style.color='#3a9a4f';setTimeout(()=>{$('upd').style.color='';$('upd').textContent=$('upd').textContent.replace(' · just refreshed','')},8000);render();return}
   const top=new Date().getFullYear()+1,lo=Math.min(2010,...D.map(d=>d.year).filter(y=>y>1900)),ys=[];for(let y=top;y>=lo;y--)ys.push(y);opts($('yFrom'),ys,'Year from');opts($('yTo'),ys,'Year to');
  opts($('state'),['ACT','NSW','NT','QLD','SA','TAS','VIC','WA'],'Any state');
  fetch('data/focus.json',{cache:'no-cache'}).then(r=>r.json()).then(f=>{FOCUS=f||{};render()}).catch(()=>{});
  load();READY=true;render();if($('near').value&&$('near').value!=='My location')updateOrigin();
-}).catch(()=>{$('list').innerHTML='<div class="empty">Could not load data/latest.json</div>'});
+}).catch(()=>{if(first)$('list').innerHTML='<div class="empty">Could not load data/latest.json</div>'})}
+loadData(true);
 let LAST=null,ST=null;
 function ago(t){const m=Math.round((Date.now()-t)/6e4);if(m<1)return 'just now';if(m<60)return m+' min ago';const h=Math.round(m/60);if(h<48)return h+' h ago';return Math.round(h/24)+' days ago'}
 function runStat(){const el=$('run'),tx=el.querySelector('span');
@@ -194,7 +198,8 @@ function runStat(){const el=$('run'),tx=el.querySelector('span');
  if(paused)el.className='run';
  tx.textContent='Last run '+ago(LAST)+(took?` · took ${Math.round(took)} min`:'')+(paused?' · daily run paused':(h>=26?' · overdue':'')+' · next '+((ST&&ST.next)||'about 08:00 Brisbane'))}
 function pollStatus(){fetch('data/status.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{ST=j&&typeof j==='object'?j:null;runStat()}).catch(()=>{})}
-setInterval(runStat,30000);setInterval(pollStatus,60000);pollStatus();
+setInterval(runStat,30000);setInterval(()=>{pollStatus();if(READY)loadData(false)},60000);pollStatus();
+document.addEventListener('visibilitychange',()=>{if(!document.hidden&&READY){pollStatus();loadData(false)}});
 $('near').addEventListener('change',updateOrigin);
 $('geo').onclick=()=>{if(!navigator.geolocation){$('nearMsg').textContent='Location not available in this browser.';return}
  navigator.geolocation.getCurrentPosition(p=>{GEO=[p.coords.latitude,p.coords.longitude];$('near').value='My location';if(!$('radius').value)$('radius').value='50';updateOrigin()},()=>{$('nearMsg').textContent='Location permission denied.'})};
