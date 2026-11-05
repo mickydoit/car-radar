@@ -11,6 +11,9 @@ First thing: write `data/status.json` as `{"state":"running","started_at":"<ISO 
 ## Timestamps
 Never invent times. Get the real time from `TZ=Australia/Brisbane date +%Y-%m-%dT%H:%M:%S+10:00` (Brisbane is AEST, UTC+10, no daylight saving) and use it for `updated`, `started_at` and `finished_at`.
 
+## Every run is a full pass
+Each run researches the whole focus from scratch — fresh results pages for every make/model/body type in scope — whether or not a run already happened today. Re-use `data/seen.json` only to keep `first_seen_at` and to skip re-benchmarking; never skip the search itself. Publish the full in-scope list every time (replace, don't append).
+
 ## 1. Scope
 First fetch the owner's saved search from Supabase (details in `data/backend.json`):
 `curl -s "<supabase_url>/rest/v1/watch_radar_settings?id=eq.<setting_id>&select=data" -H "apikey: <supabase_key>"`.
