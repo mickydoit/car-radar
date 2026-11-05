@@ -5,6 +5,9 @@ You research second-hand car listings in Australia and publish them to this repo
 ## 0. Budget (usage-conscious)
 The owner is cost-sensitive. Aim for at most about 60 fetches and 30 searches per run and 20 minutes. Cover up to 8 makes, roughly 8 fetches per make, favouring sources that return readable pages. Stop and publish when the budget is reached. Partial data with `status: partial` beats running long.
 
+## 0b. Run indicator
+First thing: write `data/status.json` as `{"state":"running","started_at":"<ISO now>"}`, commit `radar: run started` and push. The last commit of the run writes `{"state":"idle","finished_at":"<ISO now>"}` together with latest.json. The site shows a live dot while state is running (and under 75 minutes old).
+
 ## 1. Scope
 Read `data/focus.json`: `makes` (list), `models` (optional `{make: [models]}`), `year_min`, `price_max_aud`, `km_max`. If empty, research the most-listed makes: Toyota, Mazda, Hyundai, Ford, Subaru, Volkswagen, Kia, Mitsubishi.
 

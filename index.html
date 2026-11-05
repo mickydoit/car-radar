@@ -34,13 +34,19 @@ select,input{width:100%;padding:9px 10px;border:1px solid var(--line);background
 .price small{display:block;font-size:12px;color:var(--green)}
 .tag{display:inline-block;font-size:11px;text-transform:uppercase;letter-spacing:.05em;border:1px solid var(--line);border-radius:4px;padding:1px 6px;margin-right:4px}
 .tag.v{color:var(--red);border-color:var(--red)}
+.run{display:flex;align-items:center;gap:8px;margin:10px 0 0;font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--mute)}
+.run i{width:9px;height:9px;border-radius:50%;background:var(--mute)}
+.run.fresh i{background:#3a9a4f}.run.stale i{background:#d9a21b}.run.old i{background:var(--red)}
+.run.live i{background:#3a9a4f;animation:p 1.1s ease-in-out infinite}
+@keyframes p{50%{opacity:.25;transform:scale(1.5)}}
 a{color:inherit}
 .empty{padding:40px 0;color:var(--mute)}
 </style>
 </head>
 <body>
 <div class="demo" id="demo" hidden>Demo data. The daily research run has not published real listings yet</div>
-<header><h1>Car Radar</h1><p class="sub" id="upd"></p></header>
+<header><h1>Car Radar</h1><p class="sub" id="upd"></p>
+<p class="run" id="run"><i></i><span></span></p></header>
 <main>
 <aside>
 <label>Make</label><select id="make"></select>
@@ -109,13 +115,24 @@ function render(){save();brackets();
 fetch('data/latest.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{
  D=(j.listings||[]).filter(d=>!['sold','removed'].includes(d.status));
  const c=new Date(Date.now()-864e5*2).toISOString().slice(0,10);D.cut=c;
- $('demo').hidden=!j.demo;
+ $('demo').hidden=!j.demo;LAST=j.demo?null:Date.parse(j.updated);runStat();
  $('upd').textContent=j.updated?`Updated ${new Date(j.updated).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short'})} · ${D.length} listings`:'';
  opts($('make'),uniq(D.map(d=>d.make)),'All makes');
  const ys=uniq(D.map(d=>d.year));opts($('yFrom'),ys,'Year from');opts($('yTo'),ys.slice().reverse(),'Year to');
  opts($('state'),uniq(D.map(d=>d.state).filter(Boolean)),'Any state');
  load();render();
 }).catch(()=>{$('list').innerHTML='<div class="empty">Could not load data/latest.json</div>'});
+let LAST=null,ST=null;
+function ago(t){const m=Math.round((Date.now()-t)/6e4);if(m<1)return 'just now';if(m<60)return m+' min ago';const h=Math.round(m/60);if(h<48)return h+' h ago';return Math.round(h/24)+' days ago'}
+function runStat(){const el=$('run'),tx=el.querySelector('span');
+ const live=ST&&ST.state==='running'&&Date.now()-Date.parse(ST.started_at)<75*6e4;
+ if(live){el.className='run live';tx.textContent='Run in progress · started '+ago(Date.parse(ST.started_at));return}
+ if(!LAST){el.className='run';tx.textContent='No run yet';return}
+ const h=(Date.now()-LAST)/36e5;
+ el.className='run '+(h<26?'fresh':h<50?'stale':'old');
+ tx.textContent='Last run '+ago(LAST)+(h>=26?' · overdue':'')+' · next about 08:00 Brisbane'}
+function pollStatus(){fetch('data/status.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{ST=j;runStat()}).catch(()=>{})}
+setInterval(runStat,30000);setInterval(pollStatus,60000);pollStatus();
 $('make').onchange=()=>{refreshModels($('make').value);$('model').value='';render()};
 IDS.filter(i=>i!=='make').forEach(i=>$(i).addEventListener('input',render));
 $('brackets').onclick=e=>{const b=e.target.closest('button');if(!b)return;const a=+b.dataset.a,z=+b.dataset.b;
