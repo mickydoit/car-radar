@@ -1,10 +1,27 @@
 {
- "makes": ["Toyota","Mazda","Hyundai","Kia","Ford","Subaru","Volkswagen","Mitsubishi","Nissan","Honda","MG","GWM Haval","Isuzu","LDV","Suzuki","Skoda","Jeep","Land Rover","Volvo","BMW","Mercedes-Benz","Audi","Lexus","Peugeot","Renault","BYD","Tesla","Chery","Holden","KGM SsangYong","Mahindra","Mini","Cupra","Porsche"],
+ "near": "4560",
+ "makes": [
+  "GWM Haval",
+  "Honda",
+  "Hyundai",
+  "Kia",
+  "Mazda",
+  "Toyota"
+ ],
+ "state": null,
+ "km_max": 75000,
+ "km_min": null,
  "models": {},
- "body_types": ["suv"],
- "year_min": 2012,
- "price_max_aud": null,
- "km_max": null,
- "near": null,
- "radius_km": null
+ "saved_at": "2026-11-05T08:48:13.032Z",
+ "year_max": 2026,
+ "year_min": 2019,
+ "radius_km": 500,
+ "body_types": [
+  "suv"
+ ],
+ "near_latlng": null,
+ "seller_type": null,
+ "transmission": null,
+ "price_max_aud": 30000,
+ "price_min_aud": 20000
 }
