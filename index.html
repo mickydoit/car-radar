@@ -118,7 +118,7 @@ fetch('data/latest.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{
  $('demo').hidden=!j.demo;LAST=j.demo?null:Date.parse(j.updated);runStat();
  $('upd').textContent=j.updated?`Updated ${new Date(j.updated).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short',timeZone:'Australia/Brisbane'})+' AEST'} · ${D.length} listings`:'';
  opts($('make'),uniq(D.map(d=>d.make)),'All makes');
- const ys=uniq(D.map(d=>d.year));opts($('yFrom'),ys,'Year from');opts($('yTo'),ys.slice().reverse(),'Year to');
+ const top=new Date().getFullYear()+1,lo=Math.min(2010,...D.map(d=>d.year)),ys=[];for(let y=top;y>=lo;y--)ys.push(y);opts($('yFrom'),ys,'Year from');opts($('yTo'),ys,'Year to');
  opts($('state'),uniq(D.map(d=>d.state).filter(Boolean)),'Any state');
  load();render();
 }).catch(()=>{$('list').innerHTML='<div class="empty">Could not load data/latest.json</div>'});
