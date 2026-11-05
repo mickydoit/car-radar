@@ -30,7 +30,9 @@ Carsales, Autotrader, Gumtree, Facebook Marketplace (snippets only), Pickles and
 - Every published listing needs a real listing URL. Search-result or brand overview pages are not listing URLs. Snippets without one stay out of the output.
 - Record: id, make, model, variant, year, km (number), price_aud (number, drive-away if stated, else asking), body (suv|ute|hatch|sedan|wagon|van|coupe|convertible), state, suburb, postcode (4 digits when known), source, seller_type (dealer|private|auction), transmission, url, first_seen_at (ISO date), status (active|sold|removed).
 - JSON numbers must be numbers, dates ISO.
-- Re-fetch each listing page before publishing. Sold or 404 means exclude it.
+- Page-check (re-fetch) only the listings that come out 3% or more below market, plus up to 10 others; sold or 404 means exclude. Publish every other in-scope listing straight from the results pages with `availability: "listed"` (not re-checked) — the budget is for breadth, not for opening every page.
+- Use the make names exactly as they appear in focus.json (e.g. `GWM Haval`, never `GWM` or `Haval`), so the site groups them correctly.
+- Every published listing must satisfy every saved limit (year, km, price, body type, distance). Check each one before writing it; drop anything outside.
 - Benchmark: per make + model, comparables within ±2 model years AND similar kilometres (within 30,000 km or 35%, whichever is larger). A 300,000 km car is not comparable to a 60,000 km one. Median asking price of the comparables. `median_aud` and `below_market_pct = (median - price) / median * 100`. Need at least 3 comparables. Otherwise leave both null.
 - Flag `verify` when 25% or more under market, private seller with no rego or no photos, or an odometer that looks implausible for the year.
 
