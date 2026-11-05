@@ -116,7 +116,7 @@ fetch('data/latest.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{
  D=(j.listings||[]).filter(d=>!['sold','removed'].includes(d.status));
  const c=new Date(Date.now()-864e5*2).toISOString().slice(0,10);D.cut=c;
  $('demo').hidden=!j.demo;LAST=j.demo?null:Date.parse(j.updated);runStat();
- $('upd').textContent=j.updated?`Updated ${new Date(j.updated).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short'})} · ${D.length} listings`:'';
+ $('upd').textContent=j.updated?`Updated ${new Date(j.updated).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short',timeZone:'Australia/Brisbane'})+' AEST'} · ${D.length} listings`:'';
  opts($('make'),uniq(D.map(d=>d.make)),'All makes');
  const ys=uniq(D.map(d=>d.year));opts($('yFrom'),ys,'Year from');opts($('yTo'),ys.slice().reverse(),'Year to');
  opts($('state'),uniq(D.map(d=>d.state).filter(Boolean)),'Any state');

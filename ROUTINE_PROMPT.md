@@ -8,6 +8,9 @@ The owner is cost-sensitive. Aim for at most about 60 fetches and 30 searches pe
 ## 0b. Run indicator
 First thing: write `data/status.json` as `{"state":"running","started_at":"<ISO now>"}`, commit `radar: run started` and push. The last commit of the run writes `{"state":"idle","finished_at":"<ISO now>"}` together with latest.json. The site shows a live dot while state is running (and under 75 minutes old).
 
+## Timestamps
+Never invent times. Get the real time from `TZ=Australia/Brisbane date +%Y-%m-%dT%H:%M:%S+10:00` (Brisbane is AEST, UTC+10, no daylight saving) and use it for `updated`, `started_at` and `finished_at`.
+
 ## 1. Scope
 Read `data/focus.json`: `makes` (list), `models` (optional `{make: [models]}`), `year_min`, `price_max_aud`, `km_max`. If empty, research the most-listed makes: Toyota, Mazda, Hyundai, Ford, Subaru, Volkswagen, Kia, Mitsubishi.
 
