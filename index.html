@@ -39,6 +39,8 @@ select,input{width:100%;padding:9px 10px;border:1px solid var(--line);background
 .run.fresh i{background:#3a9a4f}.run.stale i{background:#d9a21b}.run.old i{background:var(--red)}
 .run.live i{background:#3a9a4f;animation:p 1.1s ease-in-out infinite}
 @keyframes p{50%{opacity:.25;transform:scale(1.5)}}
+.bar2{height:3px;background:var(--line);margin-top:8px;max-width:360px;border-radius:2px;overflow:hidden}
+.bar2 div{height:100%;background:#3a9a4f;width:0;transition:width 1s linear}
 a{color:inherit}
 .empty{padding:40px 0;color:var(--mute)}
 </style>
@@ -46,11 +48,13 @@ a{color:inherit}
 <body>
 <div class="demo" id="demo" hidden>Demo data. The daily research run has not published real listings yet</div>
 <header><h1>Car Radar</h1><p class="sub" id="upd"></p>
-<p class="run" id="run"><i></i><span></span></p></header>
+<p class="run" id="run"><i></i><span></span></p>
+<div class="bar2" id="bar" hidden><div></div></div></header>
 <main>
 <aside>
 <label>Make <span class="meta" id="mkN"></span></label><div class="chips" id="makes"></div>
 <label>Model <span class="meta" id="mdN"></span></label><div id="models"><span class="meta">Pick a make first</span></div>
+<label>Body type</label><div class="chips" id="bodies"></div>
 <label>Year</label><div class="row"><select id="yFrom"></select><select id="yTo"></select></div>
 <label>Kilometres</label>
 <div class="row"><input id="kmMin" type="number" min="0" step="5000" placeholder="Min km"><input id="kmMax" type="number" min="0" step="5000" placeholder="Max km"></div>
@@ -82,16 +86,19 @@ const num=v=>{v=parseFloat(v);return isNaN(v)?null:v};
 const IDS=['near','radius','yFrom','yTo','kmMin','kmMax','pMin','pMax','seller','state','trans','sort'];
 function opts(el,vals,any){el.innerHTML=(any?`<option value="">${any}</option>`:'')+vals.map(v=>`<option>${v}</option>`).join('')}
 function uniq(a){return [...new Set(a)].sort()}
-let MAKES=new Set(),MODELS=new Set();
-function state(){const o={};IDS.forEach(i=>{if($(i).value)o[i]=$(i).value});if(MAKES.size)o.make=[...MAKES].join(',');if(MODELS.size)o.model=[...MODELS].join(',');if($('deals').classList.contains('on'))o.deals=1;return o}
+let MAKES=new Set(),MODELS=new Set(),BODIES=new Set(),FOCUS={};
+const BODY_ALL=['suv','ute','hatch','sedan','wagon','van','coupe','convertible'];
+function state(){const o={};IDS.forEach(i=>{if($(i).value)o[i]=$(i).value});if(MAKES.size)o.make=[...MAKES].join(',');if(MODELS.size)o.model=[...MODELS].join(',');if(BODIES.size)o.body=[...BODIES].join(',');if($('deals').classList.contains('on'))o.deals=1;return o}
 function save(){history.replaceState(null,'','#'+new URLSearchParams(state()))}
 function load(){const p=new URLSearchParams(location.hash.slice(1));
- MAKES=new Set((p.get('make')||'').split(',').filter(Boolean));MODELS=new Set((p.get('model')||'').split(',').filter(Boolean));
+ MAKES=new Set((p.get('make')||'').split(',').filter(Boolean));MODELS=new Set((p.get('model')||'').split(',').filter(Boolean));BODIES=new Set((p.get('body')||'').split(',').filter(Boolean));
  IDS.forEach(i=>{if(p.has(i))$(i).value=p.get(i)});
  $('deals').classList.toggle('on',p.has('deals'))}
 function chip(label,on,attr){return `<button class="chip${on?' on':''}" ${attr}>${esc(label)}</button>`}
 function drawMakes(){const cnt={};D.forEach(d=>cnt[d.make]=(cnt[d.make]||0)+1);
- $('makes').innerHTML=uniq([...D.map(d=>d.make),...MAKES]).map(m=>chip(`${m} ${cnt[m]||0}`,MAKES.has(m),`data-make="${esc(m)}"`)).join('');
+ $('makes').innerHTML=uniq([...D.map(d=>d.make),...MAKES,...(FOCUS.makes||[])]).map(m=>chip(`${m} ${cnt[m]||0}`,MAKES.has(m),`data-make="${esc(m)}"`)).join('');
+ const bc={};D.forEach(d=>{if(d.body)bc[d.body]=(bc[d.body]||0)+1});
+ $('bodies').innerHTML=BODY_ALL.map(b=>chip(`${b.toUpperCase()==='SUV'?'SUV':b[0].toUpperCase()+b.slice(1)} ${bc[b]||0}`,BODIES.has(b),`data-body="${b}"`)).join('');
  $('mkN').textContent=MAKES.size?`· ${MAKES.size} selected`:'· any';
  const ms=[...MAKES].sort();
  $('models').innerHTML=ms.length?ms.map(m=>{const names=uniq(D.filter(d=>d.make===m).map(d=>d.model));
@@ -121,7 +128,7 @@ async function updateOrigin(){const t=$('near').value;let msg='';
  $('nearMsg').textContent=msg;render()}
 function filtered(){const f=state();
  const hasM={};MODELS.forEach(k=>hasM[k.split('|')[0]]=1);
- return D.filter(d=>(!MAKES.size||MAKES.has(d.make))&&(!hasM[d.make]||MODELS.has(d.make+'|'+d.model))
+ return D.filter(d=>(!MAKES.size||MAKES.has(d.make))&&(!hasM[d.make]||MODELS.has(d.make+'|'+d.model))&&(!BODIES.size||BODIES.has(d.body))
  &&(!f.yFrom||d.year>=+f.yFrom)&&(!f.yTo||d.year<=+f.yTo)
  &&(!f.kmMin||d.km>=+f.kmMin)&&(!f.kmMax||d.km<=+f.kmMax)
  &&(!f.pMin||d.price_aud>=+f.pMin)&&(!f.pMax||d.price_aud<=+f.pMax)
@@ -144,31 +151,37 @@ function render(){if(!READY)return;save();brackets();drawMakes();
  $('list').innerHTML=r.length?r.map(d=>{try{const bm=d.below_market_pct;
  return `<a class="car" href="${esc(link(d))}" target="_blank" rel="noopener" style="text-decoration:none">
  <div><h3>${d.year??''} ${esc(d.make)} ${esc(d.model)} ${esc(d.variant||'')}</h3>
- <div class="meta">${d.km!=null?d.km.toLocaleString('en-AU')+' km':'km unknown'} · ${esc(d.transmission||'')} · ${esc(d.suburb||'')}, ${esc(d.state||'')}${d.dist!=null&&$('radius').value&&ORIGIN?' ('+Math.round(d.dist)+' km away)':''} · ${esc(d.source)} (${esc(d.seller_type||'')})</div>
+ <div class="meta">${d.km!=null?d.km.toLocaleString('en-AU')+' km':'km unknown'} · ${d.body?esc(d.body==='suv'?'SUV':d.body)+' · ':''}${esc(d.transmission||'')} ·${esc(d.suburb||'')}, ${esc(d.state||'')}${d.dist!=null&&$('radius').value&&ORIGIN?' ('+Math.round(d.dist)+' km away)':''} · ${esc(d.source)} (${esc(d.seller_type||'')})</div>
  <div class="meta">${(d.flags||[]).includes('verify')?'<span class="tag v">Verify</span>':''}${d.first_seen_at>=D.cut?'<span class="tag">New</span>':''}${d.url?'':'<span class="tag">No direct link</span>'}</div></div>
  <div class="price">${fmt(d.price_aud)}${bm>=3?`<small>${bm}% under market</small>`:''}</div></a>`}catch(e){return ''}}).join(''):'<div class="empty">Nothing matches. Loosen a filter.</div>'}
 fetch('data/latest.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{
  D=(j.listings||[]).filter(d=>d&&!['sold','removed'].includes(d.status)).map(d=>({...d,
   make:String(d.make||'Unknown'),model:String(d.model||''),year:num(d.year),km:num(d.km),price_aud:num(d.price_aud),
-  below_market_pct:num(d.below_market_pct),first_seen_at:String(d.first_seen_at||'')})).filter(d=>d.price_aud!=null);
+  below_market_pct:num(d.below_market_pct),first_seen_at:String(d.first_seen_at||''),body:String(d.body||'').toLowerCase()||null})).filter(d=>d.price_aud!=null);
  const c=new Date(Date.now()-864e5*2).toISOString().slice(0,10);D.cut=c;
  $('demo').hidden=!j.demo;LAST=j.demo?null:Date.parse(j.updated);runStat();
  $('upd').textContent=j.updated?`Updated ${new Date(j.updated).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short',timeZone:'Australia/Brisbane'})+' AEST'} · ${D.length} listings`:'';
   const top=new Date().getFullYear()+1,lo=Math.min(2010,...D.map(d=>d.year).filter(y=>y>1900)),ys=[];for(let y=top;y>=lo;y--)ys.push(y);opts($('yFrom'),ys,'Year from');opts($('yTo'),ys,'Year to');
  opts($('state'),['ACT','NSW','NT','QLD','SA','TAS','VIC','WA'],'Any state');
+ fetch('data/focus.json',{cache:'no-cache'}).then(r=>r.json()).then(f=>{FOCUS=f||{};render()}).catch(()=>{});
  load();READY=true;render();if($('near').value&&$('near').value!=='My location')updateOrigin();
 }).catch(()=>{$('list').innerHTML='<div class="empty">Could not load data/latest.json</div>'});
 let LAST=null,ST=null;
 function ago(t){const m=Math.round((Date.now()-t)/6e4);if(m<1)return 'just now';if(m<60)return m+' min ago';const h=Math.round(m/60);if(h<48)return h+' h ago';return Math.round(h/24)+' days ago'}
 function runStat(){const el=$('run'),tx=el.querySelector('span');
  const live=ST&&ST.state==='running'&&Date.now()-Date.parse(ST.started_at)<75*6e4;
- if(live){el.className='run live';tx.textContent='Run in progress · started '+ago(Date.parse(ST.started_at));return}
+ const exp=num(ST&&ST.last_duration_min)||20,bar=$('bar');
+ if(live){el.className='run live';const m=(Date.now()-Date.parse(ST.started_at))/6e4;
+  tx.textContent=`Run in progress · ${Math.max(0,Math.round(m))} of about ${Math.round(exp)} min`+(m>exp*1.25?' · running longer than usual':'');
+  bar.hidden=false;bar.firstElementChild.style.width=Math.min(100,m/exp*100)+'%';return}
+ bar.hidden=true;
  if(!LAST){el.className='run';tx.textContent='No run yet';return}
+ const took=num(ST&&ST.last_duration_min);
  const h=(Date.now()-LAST)/36e5;
  el.className='run '+(h<26?'fresh':h<50?'stale':'old');
  const paused=ST&&ST.next==='paused';
  if(paused)el.className='run';
- tx.textContent='Last run '+ago(LAST)+(paused?' · daily run paused':(h>=26?' · overdue':'')+' · next '+((ST&&ST.next)||'about 08:00 Brisbane'))}
+ tx.textContent='Last run '+ago(LAST)+(took?` · took ${Math.round(took)} min`:'')+(paused?' · daily run paused':(h>=26?' · overdue':'')+' · next '+((ST&&ST.next)||'about 08:00 Brisbane'))}
 function pollStatus(){fetch('data/status.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{ST=j&&typeof j==='object'?j:null;runStat()}).catch(()=>{})}
 setInterval(runStat,30000);setInterval(pollStatus,60000);pollStatus();
 $('near').addEventListener('change',updateOrigin);
@@ -177,12 +190,13 @@ $('geo').onclick=()=>{if(!navigator.geolocation){$('nearMsg').textContent='Locat
 $('makes').onclick=e=>{const b=e.target.closest('[data-make]');if(!b)return;const m=b.dataset.make;togg(MAKES,m);
  if(!MAKES.has(m))[...MODELS].forEach(k=>{if(k.startsWith(m+'|'))MODELS.delete(k)});render()};
 $('models').onclick=e=>{const b=e.target.closest('[data-model]');if(!b)return;togg(MODELS,b.dataset.model);render()};
+$('bodies').onclick=e=>{const b=e.target.closest('[data-body]');if(!b)return;togg(BODIES,b.dataset.body);render()};
 IDS.forEach(i=>$(i).addEventListener('input',render));
 $('brackets').onclick=e=>{const b=e.target.closest('button');if(!b)return;const a=+b.dataset.a,z=+b.dataset.b;
  const on=(num($('pMin').value)||0)===a&&(num($('pMax').value)||0)===z;
  $('pMin').value=on?'':(a||'');$('pMax').value=on?'':(z||'');render()};
 $('deals').onclick=()=>{$('deals').classList.toggle('on');render()};
-$('reset').onclick=()=>{MAKES.clear();MODELS.clear();ORIGIN=null;$('nearMsg').textContent='';IDS.forEach(i=>{if(i!=='sort')$(i).value=''});$('deals').classList.remove('on');render()};
+$('reset').onclick=()=>{MAKES.clear();MODELS.clear();BODIES.clear();ORIGIN=null;$('nearMsg').textContent='';IDS.forEach(i=>{if(i!=='sort')$(i).value=''});$('deals').classList.remove('on');render()};
 </script>
 </body>
 </html>

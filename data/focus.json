@@ -1,1 +1,10 @@
-{"makes":[],"models":{},"year_min":2012,"price_max_aud":null,"km_max":null}
+{
+ "makes": ["Toyota","Mazda","Hyundai","Kia","Ford","Subaru","Volkswagen","Mitsubishi","Nissan","Honda","MG","GWM Haval","Isuzu","LDV","Suzuki","Skoda","Jeep","Land Rover","Volvo","BMW","Mercedes-Benz","Audi","Lexus","Peugeot","Renault","BYD","Tesla","Chery","Holden","KGM SsangYong","Mahindra","Mini","Cupra","Porsche"],
+ "models": {},
+ "body_types": ["suv"],
+ "year_min": 2012,
+ "price_max_aud": null,
+ "km_max": null,
+ "near": null,
+ "radius_km": null
+}
