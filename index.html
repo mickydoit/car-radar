@@ -59,6 +59,10 @@ a{color:inherit}
 <div class="chips" id="brackets" style="margin-top:8px"></div>
 <label>Seller</label><select id="seller"><option value="">Any</option><option value="dealer">Dealer</option><option value="private">Private</option><option value="auction">Auction</option></select>
 <label>State</label><select id="state"></select>
+<label>Within distance of</label>
+<input id="near" placeholder="Suburb or postcode, e.g. 4000">
+<div class="row" style="margin-top:8px"><select id="radius"><option value="">Any distance</option><option>10</option><option>25</option><option>50</option><option>100</option><option>200</option><option>500</option></select><button class="chip" id="geo" type="button">Use my location</button></div>
+<div class="meta" id="nearMsg" style="margin-top:6px"></div>
 <label>Gearbox</label><select id="trans"><option value="">Any</option><option>Auto</option><option>Manual</option></select>
 <label><span class="chip" id="deals" role="button" tabindex="0">Below market only (3%+)</span></label>
 <button class="reset" id="reset">Reset filters</button>
@@ -75,7 +79,7 @@ const BR=[[0,10000],[10000,20000],[20000,30000],[30000,50000],[50000,0]];
 let D=[];
 const fmt=n=>'$'+Math.round(n).toLocaleString('en-AU');
 const num=v=>{v=parseFloat(v);return isNaN(v)?null:v};
-const IDS=['make','model','yFrom','yTo','kmMin','kmMax','pMin','pMax','seller','state','trans','sort'];
+const IDS=['near','radius','make','model','yFrom','yTo','kmMin','kmMax','pMin','pMax','seller','state','trans','sort'];
 function opts(el,vals,any){el.innerHTML=(any?`<option value="">${any}</option>`:'')+vals.map(v=>`<option>${v}</option>`).join('')}
 function uniq(a){return [...new Set(a)].sort()}
 function state(){const o={};IDS.forEach(i=>{if($(i).value)o[i]=$(i).value});if($('deals').classList.contains('on'))o.deals=1;return o}
@@ -90,26 +94,46 @@ function refreshModels(mk){const keep=$('model').value;
 function brackets(){const pMin=num($('pMin').value)||0,pMax=num($('pMax').value)||0;
  $('brackets').innerHTML=BR.map(([a,b])=>{const on=a===pMin&&b===pMax;
  return `<button class="chip${on?' on':''}" data-a="${a}" data-b="${b}">${b?(a?`${a/1000}–${b/1000}k`:`Under ${b/1000}k`):`${a/1000}k+`}</button>`}).join('')}
+let PL=null,ORIGIN=null,GEO=null;
+const rad=x=>x*Math.PI/180;
+function km(a,b){const dLa=rad(b[0]-a[0]),dLo=rad(b[1]-a[1]);const h=Math.sin(dLa/2)**2+Math.cos(rad(a[0]))*Math.cos(rad(b[0]))*Math.sin(dLo/2)**2;return 12742*Math.asin(Math.sqrt(h))}
+function loadPlaces(){if(!PL)PL=fetch('data/places.json').then(r=>r.json()).catch(()=>({places:{},postcodes:{}}));return PL}
+function resolve(txt,pl){txt=txt.trim().toLowerCase();if(!txt)return null;
+ if(/^\d{4}$/.test(txt))return pl.postcodes[txt]||null;
+ const m=txt.match(/^(.*?)[ ,]+(act|nsw|nt|qld|sa|tas|vic|wa)$/);
+ if(m)return pl.places[m[1]+'|'+m[2].toUpperCase()]||null;
+ for(const s of ['QLD','NSW','VIC','WA','SA','TAS','ACT','NT']){const v=pl.places[txt+'|'+s];if(v)return v}return null}
+function locOf(d,pl){if(d.lat!=null&&d.lng!=null)return [d.lat,d.lng];
+ if(d.postcode&&pl.postcodes[d.postcode])return pl.postcodes[d.postcode];
+ const n=String(d.suburb||'').toLowerCase().trim();
+ for(const v of [n,n.replace(/\bsaint\b/g,'st'),n.replace(/\bst\b/g,'saint'),n.replace(/\bmount\b/g,'mt'),n.replace(/\bmt\b/g,'mount')]){const r=pl.places[v+'|'+d.state];if(r)return r}return null}
+async function updateOrigin(){const t=$('near').value;
+ if(t==='My location'){ORIGIN=GEO;if(!GEO)$('nearMsg').textContent='Press Use my location again.'}else{const pl=await loadPlaces();ORIGIN=resolve(t,pl)}
+ $('nearMsg').textContent=t&&!ORIGIN?'Location not found. Try a postcode.':'';render()}
 function filtered(){const f=state();
  return D.filter(d=>(!f.make||d.make===f.make)&&(!f.model||d.model===f.model)
  &&(!f.yFrom||d.year>=+f.yFrom)&&(!f.yTo||d.year<=+f.yTo)
  &&(!f.kmMin||d.km>=+f.kmMin)&&(!f.kmMax||d.km<=+f.kmMax)
  &&(!f.pMin||d.price_aud>=+f.pMin)&&(!f.pMax||d.price_aud<=+f.pMax)
  &&(!f.seller||d.seller_type===f.seller)&&(!f.state||d.state===f.state)&&(!f.trans||d.transmission===f.trans)
- &&(!f.deals||(d.below_market_pct||0)>=3))}
+ &&(!f.deals||(d.below_market_pct||0)>=3)
+ &&nearOk(d,f))}
+let SKIP=0;
+function nearOk(d,f){if(!f.radius||!ORIGIN||!PLd)return true;const p=locOf(d,PLd);if(!p){SKIP++;return false}d.dist=km(ORIGIN,p);return d.dist<=+f.radius}
+let PLd=null;loadPlaces().then(p=>{PLd=p;render()});
 const SORT={deal:(a,b)=>(b.below_market_pct||0)-(a.below_market_pct||0),new:(a,b)=>b.first_seen_at.localeCompare(a.first_seen_at),
  pa:(a,b)=>a.price_aud-b.price_aud,pd:(a,b)=>b.price_aud-a.price_aud,ka:(a,b)=>a.km-b.km,yd:(a,b)=>b.year-a.year};
 function esc(s){return String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))}
 function link(d){return d.url||'https://duckduckgo.com/?q='+encodeURIComponent(`${d.year} ${d.make} ${d.model} ${d.variant||''} ${d.km} km`)}
 function render(){save();brackets();
- const r=filtered().sort(SORT[$('sort').value]);
+ SKIP=0;const r=filtered().sort(SORT[$('sort').value]);if($('radius').value&&ORIGIN&&SKIP)$('nearMsg').textContent=SKIP+' listing'+(SKIP>1?'s':'')+' hidden: suburb not recognised';
  $('count').textContent=`${r.length} car${r.length===1?'':'s'}`;
  const ps=r.map(d=>d.price_aud).sort((a,b)=>a-b);
  $('med').textContent=ps.length?`Median ${fmt(ps[Math.floor(ps.length/2)])} · range ${fmt(ps[0])}–${fmt(ps[ps.length-1])}`:'';
  $('list').innerHTML=r.length?r.map(d=>{const bm=d.below_market_pct;
  return `<a class="car" href="${esc(link(d))}" target="_blank" rel="noopener" style="text-decoration:none">
  <div><h3>${d.year} ${esc(d.make)} ${esc(d.model)} ${esc(d.variant||'')}</h3>
- <div class="meta">${d.km.toLocaleString('en-AU')} km · ${esc(d.transmission||'')} · ${esc(d.suburb||'')}, ${esc(d.state||'')} · ${esc(d.source)} (${esc(d.seller_type||'')})</div>
+ <div class="meta">${d.km.toLocaleString('en-AU')} km · ${esc(d.transmission||'')} · ${esc(d.suburb||'')}, ${esc(d.state||'')}${d.dist!=null&&$('radius').value?' ('+Math.round(d.dist)+' km away)':''} · ${esc(d.source)} (${esc(d.seller_type||'')})</div>
  <div class="meta">${(d.flags||[]).includes('verify')?'<span class="tag v">Verify</span>':''}${d.first_seen_at>=D.cut?'<span class="tag">New</span>':''}${d.url?'':'<span class="tag">No direct link</span>'}</div></div>
  <div class="price">${fmt(d.price_aud)}${bm>=3?`<small>${bm}% under market</small>`:''}</div></a>`}).join(''):'<div class="empty">Nothing matches. Loosen a filter.</div>'}
 fetch('data/latest.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{
@@ -119,8 +143,8 @@ fetch('data/latest.json',{cache:'no-cache'}).then(r=>r.json()).then(j=>{
  $('upd').textContent=j.updated?`Updated ${new Date(j.updated).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short',timeZone:'Australia/Brisbane'})+' AEST'} · ${D.length} listings`:'';
  opts($('make'),uniq(D.map(d=>d.make)),'All makes');
  const top=new Date().getFullYear()+1,lo=Math.min(2010,...D.map(d=>d.year)),ys=[];for(let y=top;y>=lo;y--)ys.push(y);opts($('yFrom'),ys,'Year from');opts($('yTo'),ys,'Year to');
- opts($('state'),uniq(D.map(d=>d.state).filter(Boolean)),'Any state');
- load();render();
+ opts($('state'),['ACT','NSW','NT','QLD','SA','TAS','VIC','WA'],'Any state');
+ load();render();if($('near').value&&$('near').value!=='My location')updateOrigin();
 }).catch(()=>{$('list').innerHTML='<div class="empty">Could not load data/latest.json</div>'});
 let LAST=null,ST=null;
 function ago(t){const m=Math.round((Date.now()-t)/6e4);if(m<1)return 'just now';if(m<60)return m+' min ago';const h=Math.round(m/60);if(h<48)return h+' h ago';return Math.round(h/24)+' days ago'}
@@ -133,13 +157,16 @@ function runStat(){const el=$('run'),tx=el.querySelector('span');
  tx.textContent='Last run '+ago(LAST)+(h>=26?' · overdue':'')+' · next about 08:00 Brisbane'}
 function pollStatus(){fetch('data/status.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{ST=j;runStat()}).catch(()=>{})}
 setInterval(runStat,30000);setInterval(pollStatus,60000);pollStatus();
+$('near').addEventListener('change',updateOrigin);
+$('geo').onclick=()=>{if(!navigator.geolocation){$('nearMsg').textContent='Location not available in this browser.';return}
+ navigator.geolocation.getCurrentPosition(p=>{GEO=[p.coords.latitude,p.coords.longitude];$('near').value='My location';if(!$('radius').value)$('radius').value='50';updateOrigin()},()=>{$('nearMsg').textContent='Location permission denied.'})};
 $('make').onchange=()=>{refreshModels($('make').value);$('model').value='';render()};
 IDS.filter(i=>i!=='make').forEach(i=>$(i).addEventListener('input',render));
 $('brackets').onclick=e=>{const b=e.target.closest('button');if(!b)return;const a=+b.dataset.a,z=+b.dataset.b;
  const on=(num($('pMin').value)||0)===a&&(num($('pMax').value)||0)===z;
  $('pMin').value=on?'':(a||'');$('pMax').value=on?'':(z||'');render()};
 $('deals').onclick=()=>{$('deals').classList.toggle('on');render()};
-$('reset').onclick=()=>{IDS.forEach(i=>{if(i!=='sort')$(i).value=''});$('deals').classList.remove('on');refreshModels('');render()};
+$('reset').onclick=()=>{ORIGIN=null;$('nearMsg').textContent='';IDS.forEach(i=>{if(i!=='sort')$(i).value=''});$('deals').classList.remove('on');refreshModels('');render()};
 </script>
 </body>
 </html>
