@@ -42,6 +42,7 @@ Write `coverage` into latest.json: `{"sources_reached": n, "sources_total": m, "
 ## 3. Rules
 - Every published listing needs a real listing URL. Search-result or brand overview pages are not listing URLs. Snippets without one stay out of the output.
 - Record: id, make, model, variant, year, km (number), price_aud (number, drive-away if stated, else asking), body (suv|ute|hatch|sedan|wagon|van|coupe|convertible), state, suburb, postcode (4 digits when known), source, seller_type (dealer|private|auction), transmission, fuel (Petrol|Hybrid|Plug-in hybrid|Diesel|Electric; null if the listing does not say, never guess), url, first_seen_at (ISO date), status (active|sold|removed).
+- BODY TYPE: set `body` from the car itself, never from the marketplace URL or category (CarsGuide/Autotrader file some wagons and hatches such as the Corolla Touring and Honda Shuttle under `/suv`). If unsure, leave it null. After writing latest.json run `python3 tools/fix_body.py` (it corrects known mislabels from `data/body-rules.json`; add a rule there whenever you spot a new one) and mention what it corrected in the report.
 - JSON numbers must be numbers, dates ISO.
 - Page-check as set out in §2c. Listings you did not open are published from the results pages with `availability: "listed"`; page-checked ones get `availability: "verified"`.
 - Use the make names exactly as they appear in focus.json (e.g. `GWM Haval`, never `GWM` or `Haval`), so the site groups them correctly.

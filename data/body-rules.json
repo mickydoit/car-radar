@@ -1,0 +1,18 @@
+{
+ "_note": "Marketplaces file some wagons/hatches under their /suv category. First matching rule wins. body_in null = any body. variant_re is a case-insensitive regex or null.",
+ "rules": [
+  {"make": "Honda",  "model": "Shuttle", "body_in": null,    "variant_re": null,       "set": "wagon"},
+  {"make": "Toyota", "model": "Corolla", "body_in": ["suv"], "variant_re": "touring",  "set": "wagon"},
+  {"make": "Toyota", "model": "Corolla", "body_in": ["suv"], "variant_re": null,       "set": "hatch"},
+  {"make": "Toyota", "model": "Yaris",   "body_in": ["suv"], "variant_re": null,       "set": "hatch"},
+  {"make": "Toyota", "model": "Prius",   "body_in": ["suv"], "variant_re": null,       "set": "hatch"},
+  {"make": "Toyota", "model": "Camry",   "body_in": ["suv"], "variant_re": null,       "set": "sedan"},
+  {"make": "Honda",  "model": "Fit",     "body_in": ["suv"], "variant_re": null,       "set": "hatch"},
+  {"make": "Honda",  "model": "Jazz",    "body_in": ["suv"], "variant_re": null,       "set": "hatch"},
+  {"make": "Mazda",  "model": "Mazda3",  "body_in": ["suv"], "variant_re": null,       "set": "hatch"},
+  {"make": "Mazda",  "model": "3",       "body_in": ["suv"], "variant_re": null,       "set": "hatch"},
+  {"make": "Mazda",  "model": "2",       "body_in": ["suv"], "variant_re": null,       "set": "hatch"},
+  {"make": "Hyundai","model": "i30",     "body_in": ["suv"], "variant_re": null,       "set": "hatch"},
+  {"make": "Kia",    "model": "Cerato",  "body_in": ["suv"], "variant_re": null,       "set": "hatch"}
+ ]
+}

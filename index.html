@@ -106,6 +106,9 @@ function opts(el,vals,any){el.innerHTML=(any?`<option value="">${any}</option>`:
 function uniq(a){return [...new Set(a)].sort()}
 let MAKES=new Set(),MODELS=new Set(),BODIES=new Set(),FUELS=new Set(),FOCUS={};
 const FUEL_ALL=['Petrol','Hybrid','Plug-in hybrid','Diesel','Electric'];
+let BODY_RULES=[];
+function fixBody(d){for(const r of BODY_RULES){if(d.make!==r.make||d.model!==r.model)continue;if(r.body_in&&!r.body_in.includes(d.body))continue;
+ if(r.variant_re&&!new RegExp(r.variant_re,'i').test(d.variant||''))continue;return r.set}return d.body}
 function normFuel(s){const t=String(s||'').toLowerCase();if(!t.trim())return null;
  if(/phev|plug/.test(t))return 'Plug-in hybrid';const pet=/petrol|unleaded|ulp/.test(t);
  if(/hybrid/.test(t)||(/electric/.test(t)&&(pet||/diesel/.test(t))))return 'Hybrid';
@@ -186,7 +189,7 @@ function loadData(first){return fetch('data/latest.json?t='+Date.now(),{cache:'n
  if(!first&&(j.updated||'')===CUR_UPDATED)return;const changed=!first;CUR_UPDATED=j.updated||'';
  D=(j.listings||[]).filter(d=>d&&!['sold','removed'].includes(d.status)).map(d=>({...d,
   make:String(d.make||'Unknown'),model:String(d.model||''),year:num(d.year),km:num(d.km),price_aud:num(d.price_aud),
-  below_market_pct:num(d.below_market_pct),first_seen_at:String(d.first_seen_at||''),body:String(d.body||'').toLowerCase()||null,fuel:normFuel(d.fuel)})).filter(d=>d.price_aud!=null);
+  below_market_pct:num(d.below_market_pct),first_seen_at:String(d.first_seen_at||''),body:String(d.body||'').toLowerCase()||null,fuel:normFuel(d.fuel)})).map(d=>({...d,body:fixBody(d)})).filter(d=>d.price_aud!=null);
  const c=new Date(Date.now()-864e5*2).toISOString().slice(0,10);D.cut=c;
  $('demo').hidden=!j.demo;LAST=j.demo?null:Date.parse(j.updated);runStat();
  $('upd').textContent=j.updated?`Updated ${new Date(j.updated).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short',timeZone:'Australia/Brisbane'})+' AEST'} · ${D.length} listings`:'';
@@ -196,7 +199,7 @@ function loadData(first){return fetch('data/latest.json?t='+Date.now(),{cache:'n
  fetch('data/focus.json',{cache:'no-cache'}).then(r=>r.json()).then(f=>{FOCUS=f||{};render()}).catch(()=>{});
  load();READY=true;render();if($('near').value&&$('near').value!=='My location')updateOrigin();
 }).catch(()=>{if(first)$('list').innerHTML='<div class="empty">Could not load data/latest.json</div>'})}
-loadData(true);
+fetch('data/body-rules.json').then(r=>r.json()).then(j=>{BODY_RULES=j.rules||[]}).catch(()=>{}).then(()=>loadData(true));
 let LAST=null,ST=null;
 function ago(t){const m=Math.round((Date.now()-t)/6e4);if(m<1)return 'just now';if(m<60)return m+' min ago';const h=Math.round(m/60);if(h<48)return h+' h ago';return Math.round(h/24)+' days ago'}
 function runStat(){const el=$('run'),tx=el.querySelector('span');
