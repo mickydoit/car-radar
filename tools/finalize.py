@@ -12,6 +12,7 @@ Agent supplies coverage.sources = {"CarsGuide": {"planned": 130, "ok": 98}, ...}
 import json, sys, datetime
 from pathlib import Path
 import fix_body
+import marketplace
 
 ROOT = Path(__file__).resolve().parent.parent
 MAX_AGE_DAYS = 3
@@ -50,7 +51,7 @@ def message(g, bad, rated, carried):
 
 
 def main(latest=ROOT / 'data/latest.json', memory=ROOT / 'data/memory.json', focus=ROOT / 'data/focus.json',
-         today=None):
+         today=None, market_cache=marketplace.CACHE):
     today = today or datetime.date.today().isoformat()
     latest, memory, focus = Path(latest), Path(memory), Path(focus)
     fix_body.main(latest, ROOT / 'data/body-rules.json')
@@ -58,6 +59,10 @@ def main(latest=ROOT / 'data/latest.json', memory=ROOT / 'data/memory.json', foc
     mem = json.loads(memory.read_text()) if memory.exists() else {}
     f = json.loads(focus.read_text()) if focus.exists() else {}
     cov = j.setdefault('coverage', {})
+    if Path(market_cache).exists():   # CarsGuide coverage is measured from the crawl cache, never hand-written
+        mc = marketplace.coverage(f, marketplace.load_cache(market_cache))
+        cov.setdefault('sources', {})['CarsGuide'] = {'planned': mc['planned'], 'ok': mc['ok']}
+        cov['market_cache_last_run'] = mc['last_run']
     g, bad, rated = gate(cov.setdefault('sources', {}))
     cur = {d['id'] for d in j['listings']}
     for d in j['listings']:

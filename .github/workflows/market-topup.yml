@@ -1,0 +1,36 @@
+name: market top-up
+# Small, polite CarsGuide crawl every 4 hours into data/market-cache.json (no Claude usage).
+# The 08:00 Brisbane routine assembles latest.json from this cache instead of crawling in one burst,
+# which is what triggered the Peakhour challenge pages (HTTP 403) on ~45% of requests.
+on:
+  schedule:
+    - cron: '20 */4 * * *'      # 00:20, 04:20 … UTC = 10:20, 14:20 … Brisbane
+  workflow_dispatch:
+    inputs:
+      budget:
+        description: pages to fetch
+        default: '60'
+permissions:
+  contents: write
+concurrency:
+  group: market-topup
+  cancel-in-progress: false
+jobs:
+  topup:
+    runs-on: ubuntu-latest
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v4
+        with: { fetch-depth: 1 }
+      - uses: actions/setup-python@v5
+        with: { python-version: '3.12' }
+      - name: Crawl (honest UA, ≥12 s between requests, back-off on 403)
+        run: python3 tools/marketplace.py --budget ${{ github.event.inputs.budget || 60 }} --min-interval 12 --fresh-hours 6 | tail -5
+      - name: Commit cache
+        run: |
+          git config user.name "car-radar bot"
+          git config user.email "car-radar-bot@users.noreply.github.com"
+          git add data/market-cache.json
+          git diff --cached --quiet && echo "no change" && exit 0
+          git commit -m "radar: market top-up $(date -u +%Y-%m-%dT%H:%MZ)"
+          for i in 1 2 3; do git pull --rebase -q && git push -q && break; sleep 10; done

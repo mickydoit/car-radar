@@ -14,7 +14,7 @@ def run(listings, sources, memory=None, status='ok'):
     t = Path(tempfile.mkdtemp())
     (t / 'l.json').write_text(json.dumps({'status': status, 'listings': listings, 'coverage': {'sources': sources}}))
     (t / 'm.json').write_text(json.dumps(memory or {})); (t / 'f.json').write_text(json.dumps(FOCUS))
-    g = finalize.main(t / 'l.json', t / 'm.json', t / 'f.json', today='2026-11-07')
+    g = finalize.main(t / 'l.json', t / 'm.json', t / 'f.json', today='2026-11-07', market_cache=t / 'none.json')
     return g, json.loads((t / 'l.json').read_text()), json.loads((t / 'm.json').read_text())
 
 
