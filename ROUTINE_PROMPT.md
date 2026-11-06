@@ -2,8 +2,8 @@
 
 You research second-hand car listings in Australia and publish them to this repo. Run once a day. Never end your turn before the push.
 
-## 0. Budget (usage-conscious)
-The owner is cost-sensitive. Aim for at most about 100 fetches and 40 searches per run and 30 minutes. Spread the budget across every make in focus (around 3 fetches per make when the list is long), favouring sources that return readable pages and search pages that list many cars at once (e.g. one Autotrader results page per make + body type). Stop and publish when the budget is reached. Partial data with `status: partial` beats running long.
+## 0. Depth and budget
+The owner wants a DEEP pass, not a quick one. Earlier runs finished in about 3 minutes, which was too shallow. Budget per run: up to about 300 fetches, 80 searches and 45 minutes. A good run takes 15–40 minutes; if you are done in under 10 minutes you skipped work, so go back and do the depth steps in §2c. Spread effort across every make AND every model in focus, and every body type. Still obey the polite-crawling rules (1 s between requests to one host, honest UA, no workarounds). Stop at the budget and publish; partial data with `status: partial` beats a failed run.
 
 ## 0b. Run indicator
 First thing: write `data/status.json` as `{"state":"running","started_at":"<ISO now>","next":"about 08:00 Brisbane"}`, commit `radar: run started` and push. The last commit of the run writes `{"state":"idle","finished_at":"<ISO now>","last_duration_min":<minutes from started_at to now, number>,"next":"about 08:00 Brisbane"}` together with latest.json. The site uses last_duration_min to show a progress bar during the next run. Keep the `next` value exactly as you found it if it says `paused`. The site shows a live dot while state is running (and under 75 minutes old).
@@ -30,11 +30,20 @@ Read `data/focus.json`: `makes` (list), `models` (optional `{make: [models]}`), 
 Autotrader (search pages per make/body/state work) and CarsGuide (clean paths only, e.g. `https://www.carsguide.com.au/buy-a-car/used/toyota/rav4/qld` — never add query strings, they are robots-disallowed; 1 s between requests). Carsales and Gumtree BLOCK automated access and their terms forbid it: do not fetch them at all, do not use search-engine snippets of them, do not rotate user agents or work around bot checks. Facebook Marketplace needs a login: skip. Pickles/Manheim auctions: optional if budget remains.
 Write `coverage` into latest.json: `{"sources_reached": n, "sources_total": m, "sweep_fetches": k, "failed": [ids]}` from the sweep's coverage plus your own fetches.
 
+### 2c. Depth steps (do all of them)
+1. Marketplaces: for EVERY focus make (and each focus model when `models` is set) fetch the Autotrader and CarsGuide results for each state in scope (the `near` state first, then neighbouring states if the radius reaches them), and follow pagination until a page returns no new in-scope listings or 5 pages per make. Do not stop at page one.
+2. Make × body type: where body_types is set, also fetch the body-type page for each make, so models the make page buries still show up.
+3. Fuel and details: for any in-scope listing whose fuel, transmission or suburb is missing, open its listing page and fill them in (fuel as Petrol|Hybrid|Plug-in hybrid|Diesel|Electric, never guessed). The site has a fuel filter, so fuel coverage matters.
+4. Page-check: re-fetch EVERY listing that is 3% or more below market, plus every listing newer than the previous run's `updated`, and a sample of at least 20 others. Sold or 404 means exclude.
+5. Auctions and extra sources: also try Pickles and Manheim (public search pages only, no login) and any other robots-allowed source you can find for the focus area (write what you tried and what worked into `coverage`).
+6. Benchmark every make/model with 3+ comparables under the §3 rule; with fewer, leave the benchmark null rather than guess.
+7. In `reports/YYYY-MM-DD.md` list per source: pages fetched, listings found, in-scope count, and anything blocked.
+
 ## 3. Rules
 - Every published listing needs a real listing URL. Search-result or brand overview pages are not listing URLs. Snippets without one stay out of the output.
 - Record: id, make, model, variant, year, km (number), price_aud (number, drive-away if stated, else asking), body (suv|ute|hatch|sedan|wagon|van|coupe|convertible), state, suburb, postcode (4 digits when known), source, seller_type (dealer|private|auction), transmission, fuel (Petrol|Hybrid|Plug-in hybrid|Diesel|Electric; null if the listing does not say, never guess), url, first_seen_at (ISO date), status (active|sold|removed).
 - JSON numbers must be numbers, dates ISO.
-- Page-check (re-fetch) only the listings that come out 3% or more below market, plus up to 10 others; sold or 404 means exclude. Publish every other in-scope listing straight from the results pages with `availability: "listed"` (not re-checked) — the budget is for breadth, not for opening every page.
+- Page-check as set out in §2c. Listings you did not open are published from the results pages with `availability: "listed"`; page-checked ones get `availability: "verified"`.
 - Use the make names exactly as they appear in focus.json (e.g. `GWM Haval`, never `GWM` or `Haval`), so the site groups them correctly.
 - Every published listing must satisfy every saved limit (year, km, price, body type, distance). Check each one before writing it; drop anything outside.
 - Benchmark: per make + model, comparables within ±2 model years AND similar kilometres (within 30,000 km or 35%, whichever is larger). A 300,000 km car is not comparable to a 60,000 km one. Median asking price of the comparables. `median_aud` and `below_market_pct = (median - price) / median * 100`. Need at least 3 comparables. Otherwise leave both null.
