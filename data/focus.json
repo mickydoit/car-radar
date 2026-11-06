@@ -1,5 +1,8 @@
 {
- "near": "4560",
+ "fuel": [
+  "Hybrid"
+ ],
+ "near": null,
  "makes": [
   "GWM Haval",
   "Honda",
@@ -9,16 +12,14 @@
   "Toyota"
  ],
  "state": null,
- "km_max": 75000,
+ "km_max": 50000,
  "km_min": null,
  "models": {},
- "saved_at": "2026-11-05T08:56:53.059Z",
- "year_max": 2026,
+ "saved_at": "2026-11-06T03:36:27.314Z",
+ "year_max": 2027,
  "year_min": 2019,
- "radius_km": 500,
- "body_types": [
-  "suv"
- ],
+ "radius_km": null,
+ "body_types": [],
  "near_latlng": null,
  "seller_type": null,
  "transmission": null,
