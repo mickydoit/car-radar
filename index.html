@@ -23,6 +23,8 @@ select,input{width:100%;padding:9px 10px;border:1px solid var(--line);background
 .chips{display:flex;flex-wrap:wrap;gap:6px}
 .chip{border:1px solid var(--line);background:var(--panel);color:var(--ink);padding:6px 10px;border-radius:99px;font:inherit;font-size:13px;cursor:pointer}
 .chip.on{background:var(--green);color:var(--bg);border-color:var(--green)}
+.cov{margin:10px 0 0;padding:10px 12px;border:1px solid #c98a2b;border-radius:8px;font-size:13px;line-height:1.45;background:rgba(201,138,43,.12)}
+.cov.thin{border-color:#c0473a;background:rgba(192,71,58,.12)}
 .toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,20px);background:var(--ink);color:var(--bg);padding:10px 16px;border-radius:99px;font-size:14px;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;z-index:50}
 .toast.show{opacity:1;transform:translate(-50%,0)}
 @keyframes flash{0%{background:var(--green);color:var(--bg)}100%{background:transparent}}
@@ -58,6 +60,7 @@ a{color:inherit}
 <body>
 <div class="demo" id="demo" hidden>Demo data. The daily research run has not published real listings yet</div>
 <header><h1>Car Radar</h1><p class="sub" id="upd"></p>
+<div class="cov" id="cov" hidden></div>
 <p class="run" id="run"><i></i><span></span></p>
 <div class="bar2" id="bar" hidden><div></div></div></header>
 <main>
@@ -182,7 +185,7 @@ function render(){if(!READY)return;save();const na=nActive();$('resetTop').disab
  return `<a class="car" href="${esc(link(d))}" target="_blank" rel="noopener" style="text-decoration:none">
  <div><h3>${d.year??''} ${esc(d.make)} ${esc(d.model)} ${esc(d.variant||'')}</h3>
  <div class="meta">${d.km!=null?d.km.toLocaleString('en-AU')+' km':'km unknown'} · ${d.body?esc(d.body==='suv'?'SUV':d.body)+' · ':''}${d.fuel?esc(d.fuel)+' · ':''}${esc(d.transmission||'')} ·${esc(d.suburb||'')}, ${esc(d.state||'')}${d.dist!=null&&$('radius').value&&ORIGIN?' ('+Math.round(d.dist)+' km away)':''} · ${esc(d.source)} (${esc(d.seller_type||'')})</div>
- <div class="meta">${(d.flags||[]).includes('verify')?'<span class="tag v">Verify</span>':''}${d.first_seen_at>=D.cut?'<span class="tag">New</span>':''}${d.url?'':'<span class="tag">No direct link</span>'}</div></div>
+ <div class="meta">${(d.flags||[]).includes('verify')?'<span class="tag v">Verify</span>':''}${d.first_seen_at>=D.cut?'<span class="tag">New</span>':''}${d.stale?`<span class="tag v" title="Not re-found today because the source refused some pages">Last seen ${esc(d.last_seen||'')}</span>`:''}${d.url?'':'<span class="tag">No direct link</span>'}</div></div>
  <div class="price">${fmt(d.price_aud)}${bm>=3?`<small>${bm}% under market</small>`:''}</div></a>`}catch(e){return ''}}).join(''):'<div class="empty">Nothing matches. Loosen a filter.</div>'}
 let CUR_UPDATED=null;
 function loadData(first){return fetch('data/latest.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.json()).then(j=>{
@@ -191,7 +194,8 @@ function loadData(first){return fetch('data/latest.json?t='+Date.now(),{cache:'n
   make:String(d.make||'Unknown'),model:String(d.model||''),year:num(d.year),km:num(d.km),price_aud:num(d.price_aud),
   below_market_pct:num(d.below_market_pct),first_seen_at:String(d.first_seen_at||''),body:String(d.body||'').toLowerCase()||null,fuel:normFuel(d.fuel)})).map(d=>({...d,body:fixBody(d)})).filter(d=>d.price_aud!=null);
  const c=new Date(Date.now()-864e5*2).toISOString().slice(0,10);D.cut=c;
- $('demo').hidden=!j.demo;LAST=j.demo?null:Date.parse(j.updated);runStat();
+ $('demo').hidden=!j.demo;const cv=j.coverage||{};$('cov').hidden=!cv.message;$('cov').className='cov'+(cv.gate==='thin'?' thin':'');$('cov').textContent=cv.message||'';
+LAST=j.demo?null:Date.parse(j.updated);runStat();
  $('upd').textContent=j.updated?`Updated ${new Date(j.updated).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short',timeZone:'Australia/Brisbane'})+' AEST'} · ${D.length} listings`:'';
  if(changed){$('upd').textContent+=' · just refreshed';$('upd').style.color='#3a9a4f';setTimeout(()=>{$('upd').style.color='';$('upd').textContent=$('upd').textContent.replace(' · just refreshed','')},8000);render();return}
   const top=new Date().getFullYear()+1,lo=Math.min(2010,...D.map(d=>d.year).filter(y=>y>1900)),ys=[];for(let y=top;y>=lo;y--)ys.push(y);opts($('yFrom'),ys,'Year from');opts($('yTo'),ys,'Year to');

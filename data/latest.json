@@ -30,7 +30,22 @@
    "carsales(off limits)",
    "gumtree(off limits)"
   ],
-  "note": "Benchmark pool is mostly marketplace results capped at $30k, so medians for models that usually sell above $30k (Camry, Yaris Cross, C-HR, RAV4) are biased low."
+  "note": "Benchmark pool is mostly marketplace results capped at $30k, so medians for models that usually sell above $30k (Camry, Yaris Cross, C-HR, RAV4) are biased low.",
+  "sources": {
+   "CarsGuide": {
+    "planned": 130,
+    "ok": 68,
+    "rate": 0.52
+   },
+   "Autotrader": {
+    "planned": 57,
+    "ok": 33,
+    "rate": 0.58
+   }
+  },
+  "gate": "degraded",
+  "carried_over": 0,
+  "message": "Some sources refused part of today's search (CarsGuide: 68 of 130 pages loaded; Autotrader: 33 of 57 pages loaded). Results may under-represent those sources."
  },
  "listings": [
   {
@@ -57,7 +72,8 @@
    "median_aud": 27990,
    "below_market_pct": 21.4,
    "comparables": 102,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15315697",
@@ -83,7 +99,8 @@
    "median_aud": 26990,
    "below_market_pct": 20.4,
    "comparables": 15,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15331628",
@@ -109,7 +126,8 @@
    "median_aud": 26990,
    "below_market_pct": 20.3,
    "comparables": 11,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15288102",
@@ -135,7 +153,8 @@
    "median_aud": 27440,
    "below_market_pct": 16.6,
    "comparables": 12,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15330850",
@@ -161,7 +180,8 @@
    "median_aud": 27990,
    "below_market_pct": 14.3,
    "comparables": 110,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15376716",
@@ -187,7 +207,8 @@
    "median_aud": 28240,
    "below_market_pct": 11.5,
    "comparables": 4,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15377192",
@@ -213,7 +234,8 @@
    "median_aud": 26990,
    "below_market_pct": 11.1,
    "comparables": 7,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15343609",
@@ -239,7 +261,8 @@
    "median_aud": 27998,
    "below_market_pct": 11.1,
    "comparables": 110,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-14847288",
@@ -265,7 +288,8 @@
    "median_aud": 27990,
    "below_market_pct": 10.7,
    "comparables": 83,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15383320",
@@ -291,7 +315,8 @@
    "median_aud": 27640,
    "below_market_pct": 9.6,
    "comparables": 70,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15251537",
@@ -317,7 +342,8 @@
    "median_aud": 27888,
    "below_market_pct": 8.6,
    "comparables": 59,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15301308",
@@ -343,7 +369,8 @@
    "median_aud": 26990,
    "below_market_pct": 7.4,
    "comparables": 11,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15325966",
@@ -369,7 +396,8 @@
    "median_aud": 26990,
    "below_market_pct": 7.4,
    "comparables": 17,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15380636",
@@ -395,7 +423,8 @@
    "median_aud": 27990,
    "below_market_pct": 7.2,
    "comparables": 115,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15162431",
@@ -421,7 +450,8 @@
    "median_aud": 27990,
    "below_market_pct": 7.1,
    "comparables": 98,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15385510",
@@ -447,7 +477,8 @@
    "median_aud": 28990,
    "below_market_pct": 6.9,
    "comparables": 5,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15388426",
@@ -473,7 +504,8 @@
    "median_aud": 28969,
    "below_market_pct": 6.8,
    "comparables": 10,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15390287",
@@ -499,7 +531,8 @@
    "median_aud": 26990,
    "below_market_pct": 6.7,
    "comparables": 7,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15373659",
@@ -525,7 +558,8 @@
    "median_aud": 29990,
    "below_market_pct": 6.7,
    "comparables": 7,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15374391",
@@ -551,7 +585,8 @@
    "median_aud": 27839,
    "below_market_pct": 6.6,
    "comparables": 58,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15214369",
@@ -577,7 +612,8 @@
    "median_aud": 28730,
    "below_market_pct": 6.4,
    "comparables": 90,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15391099",
@@ -603,7 +639,8 @@
    "median_aud": 28730,
    "below_market_pct": 6.0,
    "comparables": 82,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15391016",
@@ -629,7 +666,8 @@
    "median_aud": 28720,
    "below_market_pct": 6.0,
    "comparables": 12,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15008849",
@@ -655,7 +693,8 @@
    "median_aud": 28730,
    "below_market_pct": 6.0,
    "comparables": 66,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15385391",
@@ -681,7 +720,8 @@
    "median_aud": 29244,
    "below_market_pct": 6.0,
    "comparables": 6,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15293016",
@@ -707,7 +747,8 @@
    "median_aud": 25490,
    "below_market_pct": 5.9,
    "comparables": 14,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15366322",
@@ -733,7 +774,8 @@
    "median_aud": 28670,
    "below_market_pct": 5.9,
    "comparables": 87,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15236778",
@@ -759,7 +801,8 @@
    "median_aud": 27490,
    "below_market_pct": 5.5,
    "comparables": 81,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15247327",
@@ -785,7 +828,8 @@
    "median_aud": 27888,
    "below_market_pct": 5.4,
    "comparables": 63,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15366971",
@@ -811,7 +855,8 @@
    "median_aud": 28240,
    "below_market_pct": 4.8,
    "comparables": 14,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15320396",
@@ -837,7 +882,8 @@
    "median_aud": 29496,
    "below_market_pct": 4.8,
    "comparables": 21,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15279385",
@@ -863,7 +909,8 @@
    "median_aud": 27790,
    "below_market_pct": 4.7,
    "comparables": 49,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15352199",
@@ -889,7 +936,8 @@
    "median_aud": 28244,
    "below_market_pct": 4.4,
    "comparables": 78,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15299665",
@@ -915,7 +963,8 @@
    "median_aud": 27998,
    "below_market_pct": 4.0,
    "comparables": 93,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15342915",
@@ -941,7 +990,8 @@
    "median_aud": 27990,
    "below_market_pct": 3.9,
    "comparables": 100,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15353551",
@@ -967,7 +1017,8 @@
    "median_aud": 26990,
    "below_market_pct": 3.7,
    "comparables": 7,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15389819",
@@ -993,7 +1044,8 @@
    "median_aud": 26990,
    "below_market_pct": 3.7,
    "comparables": 13,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15387235",
@@ -1019,7 +1071,8 @@
    "median_aud": 26990,
    "below_market_pct": 3.7,
    "comparables": 53,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15311174",
@@ -1045,7 +1098,8 @@
    "median_aud": 27990,
    "below_market_pct": 3.6,
    "comparables": 80,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15311024",
@@ -1071,7 +1125,8 @@
    "median_aud": 27888,
    "below_market_pct": 3.6,
    "comparables": 59,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15353648",
@@ -1097,7 +1152,8 @@
    "median_aud": 27990,
    "below_market_pct": 3.5,
    "comparables": 116,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15353900",
@@ -1123,7 +1179,8 @@
    "median_aud": 28880,
    "below_market_pct": 3.4,
    "comparables": 30,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15389499",
@@ -1149,7 +1206,8 @@
    "median_aud": 28990,
    "below_market_pct": 3.4,
    "comparables": 7,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15390191",
@@ -1175,7 +1233,8 @@
    "median_aud": 28950,
    "below_market_pct": 3.3,
    "comparables": 11,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15272198",
@@ -1201,7 +1260,8 @@
    "median_aud": 21184,
    "below_market_pct": 3.3,
    "comparables": 10,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-14994006",
@@ -1227,7 +1287,8 @@
    "median_aud": 28888,
    "below_market_pct": 3.1,
    "comparables": 62,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15192592",
@@ -1253,7 +1314,8 @@
    "median_aud": 28730,
    "below_market_pct": 2.9,
    "comparables": 82,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15226212",
@@ -1279,7 +1341,8 @@
    "median_aud": 28730,
    "below_market_pct": 2.6,
    "comparables": 90,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15199277",
@@ -1305,7 +1368,8 @@
    "median_aud": 28730,
    "below_market_pct": 2.6,
    "comparables": 82,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15035424",
@@ -1331,7 +1395,8 @@
    "median_aud": 21990,
    "below_market_pct": 2.3,
    "comparables": 7,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15385573",
@@ -1357,7 +1422,8 @@
    "median_aud": 27440,
    "below_market_pct": 2.0,
    "comparables": 12,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15383704",
@@ -1383,7 +1449,8 @@
    "median_aud": 27415,
    "below_market_pct": 1.9,
    "comparables": 82,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15378938",
@@ -1409,7 +1476,8 @@
    "median_aud": 23800,
    "below_market_pct": 1.7,
    "comparables": 5,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15355495",
@@ -1435,7 +1503,8 @@
    "median_aud": 29494,
    "below_market_pct": 1.7,
    "comparables": 8,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15283657",
@@ -1461,7 +1530,8 @@
    "median_aud": 28832,
    "below_market_pct": 1.2,
    "comparables": 42,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15384169",
@@ -1487,7 +1557,8 @@
    "median_aud": 27990,
    "below_market_pct": 0.7,
    "comparables": 87,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-14762154",
@@ -1513,7 +1584,8 @@
    "median_aud": 27990,
    "below_market_pct": 0.0,
    "comparables": 57,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15366644",
@@ -1539,7 +1611,8 @@
    "median_aud": 27990,
    "below_market_pct": 0.0,
    "comparables": 80,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15388570",
@@ -1565,7 +1638,8 @@
    "median_aud": 29990,
    "below_market_pct": 0.0,
    "comparables": 7,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15375018",
@@ -1591,7 +1665,8 @@
    "median_aud": 28990,
    "below_market_pct": 0.0,
    "comparables": 11,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15303954",
@@ -1617,7 +1692,8 @@
    "median_aud": 26938,
    "below_market_pct": -0.2,
    "comparables": 92,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15383517",
@@ -1643,7 +1719,8 @@
    "median_aud": 26888,
    "below_market_pct": -0.4,
    "comparables": 7,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15245946",
@@ -1669,7 +1746,8 @@
    "median_aud": 27888,
    "below_market_pct": -0.4,
    "comparables": 43,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15389977",
@@ -1695,7 +1773,8 @@
    "median_aud": 28832,
    "below_market_pct": -0.5,
    "comparables": 26,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15358388",
@@ -1721,7 +1800,8 @@
    "median_aud": 28612,
    "below_market_pct": -0.9,
    "comparables": 76,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15316027",
@@ -1747,7 +1827,8 @@
    "median_aud": 28555,
    "below_market_pct": -1.2,
    "comparables": 91,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15239478",
@@ -1773,7 +1854,8 @@
    "median_aud": 26990,
    "below_market_pct": -1.5,
    "comparables": 10,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15255870",
@@ -1799,7 +1881,8 @@
    "median_aud": 29540,
    "below_market_pct": -1.5,
    "comparables": 14,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15375457",
@@ -1825,7 +1908,8 @@
    "median_aud": 29499,
    "below_market_pct": -1.7,
    "comparables": 19,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15251063",
@@ -1851,7 +1935,8 @@
    "median_aud": 23390,
    "below_market_pct": -1.8,
    "comparables": 5,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15382162",
@@ -1877,7 +1962,8 @@
    "median_aud": 28491,
    "below_market_pct": -1.8,
    "comparables": 11,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15286576",
@@ -1903,7 +1989,8 @@
    "median_aud": 28470,
    "below_market_pct": -1.8,
    "comparables": 8,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15354108",
@@ -1929,7 +2016,8 @@
    "median_aud": 28470,
    "below_market_pct": -1.8,
    "comparables": 8,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15384201",
@@ -1955,7 +2043,8 @@
    "median_aud": 27998,
    "below_market_pct": -1.8,
    "comparables": 111,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15378710",
@@ -1981,7 +2070,8 @@
    "median_aud": 28490,
    "below_market_pct": -1.8,
    "comparables": 98,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15388537",
@@ -2007,7 +2097,8 @@
    "median_aud": 25980,
    "below_market_pct": -2.0,
    "comparables": 7,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15364479",
@@ -2033,7 +2124,8 @@
    "median_aud": 29387,
    "below_market_pct": -2.1,
    "comparables": 21,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15258075",
@@ -2059,7 +2151,8 @@
    "median_aud": 27340,
    "below_market_pct": -2.4,
    "comparables": 57,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15293977",
@@ -2085,7 +2178,8 @@
    "median_aud": 28612,
    "below_market_pct": -2.5,
    "comparables": 90,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-14847297",
@@ -2111,7 +2205,8 @@
    "median_aud": 23390,
    "below_market_pct": -2.6,
    "comparables": 5,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15203145",
@@ -2137,7 +2232,8 @@
    "median_aud": 27990,
    "below_market_pct": -2.9,
    "comparables": 104,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15392046",
@@ -2163,7 +2259,8 @@
    "median_aud": 25990,
    "below_market_pct": -3.1,
    "comparables": 9,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15276070",
@@ -2189,7 +2286,8 @@
    "median_aud": 27990,
    "below_market_pct": -3.2,
    "comparables": 69,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15240892",
@@ -2215,7 +2313,8 @@
    "median_aud": 27994,
    "below_market_pct": -3.2,
    "comparables": 78,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15351917",
@@ -2241,7 +2340,8 @@
    "median_aud": 28990,
    "below_market_pct": -3.4,
    "comparables": 49,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15329849",
@@ -2267,7 +2367,8 @@
    "median_aud": 28990,
    "below_market_pct": -3.4,
    "comparables": 9,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15068625",
@@ -2293,7 +2394,8 @@
    "median_aud": 21735,
    "below_market_pct": -3.4,
    "comparables": 6,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15389066",
@@ -2319,7 +2421,8 @@
    "median_aud": 27990,
    "below_market_pct": -3.6,
    "comparables": 98,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15392668",
@@ -2345,7 +2448,8 @@
    "median_aud": 26990,
    "below_market_pct": -3.7,
    "comparables": 90,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15367672",
@@ -2371,7 +2475,8 @@
    "median_aud": 26999,
    "below_market_pct": -3.7,
    "comparables": 83,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15388331",
@@ -2397,7 +2502,8 @@
    "median_aud": 28832,
    "below_market_pct": -3.9,
    "comparables": 78,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15348807",
@@ -2423,7 +2529,8 @@
    "median_aud": 27888,
    "below_market_pct": -4.0,
    "comparables": 33,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15351922",
@@ -2449,7 +2556,8 @@
    "median_aud": 27839,
    "below_market_pct": -4.1,
    "comparables": 52,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15382699",
@@ -2475,7 +2583,8 @@
    "median_aud": 27790,
    "below_market_pct": -4.3,
    "comparables": 51,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15334040",
@@ -2501,7 +2610,8 @@
    "median_aud": 27790,
    "below_market_pct": -4.3,
    "comparables": 37,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15376764",
@@ -2527,7 +2637,8 @@
    "median_aud": 28491,
    "below_market_pct": -4.5,
    "comparables": 11,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15352383",
@@ -2553,7 +2664,8 @@
    "median_aud": 28522,
    "below_market_pct": -5.1,
    "comparables": 86,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15384495",
@@ -2579,7 +2691,8 @@
    "median_aud": 28522,
    "below_market_pct": -5.1,
    "comparables": 72,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15391962",
@@ -2605,7 +2718,8 @@
    "median_aud": 28522,
    "below_market_pct": -5.2,
    "comparables": 78,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15299591",
@@ -2631,7 +2745,8 @@
    "median_aud": 20888,
    "below_market_pct": -5.3,
    "comparables": 9,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15378472",
@@ -2657,7 +2772,8 @@
    "median_aud": 27998,
    "below_market_pct": -5.3,
    "comparables": 103,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15340474",
@@ -2683,7 +2799,8 @@
    "median_aud": 27990,
    "below_market_pct": -5.3,
    "comparables": 80,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15316923",
@@ -2709,7 +2826,8 @@
    "median_aud": 28490,
    "below_market_pct": -5.3,
    "comparables": 49,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15306583",
@@ -2735,7 +2853,8 @@
    "median_aud": 27990,
    "below_market_pct": -5.4,
    "comparables": 68,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15385459",
@@ -2761,7 +2880,8 @@
    "median_aud": 26990,
    "below_market_pct": -5.6,
    "comparables": 13,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15331958",
@@ -2787,7 +2907,8 @@
    "median_aud": 27440,
    "below_market_pct": -5.7,
    "comparables": 10,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15218323",
@@ -2813,7 +2934,8 @@
    "median_aud": 19740,
    "below_market_pct": -5.8,
    "comparables": 14,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15251341",
@@ -2839,7 +2961,8 @@
    "median_aud": 27994,
    "below_market_pct": -7.1,
    "comparables": 112,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15390385",
@@ -2865,7 +2988,8 @@
    "median_aud": 27990,
    "below_market_pct": -7.1,
    "comparables": 75,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15334034",
@@ -2891,7 +3015,8 @@
    "median_aud": 27998,
    "below_market_pct": -7.1,
    "comparables": 81,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15362427",
@@ -2917,7 +3042,8 @@
    "median_aud": 27990,
    "below_market_pct": -7.1,
    "comparables": 111,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15357743",
@@ -2943,7 +3069,8 @@
    "median_aud": 26990,
    "below_market_pct": -7.3,
    "comparables": 15,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15323384",
@@ -2969,7 +3096,8 @@
    "median_aud": 26990,
    "below_market_pct": -7.4,
    "comparables": 12,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15378290",
@@ -2995,7 +3123,8 @@
    "median_aud": 27888,
    "below_market_pct": -7.5,
    "comparables": 43,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15295376",
@@ -3021,7 +3150,8 @@
    "median_aud": 25090,
    "below_market_pct": -7.6,
    "comparables": 14,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15324350",
@@ -3047,7 +3177,8 @@
    "median_aud": 27884,
    "below_market_pct": -7.6,
    "comparables": 124,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15363302",
@@ -3073,7 +3204,8 @@
    "median_aud": 27790,
    "below_market_pct": -7.9,
    "comparables": 37,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15379563",
@@ -3099,7 +3231,8 @@
    "median_aud": 24990,
    "below_market_pct": -8.0,
    "comparables": 13,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15344861",
@@ -3125,7 +3258,8 @@
    "median_aud": 26889,
    "below_market_pct": -9.2,
    "comparables": 58,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15308231",
@@ -3151,7 +3285,8 @@
    "median_aud": 24490,
    "below_market_pct": -10.2,
    "comparables": 12,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15378243",
@@ -3177,7 +3312,8 @@
    "median_aud": 27189,
    "below_market_pct": -10.3,
    "comparables": 10,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15282333",
@@ -3203,7 +3339,8 @@
    "median_aud": 26990,
    "below_market_pct": -10.3,
    "comparables": 12,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15318180",
@@ -3229,7 +3366,8 @@
    "median_aud": 26990,
    "below_market_pct": -10.7,
    "comparables": 93,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15322603",
@@ -3255,7 +3393,8 @@
    "median_aud": 26990,
    "below_market_pct": -11.0,
    "comparables": 13,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15384693",
@@ -3281,7 +3420,8 @@
    "median_aud": 26990,
    "below_market_pct": -11.1,
    "comparables": 11,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15326825",
@@ -3307,7 +3447,8 @@
    "median_aud": 26990,
    "below_market_pct": -11.1,
    "comparables": 8,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15292638",
@@ -3333,7 +3474,8 @@
    "median_aud": 26990,
    "below_market_pct": -11.1,
    "comparables": 8,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15033940",
@@ -3359,7 +3501,8 @@
    "median_aud": 26990,
    "below_market_pct": -11.1,
    "comparables": 11,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15299414",
@@ -3385,7 +3528,8 @@
    "median_aud": 24990,
    "below_market_pct": -11.6,
    "comparables": 11,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15387863",
@@ -3411,7 +3555,8 @@
    "median_aud": 26240,
    "below_market_pct": -14.3,
    "comparables": 6,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15079651",
@@ -3437,7 +3582,8 @@
    "median_aud": 21184,
    "below_market_pct": -15.6,
    "comparables": 10,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15067462",
@@ -3463,7 +3609,8 @@
    "median_aud": 24995,
    "below_market_pct": -18.0,
    "comparables": 3,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15214368",
@@ -3489,7 +3636,8 @@
    "median_aud": 20888,
    "below_market_pct": -23.9,
    "comparables": 11,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15330623",
@@ -3515,7 +3663,8 @@
    "median_aud": 22690,
    "below_market_pct": -32.2,
    "comparables": 6,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15085270",
@@ -3541,7 +3690,8 @@
    "median_aud": null,
    "below_market_pct": null,
    "comparables": 2,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15340594",
@@ -3567,7 +3717,8 @@
    "median_aud": null,
    "below_market_pct": null,
    "comparables": 1,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15363214",
@@ -3593,7 +3744,8 @@
    "median_aud": null,
    "below_market_pct": null,
    "comparables": 1,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15389033",
@@ -3619,7 +3771,8 @@
    "median_aud": null,
    "below_market_pct": null,
    "comparables": 0,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15069884",
@@ -3647,7 +3800,8 @@
    "comparables": 0,
    "flags": [
     "verify"
-   ]
+   ],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-14958040",
@@ -3673,7 +3827,8 @@
    "median_aud": null,
    "below_market_pct": null,
    "comparables": 2,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15360086",
@@ -3699,7 +3854,8 @@
    "median_aud": null,
    "below_market_pct": null,
    "comparables": 0,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15350447",
@@ -3725,7 +3881,8 @@
    "median_aud": null,
    "below_market_pct": null,
    "comparables": 0,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15079654",
@@ -3751,7 +3908,8 @@
    "median_aud": null,
    "below_market_pct": null,
    "comparables": 2,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   },
   {
    "id": "cg-15079656",
@@ -3777,7 +3935,8 @@
    "median_aud": null,
    "below_market_pct": null,
    "comparables": 2,
-   "flags": []
+   "flags": [],
+   "last_seen": "2026-11-06"
   }
  ]
 }
