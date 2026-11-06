@@ -26,6 +26,25 @@ def norm_body(s):
     return None
 
 
+def norm_fuel(s):
+    """Raw dealer fuel text -> Petrol | Hybrid | Plug-in hybrid | Diesel | Electric | None."""
+    t = (s or '').lower()
+    if not t.strip():
+        return None
+    if 'phev' in t or 'plug' in t:
+        return 'Plug-in hybrid'
+    petrolish = any(w in t for w in ('petrol', 'unleaded', 'ulp'))
+    if 'hybrid' in t or ('electric' in t and (petrolish or 'diesel' in t)):
+        return 'Hybrid'
+    if 'electric' in t or t.strip() == 'ev':
+        return 'Electric'
+    if 'diesel' in t:
+        return 'Diesel'
+    if petrolish:
+        return 'Petrol'
+    return None
+
+
 def norm_trans(s):
     s = (s or '').lower()
     if 'man' in s:
@@ -91,7 +110,7 @@ def listing_from_carssr(d, src, url):
         'price_aud': price, 'price_type': d.get('price_type'),
         'body': norm_body(d.get('simple_body') or d.get('body')),
         'transmission': norm_trans(d.get('simple_transmission')),
-        'fuel': d.get('simple_fuel') or d.get('fuel'), 'colour': d.get('colour'),
+        'fuel': norm_fuel(d.get('simple_fuel') or d.get('fuel')), 'colour': d.get('colour'),
         'state': addr.get('state') or src.get('state'), 'suburb': addr.get('city') or src.get('town'),
         'postcode': str(addr.get('postcode') or src.get('postcode') or ''),
         'source': src['name'], 'seller_type': 'dealer', 'url': url, 'image_url': img,
@@ -145,7 +164,7 @@ def listing_from_imotor(h, src):
         'make': h.get('make'), 'model': h.get('model'), 'variant': h.get('series') or None,
         'year': num(h.get('year')), 'km': num(h.get('odometer')), 'price_aud': price,
         'price_type': h.get('priceQualifier'), 'body': norm_body(h.get('body')),
-        'transmission': norm_trans(h.get('transmission')), 'fuel': h.get('fuelType'), 'colour': h.get('colour'),
+        'transmission': norm_trans(h.get('transmission')), 'fuel': norm_fuel(h.get('fuelType')), 'colour': h.get('colour'),
         'state': src.get('state'), 'suburb': loc.get('suburb') or loc.get('name') or src.get('town'),
         'postcode': str(loc.get('postcode') or src.get('postcode') or ''),
         'source': src['name'], 'seller_type': 'dealer',

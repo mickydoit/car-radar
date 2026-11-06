@@ -57,6 +57,12 @@ class Normalisers(unittest.TestCase):
         self.assertEqual(sweep.norm_body('SUV'), 'suv')
         self.assertIsNone(sweep.norm_body(''))
 
+    def test_fuel(self):
+        for raw, want in [('Petrol', 'Petrol'), ('Petrol - Unleaded ULP', 'Petrol'), ('Hybrid with Petrol - Premium ULP', 'Hybrid'),
+                          ('Hybrid', 'Hybrid'), ('PHEV', 'Plug-in hybrid'), ('PREMIUM UNLEADED/ELECTRIC', 'Hybrid'),
+                          ('Electric', 'Electric'), ('Diesel', 'Diesel'), ('', None), (None, None)]:
+            self.assertEqual(sweep.norm_fuel(raw), want, raw)
+
     def test_trans(self):
         self.assertEqual(sweep.norm_trans('6 Sp Manual'), 'Manual')
         self.assertEqual(sweep.norm_trans('Automatic'), 'Auto')

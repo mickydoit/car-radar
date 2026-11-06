@@ -18,7 +18,7 @@ Each run researches the whole focus from scratch — fresh results pages for eve
 First fetch the owner's saved search from Supabase (details in `data/backend.json`):
 `curl -s "<supabase_url>/rest/v1/watch_radar_settings?id=eq.<setting_id>&select=data" -H "apikey: <supabase_key>"`.
 If a row comes back, write its `data` object to `data/focus.json` (pretty-printed) and use it; commit it with the run. If there is no row or the request fails, use the `data/focus.json` already in the repo.
-Focus fields: `makes`, `models` `{make:[models]}`, `body_types`, `year_min`, `year_max`, `km_min`, `km_max`, `price_min_aud`, `price_max_aud`, `near` (suburb or postcode) or `near_latlng` [lat,lng], `radius_km`, `seller_type`, `transmission`, `state`. Null or empty means no limit.
+Focus fields: `makes`, `models` `{make:[models]}`, `body_types`, `year_min`, `year_max`, `km_min`, `km_max`, `price_min_aud`, `price_max_aud`, `near` (suburb or postcode) or `near_latlng` [lat,lng], `radius_km`, `seller_type`, `transmission`, `fuel` (list of Petrol|Hybrid|Plug-in hybrid|Diesel|Electric), `state`. Null or empty means no limit.
 Publish EVERY listing that satisfies the limits and whose page you could verify, not only the below-market ones: the site is a browsing tool and ranks deals first itself. Each gets `median_aud` / `below_market_pct` when there are enough comparables (null otherwise). Research ONLY the focus makes/body types; aim the search at the `near` area (its state first) when set.
 
 Read `data/focus.json`: `makes` (list), `models` (optional `{make: [models]}`), `body_types` (list of suv|ute|hatch|sedan|wagon|van|coupe|convertible — empty = all), `year_min`, `price_max_aud`, `km_max`, `near` (suburb or postcode) + `radius_km`. Only research what is in focus. When `near` is set, search listings located in that state first and prefer those within the radius. If makes is empty, use: Toyota, Mazda, Hyundai, Ford, Subaru, Volkswagen, Kia, Mitsubishi.
@@ -32,7 +32,7 @@ Write `coverage` into latest.json: `{"sources_reached": n, "sources_total": m, "
 
 ## 3. Rules
 - Every published listing needs a real listing URL. Search-result or brand overview pages are not listing URLs. Snippets without one stay out of the output.
-- Record: id, make, model, variant, year, km (number), price_aud (number, drive-away if stated, else asking), body (suv|ute|hatch|sedan|wagon|van|coupe|convertible), state, suburb, postcode (4 digits when known), source, seller_type (dealer|private|auction), transmission, url, first_seen_at (ISO date), status (active|sold|removed).
+- Record: id, make, model, variant, year, km (number), price_aud (number, drive-away if stated, else asking), body (suv|ute|hatch|sedan|wagon|van|coupe|convertible), state, suburb, postcode (4 digits when known), source, seller_type (dealer|private|auction), transmission, fuel (Petrol|Hybrid|Plug-in hybrid|Diesel|Electric; null if the listing does not say, never guess), url, first_seen_at (ISO date), status (active|sold|removed).
 - JSON numbers must be numbers, dates ISO.
 - Page-check (re-fetch) only the listings that come out 3% or more below market, plus up to 10 others; sold or 404 means exclude. Publish every other in-scope listing straight from the results pages with `availability: "listed"` (not re-checked) — the budget is for breadth, not for opening every page.
 - Use the make names exactly as they appear in focus.json (e.g. `GWM Haval`, never `GWM` or `Haval`), so the site groups them correctly.
