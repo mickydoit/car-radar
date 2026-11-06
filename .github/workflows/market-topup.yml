@@ -2,9 +2,9 @@ name: market top-up
 # Small, polite CarsGuide crawl every 4 hours into data/market-cache.json (no Claude usage).
 # The 08:00 Brisbane routine assembles latest.json from this cache instead of crawling in one burst,
 # which is what triggered the Peakhour challenge pages (HTTP 403) on ~45% of requests.
+# SCHEDULE DISABLED 6 Nov 2026: GitHub runner addresses are challenged on 100% of requests (0/12 test run),
+# so the top-up runs from a residential or Claude-cloud host instead. Manual dispatch kept for tests.
 on:
-  schedule:
-    - cron: '20 */4 * * *'      # 00:20, 04:20 … UTC = 10:20, 14:20 … Brisbane
   workflow_dispatch:
     inputs:
       budget:
