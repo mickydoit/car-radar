@@ -58,7 +58,7 @@ a{color:inherit}
 </style>
 </head>
 <body>
-<div class="demo" id="demo" hidden>Demo data. The daily research run has not published real listings yet</div>
+<div class="demo" id="demo" hidden>Demo data. The research run has not published real listings yet</div>
 <header><h1>Car Radar</h1><p class="sub" id="upd"></p>
 <div class="cov" id="cov" hidden></div>
 <p class="run" id="run"><i></i><span></span></p>
@@ -66,8 +66,8 @@ a{color:inherit}
 <main>
 <aside>
 <div class="focus" id="focusBox">
- <div class="meta" id="focusNow">Daily search: loading…</div>
- <button class="save" id="saveBtn" type="button">Save these filters as the daily search</button>
+ <div class="meta" id="focusNow">Saved search: loading…</div>
+ <button class="save" id="saveBtn" type="button">Save these filters as the search</button>
  <div id="pwRow" hidden><input id="pw" type="password" placeholder="Password" autocomplete="current-password"><button class="chip" id="pwGo" type="button">Save</button></div>
  <div class="meta" id="saveMsg"></div>
 </div>
@@ -90,7 +90,7 @@ a{color:inherit}
 <label>Gearbox</label><select id="trans"><option value="">Any</option><option>Auto</option><option>Manual</option></select>
 <div class="chips" style="margin-top:14px"><button class="chip" id="deals" type="button">Below market only (3%+)</button></div>
 <button class="reset" id="reset">Reset filters</button>
-<div style="margin-top:14px"><button class="save" type="button" onclick="document.getElementById('saveBtn').click();document.getElementById('focusBox').scrollIntoView({behavior:'smooth'})">Save these filters as the daily search</button></div>
+<div style="margin-top:14px"><button class="save" type="button" onclick="document.getElementById('saveBtn').click();document.getElementById('focusBox').scrollIntoView({behavior:'smooth'})">Save these filters as the search</button></div>
 </aside>
 <section>
 <div class="bar"><b id="count"></b><button class="rbtn" id="resetTop" type="button">Reset filters</button><span id="med" class="meta"></span>
@@ -217,9 +217,9 @@ function runStat(){const el=$('run'),tx=el.querySelector('span');
  const took=num(ST&&ST.last_duration_min);
  const h=(Date.now()-LAST)/36e5;
  el.className='run '+(h<26?'fresh':h<50?'stale':'old');
- const paused=ST&&ST.next==='paused';
+ const paused=ST&&(ST.next==='paused'||ST.next==='on request');
  if(paused)el.className='run';
- tx.textContent='Last run '+ago(LAST)+(took?` · took ${Math.round(took)} min`:'')+(paused?' · daily run paused':(h>=26?' · overdue':'')+' · next '+((ST&&ST.next)||'about 08:00 Brisbane'))}
+ tx.textContent='Last run '+ago(LAST)+(took?` · took ${Math.round(took)} min`:'')+(paused?' · runs on request':(h>=26?' · overdue':'')+' · next '+((ST&&ST.next)||'on request'))}
 function pollStatus(){fetch('data/status.json?t='+Date.now(),{cache:'no-store'}).then(r=>r.ok?r.json():null).then(j=>{ST=j&&typeof j==='object'?j:null;runStat()}).catch(()=>{})}
 setInterval(runStat,30000);setInterval(()=>{pollStatus();if(READY)loadData(false)},60000);pollStatus();
 document.addEventListener('visibilitychange',()=>{if(!document.hidden&&READY){pollStatus();loadData(false)}});
@@ -236,9 +236,9 @@ $('brackets').onclick=e=>{const b=e.target.closest('button');if(!b)return;const 
  const on=(num($('pMin').value)||0)===a&&(num($('pMax').value)||0)===z;
  $('pMin').value=on?'':(a||'');$('pMax').value=on?'':(z||'');render()};
 $('deals').onclick=()=>{$('deals').classList.toggle('on');render()};
-// ---- daily search (focus) save/load via Supabase ----
+// ---- saved search (focus) save/load via Supabase ----
 let BE=null;
-fetch('data/backend.json').then(r=>r.json()).then(b=>{BE=b;loadFocusNow()}).catch(()=>{$('focusNow').textContent='Daily search: backend not configured'});
+fetch('data/backend.json').then(r=>r.json()).then(b=>{BE=b;loadFocusNow()}).catch(()=>{$('focusNow').textContent='Saved search: backend not configured'});
 function focusFromFilters(){const f=state();const models={};MODELS.forEach(k=>{const [m,n]=k.split('|');(models[m]=models[m]||[]).push(n)});
  return {makes:MAKES.size?[...MAKES].sort():(FOCUS.makes||[]),models,body_types:[...BODIES].sort(),fuel:[...FUELS].sort(),
   year_min:f.yFrom?+f.yFrom:null,year_max:f.yTo?+f.yTo:null,km_min:f.kmMin?+f.kmMin:null,km_max:f.kmMax?+f.kmMax:null,
@@ -257,8 +257,8 @@ function summarise(x){if(!x)return 'nothing saved yet';const a=[];
  return a.join(' · ')}
 async function loadFocusNow(){try{const r=await fetch(`${BE.supabase_url}/rest/v1/watch_radar_settings?id=eq.${BE.setting_id}&select=data,updated_at`,{headers:{apikey:BE.supabase_key}});
  const rows=await r.json();const row=rows&&rows[0];
- $('focusNow').textContent='Daily search: '+(row?summarise(row.data)+' · saved '+new Date(row.updated_at).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short',timeZone:'Australia/Brisbane'}):'nothing saved yet (using the repo default: '+summarise(FOCUS)+')')}
- catch(e){$('focusNow').textContent='Daily search: could not read saved search'}}
+ $('focusNow').textContent='Saved search: '+(row?summarise(row.data)+' · saved '+new Date(row.updated_at).toLocaleString('en-AU',{dateStyle:'medium',timeStyle:'short',timeZone:'Australia/Brisbane'}):'nothing saved yet (using the repo default: '+summarise(FOCUS)+')')}
+ catch(e){$('focusNow').textContent='Saved search: could not read saved search'}}
 $('saveBtn').onclick=()=>{const pw=localStorage.getItem('car-radar-pw');if(pw){doSave(pw)}else{$('pwRow').hidden=false;$('pw').focus()}};
 $('pwGo').onclick=()=>doSave($('pw').value);$('pw').addEventListener('keydown',e=>{if(e.key==='Enter')doSave($('pw').value)});
 async function doSave(pw){if(!BE){$('saveMsg').textContent='Backend not configured.';return}if(!pw){$('saveMsg').textContent='Enter the password.';return}

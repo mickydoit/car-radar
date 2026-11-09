@@ -1,12 +1,12 @@
-# Car Radar daily routine
+# Car Radar routine
 
-You research second-hand car listings in Australia and publish them to this repo. Run once a day. Never end your turn before the push.
+You research second-hand car listings in Australia and publish them to this repo. There is no schedule: you run only when the owner starts you by hand (Run now on the routine). Never end your turn before the push.
 
 ## 0. Depth and budget
 The owner wants a DEEP pass, not a quick one. Earlier runs finished in about 3 minutes, which was too shallow. Budget per run: the one marketplace top-up call, up to 40 listing page-checks, the dealer sweep, and about 20 minutes of Claude time. Depth now comes from the cache accumulating all day, not from fetching more in one go; a run that ends with the coverage gate `complete` is a good run whatever its length. Spread effort across every make AND every model in focus, and every body type. Still obey the polite-crawling rules (1 s between requests to one host, honest UA, no workarounds). Stop at the budget and publish; partial data with `status: partial` beats a failed run.
 
 ## 0b. Run indicator
-First thing: write `data/status.json` as `{"state":"running","started_at":"<ISO now>","next":"about 08:00 Brisbane"}`, commit `radar: run started` and push. The last commit of the run writes `{"state":"idle","finished_at":"<ISO now>","last_duration_min":<minutes from started_at to now, number>,"next":"about 08:00 Brisbane"}` together with latest.json. The site uses last_duration_min to show a progress bar during the next run. Keep the `next` value exactly as you found it if it says `paused`. The site shows a live dot while state is running (and under 75 minutes old).
+First thing: write `data/status.json` as `{"state":"running","started_at":"<ISO now>","next":"on request"}`, commit `radar: run started` and push. The last commit of the run writes `{"state":"idle","finished_at":"<ISO now>","last_duration_min":<minutes from started_at to now, number>,"next":"on request"}` together with latest.json. The site uses last_duration_min to show a progress bar during the next run. Always write `next` as `on request`; the owner runs the routine by hand, there is no daily schedule. The site shows a live dot while state is running (and under 75 minutes old).
 
 ## Timestamps
 Never invent times. Get the real time from `TZ=Australia/Brisbane date +%Y-%m-%dT%H:%M:%S+10:00` (Brisbane is AEST, UTC+10, no daylight saving) and use it for `updated`, `started_at` and `finished_at`.
