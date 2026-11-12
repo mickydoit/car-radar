@@ -1,72 +1,72 @@
 {
 "urls": {
 "https://www.carsguide.com.au/buy-a-car/used/gwm/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 45,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 43,
 "last_page": 2
 },
 "https://www.carsguide.com.au/buy-a-car/used/gwm/hybrid/under-$30000?page=2": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 403,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 45,
 "last_page": 2
 },
 "https://www.carsguide.com.au/buy-a-car/used/honda/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 403,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 86,
 "last_page": 4
 },
 "https://www.carsguide.com.au/buy-a-car/used/honda/hybrid/under-$30000?page=2": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 86,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 84,
 "last_page": 4
 },
 "https://www.carsguide.com.au/buy-a-car/used/honda/hybrid/under-$30000?page=3": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 86,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 84,
 "last_page": 4
 },
 "https://www.carsguide.com.au/buy-a-car/used/honda/hybrid/under-$30000?page=4": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 86,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 84,
 "last_page": 4
 },
 "https://www.carsguide.com.au/buy-a-car/used/hyundai/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
 "total": 19,
 "last_page": 1
 },
 "https://www.carsguide.com.au/buy-a-car/used/kia/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 403,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 27,
 "last_page": 2
 },
 "https://www.carsguide.com.au/buy-a-car/used/kia/hybrid/under-$30000?page=2": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
 "total": 27,
 "last_page": 2
 },
 "https://www.carsguide.com.au/buy-a-car/used/mazda/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 403,
-"last_ok": "2026-11-09T16:13:09.795134+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 200,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
 "total": 16,
 "last_page": 1
 },
@@ -78,120 +78,120 @@
 "last_page": 29
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/act/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
 "total": 14,
 "last_page": 1
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/nsw/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 192,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 196,
 "last_page": 8
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/nsw/hybrid/under-$30000?page=2": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 192,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 196,
 "last_page": 8
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/nsw/hybrid/under-$30000?page=3": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 192,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 196,
 "last_page": 8
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/nsw/hybrid/under-$30000?page=4": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 192,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 196,
 "last_page": 8
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/nsw/hybrid/under-$30000?page=5": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 192,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 196,
 "last_page": 8
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/nsw/hybrid/under-$30000?page=6": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 192,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 196,
 "last_page": 8
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/nsw/hybrid/under-$30000?page=7": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 403,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 192,
 "last_page": 8
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/nsw/hybrid/under-$30000?page=8": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
-"total": 192,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 196,
 "last_page": 8
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/nt/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
 "total": 3,
 "last_page": 1
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/qld/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
+"last_try": "2026-11-12T10:10:31.163733+00:00",
 "last_code": 200,
-"last_ok": "2026-11-11T10:10:19.359067+00:00",
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
 "total": 124,
 "last_page": 5
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/qld/hybrid/under-$30000?page=2": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 403,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 124,
 "last_page": 5
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/qld/hybrid/under-$30000?page=3": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 403,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 124,
 "last_page": 5
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/qld/hybrid/under-$30000?page=4": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 124,
 "last_page": 5
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/qld/hybrid/under-$30000?page=5": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 124,
 "last_page": 5
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/sa/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 49,
 "last_page": 2
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/sa/hybrid/under-$30000?page=2": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 49,
 "last_page": 2
@@ -204,101 +204,101 @@
 "last_page": 3
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/tas/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 13,
 "last_page": 1
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/vic/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 182,
 "last_page": 7
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/vic/hybrid/under-$30000?page=2": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 403,
-"last_ok": "2026-11-08T22:09:50.549573+00:00",
-"total": 181,
-"last_page": 7
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 200,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 188,
+"last_page": 8
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/vic/hybrid/under-$30000?page=3": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 182,
 "last_page": 7
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/vic/hybrid/under-$30000?page=4": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 182,
 "last_page": 7
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/vic/hybrid/under-$30000?page=5": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 403,
-"last_ok": "2026-11-08T22:09:50.549573+00:00",
-"total": 181,
-"last_page": 7
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 200,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 188,
+"last_page": 8
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/vic/hybrid/under-$30000?page=6": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 182,
 "last_page": 7
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/vic/hybrid/under-$30000?page=7": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 182,
 "last_page": 7
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/wa/hybrid/under-$30000": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 146,
 "last_page": 6
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/wa/hybrid/under-$30000?page=2": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 146,
 "last_page": 6
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/wa/hybrid/under-$30000?page=3": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 146,
 "last_page": 6
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/wa/hybrid/under-$30000?page=4": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 146,
 "last_page": 6
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/wa/hybrid/under-$30000?page=5": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 200,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 0,
 "last_ok": "2026-11-11T10:10:19.359067+00:00",
 "total": 146,
 "last_page": 6
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/wa/hybrid/under-$30000?page=6": {
-"last_try": "2026-11-11T10:10:19.359067+00:00",
-"last_code": 403,
-"last_ok": "2026-11-09T02:09:31.546140+00:00",
-"total": 147,
+"last_try": "2026-11-12T10:10:31.163733+00:00",
+"last_code": 200,
+"last_ok": "2026-11-12T10:10:31.163733+00:00",
+"total": 145,
 "last_page": 6
 },
 "https://www.carsguide.com.au/buy-a-car/used/toyota/nsw/hybrid/under-$30000?page=9": {
@@ -360,7 +360,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/75454942224971/15309331/2022_gwm_haval_h6_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15338360": {
@@ -380,10 +380,10 @@
 "transmission": null,
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15338360/gwm/haval-h6/qld/kedron/suv",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-01/82929605280971/15338360/2022_gwm_haval_h6_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/87630297544971/15338360/2022_gwm_haval_h6_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15286576": {
@@ -406,7 +406,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-26/59228575830971/15286576/2025_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15331095": {
@@ -429,7 +429,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-07/18995565431971/15331095/2022_gwm_haval_h6_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15366971": {
@@ -475,7 +475,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-29/25693514897871/15288102/2022_gwm_b01_h6_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15392046": {
@@ -498,7 +498,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/86616189293971/15392046/2024_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15382162": {
@@ -521,7 +521,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/73724031683971/15382162/2025_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15383517": {
@@ -544,7 +544,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-31/16002940143971/15383517/2022_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15384693": {
@@ -567,7 +567,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/02396670853971/15384693/2024_gwm_h6_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15332726": {
@@ -590,7 +590,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/74525952834971/15332726/2022_gwm_haval_h6_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15390191": {
@@ -613,7 +613,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-04/21670735773971/15390191/2025_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15303291": {
@@ -623,7 +623,7 @@
 "variant": "Lux Hybrid",
 "year": 2024,
 "km": 68420,
-"price_aud": 26990,
+"price_aud": 25990,
 "body": "suv",
 "state": "WA",
 "suburb": "Saint James",
@@ -636,7 +636,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/09117710423971/15303291/2024_gwm_haval_h6_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15188387": {
@@ -678,11 +678,11 @@
 "seller_type": "dealer",
 "transmission": null,
 "fuel": "Hybrid",
-"url": "https://www.carsguide.com.au/car/15385510/gwm/haval-h6/qld/bundamba/suv",
+"url": "https://www.carsguide.com.au/car/15385510/gwm/haval-h6/suv",
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/40634402953971/15385510/2024_gwm_haval_h6_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15385459": {
@@ -728,7 +728,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-27/41081222803971/15376508/2022_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15353551": {
@@ -820,7 +820,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/68285811224971/15309755/2022_gwm_haval_h6_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15391016": {
@@ -843,7 +843,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/16863220004971/15391016/2025_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15357743": {
@@ -866,7 +866,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/59047173323971/15357743/2024_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15322603": {
@@ -912,7 +912,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/31044811224971/15309333/2022_gwm_haval_h6_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15331958": {
@@ -981,7 +981,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-04/15734631773971/15388426/2026_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15362286": {
@@ -1280,7 +1280,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/36180694793971/15389819/2023_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15391361": {
@@ -1349,7 +1349,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-08/32954212388871/15302130/2016_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15272198": {
@@ -1372,7 +1372,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-20/19967944817871/15272198/2020_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15270306": {
@@ -1441,7 +1441,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-08/00042281588871/15303174/2018_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15303173": {
@@ -1464,7 +1464,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-08/18130181588871/15303173/2018_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15299591": {
@@ -1579,7 +1579,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-05-26/81071091679771/15095142/2016_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15377571": {
@@ -1717,7 +1717,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-06-18/59833978671871/15025650/2016_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15127508": {
@@ -1740,7 +1740,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-05/97492959758871/15127508/2017_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15127513": {
@@ -1763,7 +1763,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-17/12898174596871/15127513/2020_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15025659": {
@@ -1809,7 +1809,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-17/88405764596871/15085515/2018_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-14959706": {
@@ -1878,7 +1878,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-07-16/64178999614871/14966685/2016_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15191926": {
@@ -1898,10 +1898,10 @@
 "transmission": "Auto",
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15191926/honda/vezel/nsw/windsor/suv",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-07-01/85078022882871/15191926/2015_honda_vezel_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/19617124444971/15191926/2015_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15139288": {
@@ -2131,7 +2131,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-05-14/88564696378771/15111498/2016_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15218323": {
@@ -2269,7 +2269,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-17/75372374596871/15051486/2020_honda_fit_shuttle_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15150846": {
@@ -2325,7 +2325,7 @@
 "variant": "HYBRID HONDA SENSING",
 "year": 2016,
 "km": 145172,
-"price_aud": 19995,
+"price_aud": 17995,
 "body": null,
 "state": "VIC",
 "suburb": "Maidstone",
@@ -2338,7 +2338,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-18/48017531407871/15225268/2016_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15150844": {
@@ -2384,7 +2384,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/26929279393971/15376718/2018_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15197850": {
@@ -2407,7 +2407,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-07-07/14203860143871/15197850/2016_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15197782": {
@@ -2430,7 +2430,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-07-28/08014269325871/15197782/2020_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15212599": {
@@ -2453,7 +2453,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-15/25433556876871/15212599/2017_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15156832": {
@@ -2476,7 +2476,7 @@
 "image_url": null,
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15244451": {
@@ -2499,7 +2499,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-03/96326732375871/15244451/2017_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15244452": {
@@ -2522,7 +2522,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-26/22681196277871/15244452/2016_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15376720": {
@@ -2545,7 +2545,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/29540512863971/15376720/2018_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15303470": {
@@ -2568,7 +2568,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-08/72599937688871/15303470/2020_honda_shuttle_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15376715": {
@@ -2591,7 +2591,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/50004412863971/15376715/2016_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15376746": {
@@ -2614,7 +2614,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/71393512863971/15376746/2021_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15262618": {
@@ -2637,7 +2637,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-22/46092473600971/15262618/2016_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15289747": {
@@ -2683,7 +2683,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-28/00921152813971/15213244/2015_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15159577": {
@@ -2706,7 +2706,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-24/62731290357871/15159577/2019_honda_freed_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15078553": {
@@ -2729,7 +2729,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-03/75948105448871/15078553/2018_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15117544": {
@@ -2752,7 +2752,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-11/03139889246871/15117544/2020_honda_freed_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15117546": {
@@ -2775,7 +2775,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-17/86985353396871/15117546/2020_honda_freed_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15213247": {
@@ -2798,7 +2798,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-26/51418782277871/15213247/2014_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15213252": {
@@ -2821,7 +2821,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-05/14984972421971/15213252/2024_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15213241": {
@@ -2844,7 +2844,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-14/02844963539871/15213241/2018_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15213236": {
@@ -2867,7 +2867,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-01/05284065980971/15213236/2017_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15213253": {
@@ -2890,7 +2890,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-06/26444351521971/15213253/2017_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15158329": {
@@ -2913,7 +2913,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-03/91348615448871/15158329/2018_honda_shuttle_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15213245": {
@@ -2936,7 +2936,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-05/65578762421971/15213245/2015_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15150526": {
@@ -2959,7 +2959,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-01/01152165980971/15150526/2019_honda_shuttle_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15183598": {
@@ -2982,7 +2982,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-14/20988977666871/15183598/2017_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15218398": {
@@ -3005,7 +3005,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-07-18/89019769334871/15218398/2007_honda_civic_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15174886": {
@@ -3028,7 +3028,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-06-22/48125309012871/15174886/2018_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15315982": {
@@ -3051,7 +3051,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-16/93884902559871/15315982/2022_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15294520": {
@@ -3097,7 +3097,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/89017370473971/15388262/2021_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15280964": {
@@ -3120,7 +3120,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-21/17416327899871/15280964/2020_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15380484": {
@@ -3143,7 +3143,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/90272121963971/15380484/2018_honda_vezel_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15384993": {
@@ -3166,7 +3166,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/51155563853971/15384993/2019_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15381700": {
@@ -3189,7 +3189,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-30/66459225233971/15381700/2023_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15382246": {
@@ -3212,7 +3212,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-04/29300986573971/15382246/2023_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15045448": {
@@ -3235,7 +3235,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-15/71558707576871/15045448/2019_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-14958040": {
@@ -3258,7 +3258,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-03/29285541448871/14958040/2020_honda_shuttle_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15056959": {
@@ -3281,7 +3281,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-20/30219280789871/15056959/2018_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15079654": {
@@ -3327,7 +3327,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-03/54098151448871/15035424/2019_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15079656": {
@@ -3350,7 +3350,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-18/57929057307871/15079656/2022_honda_shuttle_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15068625": {
@@ -3373,7 +3373,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-09/16674250298871/15068625/2019_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15079651": {
@@ -3396,7 +3396,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-03/47937251448871/15079651/2021_honda_fit_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15196385": {
@@ -3419,7 +3419,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-17/85888874596871/15196385/2017_honda_odyssey_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15335279": {
@@ -3465,7 +3465,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-17/02762074122971/15363214/2023_hyundai_kona_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15381396": {
@@ -3488,7 +3488,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-30/63461249233971/15381396/2022_hyundai_ioniq_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15340594": {
@@ -3511,7 +3511,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/75042578523971/15340594/2025_hyundai_i30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15357200": {
@@ -3534,7 +3534,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-22/07589438462971/15357200/2020_hyundai_ioniq_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15288672": {
@@ -3557,7 +3557,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-03/00982182048871/15288672/2021_hyundai_ioniq_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15363495": {
@@ -3603,7 +3603,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/52656319824971/15392010/2023_hyundai_kona_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15360505": {
@@ -3626,7 +3626,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-15/71510476402971/15360505/2022_hyundai_ioniq_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15366239": {
@@ -3649,7 +3649,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-20/21508130742971/15366239/2022_hyundai_ioniq_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15389033": {
@@ -3672,7 +3672,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/70725965473971/15389033/2025_hyundai_i30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15356333": {
@@ -3718,7 +3718,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-21/25651227552971/15368086/2025_hyundai_tucson_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15390350": {
@@ -3741,7 +3741,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-04/40943336773971/15390350/2025_hyundai_i30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15371583": {
@@ -3764,7 +3764,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-23/09663123272971/15371583/2025_hyundai_tucson_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15260797": {
@@ -3774,7 +3774,7 @@
 "variant": "(Bev)",
 "year": 2024,
 "km": 98310,
-"price_aud": 23888,
+"price_aud": 22888,
 "body": "sedan",
 "state": "WA",
 "suburb": "Dianella",
@@ -3787,7 +3787,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-22/29491082462971/15260797/2024_hyundai_i30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15282887": {
@@ -3810,7 +3810,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-13/92087747781971/15282887/2025_hyundai_tucson_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15136200": {
@@ -3820,7 +3820,7 @@
 "variant": "Plug-In Hybrid Premium",
 "year": 2022,
 "km": 77389,
-"price_aud": 23490,
+"price_aud": 22990,
 "body": "hatch",
 "state": "QLD",
 "suburb": "Pinkenba",
@@ -3833,7 +3833,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-06-18/82529737971871/15136200/2022_hyundai_ioniq_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15231996": {
@@ -3856,7 +3856,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-04/87428166848871/15231996/2020_hyundai_ioniq_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15263309": {
@@ -4477,7 +4477,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-02/58029156138871/15073173/2021_kia_niro_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15330476": {
@@ -4500,7 +4500,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/97682358483971/15330476/2022_mazda_cx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15376406": {
@@ -4510,7 +4510,7 @@
 "variant": "G20E Touring Mhev",
 "year": 2022,
 "km": 87483,
-"price_aud": 24490,
+"price_aud": 23990,
 "body": "suv",
 "state": "QLD",
 "suburb": "West Gladstone",
@@ -4520,10 +4520,10 @@
 "transmission": "Auto",
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15376406/mazda/mx-30/qld/west-gladstone/suv",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-30/45668250433971/15376406/2022_mazda_mx_30_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/75658676544971/15376406/2022_mazda_mx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15382973": {
@@ -4546,7 +4546,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-30/26557375533971/15382973/2021_mazda_cx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15357209": {
@@ -4615,7 +4615,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-28/62289478913971/15378937/2022_mazda_mx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15360086": {
@@ -4638,7 +4638,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-16/08991088212971/15360086/2023_mazda_cx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15336676": {
@@ -4661,7 +4661,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-23/42793516972971/15336676/2021_mazda_mx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15330623": {
@@ -4684,7 +4684,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-29/29679056460971/15330623/2022_mazda_mx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15321599": {
@@ -4707,7 +4707,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-13/18813380881971/15321599/2020_mazda_mazda3_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15387524": {
@@ -4730,7 +4730,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/49899825663971/15387524/2021_mazda_mx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15392598": {
@@ -4776,7 +4776,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-07/11144602606871/15207161/2021_mazda_mx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15378938": {
@@ -4799,7 +4799,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-28/62207778913971/15378938/2022_mazda_mx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15392596": {
@@ -4845,7 +4845,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/27627833423971/15379825/2022_mazda_mx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-14847297": {
@@ -4868,7 +4868,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2025-12-09/07776962625671/14847297/2021_mazda_mx_30_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15251063": {
@@ -5006,7 +5006,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/87240826924971/15375457/2024_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15267908": {
@@ -5098,7 +5098,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-03/16491309001971/15343609/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15392385": {
@@ -5121,7 +5121,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/89611648683971/15392385/2015_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15271966": {
@@ -5190,7 +5190,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-22/18830110172971/15371003/2012_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15333843": {
@@ -5213,7 +5213,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-29/89470574560971/15333843/2023_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15392413": {
@@ -5259,7 +5259,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-30/97872417270971/15335112/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15301308": {
@@ -5305,7 +5305,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-13/38035539681971/15356583/2013_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15352107": {
@@ -5397,7 +5397,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-28/02675814850971/15332840/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15355071": {
@@ -5466,7 +5466,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-12/27143589771971/15354617/2022_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15361952": {
@@ -5489,7 +5489,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-20/71272213842971/15361952/2022_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15318459": {
@@ -5512,7 +5512,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-18/97227794179871/15318459/2011_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15258950": {
@@ -5535,7 +5535,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-11/47311797146871/15258950/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15372920": {
@@ -5558,7 +5558,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-23/26441437972971/15372920/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15371410": {
@@ -5581,7 +5581,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-23/11990075272971/15371410/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15311827": {
@@ -5627,7 +5627,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-30/56231439218871/15254208/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15367877": {
@@ -5673,7 +5673,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-07/27701103531971/15348131/2021_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15370170": {
@@ -5719,7 +5719,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/45761170423971/15374668/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15366666": {
@@ -5742,7 +5742,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-20/91196817742971/15366666/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15336204": {
@@ -5788,7 +5788,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-05/14731841958871/15299439/2019_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15300254": {
@@ -5811,7 +5811,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/72458784478871/15300254/2015_toyota_crown_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15339737": {
@@ -5857,7 +5857,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-14/44693600591971/15358136/2023_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15300253": {
@@ -5880,7 +5880,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/54563684478871/15300253/2012_toyota_alphard_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15363302": {
@@ -5903,7 +5903,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-17/00350746422971/15363302/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15055962": {
@@ -5926,7 +5926,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-22/36507436700971/15055962/2016_toyota_fielder_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15357829": {
@@ -5972,7 +5972,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-23/44607867972971/15298479/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15297202": {
@@ -5995,7 +5995,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-11/20865792119871/15297202/2018_toyota_c_hr_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15325517": {
@@ -6018,7 +6018,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-16/47685600212971/15325517/2016_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15280781": {
@@ -6041,7 +6041,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-25/87856902467871/15280781/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15284987": {
@@ -6064,7 +6064,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-27/10686514287871/15284987/2018_toyota_voxy_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15297142": {
@@ -6074,7 +6074,7 @@
 "variant": "Ascent Sport (Hybrid)",
 "year": 2018,
 "km": 120084,
-"price_aud": 22990,
+"price_aud": 20990,
 "body": "hatch",
 "state": "NSW",
 "suburb": "Mayfield West",
@@ -6087,7 +6087,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-16/19192512459871/15297142/2018_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15364664": {
@@ -6110,7 +6110,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-19/45054986932971/15364664/2016_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15373659": {
@@ -6133,7 +6133,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-25/59412525292971/15373659/2021_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15293557": {
@@ -6156,7 +6156,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-02/28400179138871/15293557/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15374720": {
@@ -6179,7 +6179,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-26/86996906003971/15374720/2011_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15369922": {
@@ -6202,7 +6202,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-04/15483039573971/15369922/2017_toyota_prius_v_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15326149": {
@@ -6211,7 +6211,7 @@
 "model": "Corolla Cross",
 "variant": "Gx 2Wd Hybrid",
 "year": 2023,
-"km": 102279,
+"km": 102714,
 "price_aud": 29800,
 "body": "suv",
 "state": "NSW",
@@ -6222,10 +6222,10 @@
 "transmission": "Auto",
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15326149/toyota/corolla-cross/nsw/boolaroo/suv",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-04/50781931573971/15326149/2023_toyota_corolla_cross_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/38697205344971/15326149/2023_toyota_corolla_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15295376": {
@@ -6248,7 +6248,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-03/33177369938871/15295376/2024_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15391090": {
@@ -6271,7 +6271,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/06124101483971/15391090/2021_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15388628": {
@@ -6294,7 +6294,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/46896314963971/15388628/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15387613": {
@@ -6340,7 +6340,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-31/01699139143971/15383780/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15347511": {
@@ -6363,7 +6363,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-07/11363300431971/15347511/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15297378": {
@@ -6386,7 +6386,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-19/73897180189871/15297378/2022_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15362596": {
@@ -6432,7 +6432,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-06/86641319621971/15345762/2023_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15352636": {
@@ -6455,7 +6455,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-09/36579316451971/15352636/2012_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15379981": {
@@ -6478,7 +6478,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/50762088663971/15379981/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15391099": {
@@ -6524,7 +6524,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/90392334063971/15386463/2017_toyota_prius_c_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15378842": {
@@ -6547,7 +6547,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-28/98183520023971/15378842/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15388578": {
@@ -6570,7 +6570,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/30703868173971/15388578/2022_toyota_c_hr_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15391653": {
@@ -6593,7 +6593,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/32519782583971/15391653/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15390982": {
@@ -6616,7 +6616,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/31638367383971/15390982/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15392863": {
@@ -6662,7 +6662,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/47512186393971/15393457/2021_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15377345": {
@@ -6685,7 +6685,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-28/22707770513971/15377345/2023_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15374185": {
@@ -6708,7 +6708,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/59666874523971/15374185/2021_toyota_c_hr_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15346893": {
@@ -6731,7 +6731,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-06/43441580921971/15346893/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15377343": {
@@ -6754,7 +6754,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-28/84503070513971/15377343/2023_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15379563": {
@@ -6777,7 +6777,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/90762698323971/15379563/2024_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15377282": {
@@ -6800,7 +6800,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/39631901734971/15377282/2013_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15298279": {
@@ -6823,7 +6823,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-09/06813289198871/15298279/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15367040": {
@@ -6846,7 +6846,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-20/98665016942971/15367040/2021_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15371888": {
@@ -6869,7 +6869,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-04/52983686573971/15371888/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15369523": {
@@ -6892,7 +6892,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-22/55784405362971/15369523/2020_toyota_axio_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15316027": {
@@ -7053,7 +7053,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/53411771523971/15380252/2013_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15328920": {
@@ -7076,7 +7076,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/54408851583971/15328920/2014_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15300133": {
@@ -7122,7 +7122,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-13/14732544391971/15357467/2021_toyota_fielder_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15284983": {
@@ -7145,7 +7145,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-27/66544314287871/15284983/2014_toyota_estima_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15336202": {
@@ -7191,7 +7191,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-03/34321091001971/15341550/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15320956": {
@@ -7214,7 +7214,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-19/47429077879871/15320956/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15258787": {
@@ -7237,7 +7237,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/05144153534971/15258787/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15283663": {
@@ -7329,7 +7329,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-01/57017327153971/15381718/2019_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15343531": {
@@ -7352,7 +7352,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-31/88173204243971/15343531/2014_toyota_estima_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15379144": {
@@ -7375,7 +7375,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/63576570423971/15379144/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15371357": {
@@ -7398,7 +7398,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/67441514724971/15371357/2021_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15358919": {
@@ -7421,7 +7421,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-14/94756982991971/15358919/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15347265": {
@@ -7444,7 +7444,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-07/56096272331971/15347265/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15375263": {
@@ -7467,7 +7467,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/95630724734971/15375263/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15374540": {
@@ -7490,7 +7490,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-30/61169758433971/15374540/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15297213": {
@@ -7536,7 +7536,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/78145366493971/15382699/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15262440": {
@@ -7559,7 +7559,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-13/47035216856871/15262440/2023_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15300248": {
@@ -7582,7 +7582,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/21171184478871/15300248/2016_toyota_sienta_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15362543": {
@@ -7605,7 +7605,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-19/84336206142971/15362543/2021_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15361712": {
@@ -7651,7 +7651,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/51918951583971/15354943/2016_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15297144": {
@@ -7674,7 +7674,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-14/94667545439871/15297144/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15292113": {
@@ -7697,7 +7697,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-03/60481702048871/15292113/2020_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15366632": {
@@ -7720,7 +7720,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-20/82157756742971/15366632/2022_toyota_yaris_cross_hybrid_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15362944": {
@@ -7743,7 +7743,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-17/15319332022971/15362944/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15378071": {
@@ -7766,7 +7766,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/70438576323971/15378071/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15378525": {
@@ -7789,7 +7789,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-31/85028296043971/15378525/2022_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15362427": {
@@ -7812,7 +7812,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-16/21824224412971/15362427/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15369223": {
@@ -7835,7 +7835,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-24/36545893182971/15369223/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15332967": {
@@ -7858,7 +7858,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-23/75770603572971/15332967/2021_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15342915": {
@@ -7881,7 +7881,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-06/64405380621971/15342915/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15300135": {
@@ -7904,7 +7904,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/94760372478871/15300135/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15309352": {
@@ -7927,7 +7927,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-29/51494725660971/15309352/2018_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15367352": {
@@ -7950,7 +7950,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-21/34789081452971/15367352/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15319097": {
@@ -7973,7 +7973,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-07/25080101731971/15319097/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15376855": {
@@ -7996,7 +7996,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-30/22931559333971/15376855/2019_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15378793": {
@@ -8006,7 +8006,7 @@
 "variant": "Ascent Sport Hybrid",
 "year": 2020,
 "km": 118725,
-"price_aud": 28990,
+"price_aud": 27990,
 "body": "sedan",
 "state": "NSW",
 "suburb": "Seven Hills",
@@ -8019,7 +8019,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-28/42703880813971/15378793/2020_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15353900": {
@@ -8042,7 +8042,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-27/53226049503971/15353900/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15334296": {
@@ -8065,7 +8065,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-29/81405421660971/15334296/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15268398": {
@@ -8111,7 +8111,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-24/02418585167871/15275677/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15299665": {
@@ -8180,7 +8180,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-19/29693901732971/15346906/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15353815": {
@@ -8226,7 +8226,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-27/39477854413971/15377337/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15344273": {
@@ -8249,7 +8249,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/57265014724971/15344273/2023_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15356374": {
@@ -8272,7 +8272,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-13/77895655681971/15356374/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15334853": {
@@ -8295,7 +8295,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-01/40400278653971/15334853/2015_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15307641": {
@@ -8318,7 +8318,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-09/82988524851971/15307641/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15303954": {
@@ -8341,7 +8341,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-09/64500707198871/15303954/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15379203": {
@@ -8364,7 +8364,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/78388283523971/15379203/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15371258": {
@@ -8387,7 +8387,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-27/32596707803971/15371258/2019_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15378523": {
@@ -8410,7 +8410,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-31/37761007043971/15378523/2022_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15320527": {
@@ -8433,7 +8433,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-31/17297668143971/15320527/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15258075": {
@@ -8479,7 +8479,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-10/21252105061971/15347016/2018_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15361449": {
@@ -8525,7 +8525,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-06/96633466031971/15300127/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15299414": {
@@ -8548,7 +8548,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-28/48104208223971/15299414/2021_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15298395": {
@@ -8571,7 +8571,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-08/78351247341971/15298395/2019_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15320396": {
@@ -8594,7 +8594,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-18/44509284379871/15320396/2020_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15276070": {
@@ -8617,7 +8617,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-21/74868909927871/15276070/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15342081": {
@@ -8640,7 +8640,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-06/40397156621971/15342081/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15320402": {
@@ -8663,7 +8663,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-08/86066006014971/15320402/2018_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15296971": {
@@ -8686,7 +8686,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-04/39574516058871/15296971/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15343342": {
@@ -8709,7 +8709,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/44286932683971/15343342/2014_toyota_aqua_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15387235": {
@@ -8732,7 +8732,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/34329896263971/15387235/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15390287": {
@@ -8755,7 +8755,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/19095962924971/15390287/2025_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15389499": {
@@ -8778,7 +8778,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/38074020393971/15389499/2020_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15383639": {
@@ -8801,7 +8801,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-31/41008737243971/15383639/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15388566": {
@@ -8824,7 +8824,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/25396951683971/15388566/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15390401": {
@@ -8847,7 +8847,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-04/79847977773971/15390401/2018_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15301537": {
@@ -8870,7 +8870,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/14615423778871/15301537/2018_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15297185": {
@@ -8916,7 +8916,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-26/25178688892971/15374391/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15373762": {
@@ -8939,7 +8939,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-25/70361787692971/15373762/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15374010": {
@@ -8985,7 +8985,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/01693599853971/15376050/2018_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15097022": {
@@ -8995,7 +8995,7 @@
 "variant": "Sl (Hybrid)",
 "year": 2018,
 "km": 162501,
-"price_aud": 26888,
+"price_aud": 24999,
 "body": "sedan",
 "state": "NSW",
 "suburb": "Blacktown",
@@ -9008,7 +9008,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-05-06/19725116408771/15097022/2018_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15197970": {
@@ -9031,7 +9031,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-14/03313428376871/15197970/2010_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15214369": {
@@ -9054,7 +9054,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-11/33670397146871/15214369/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-14838492": {
@@ -9077,7 +9077,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-27/27954128977871/14838492/2010_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15213900": {
@@ -9100,7 +9100,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-19/95791636932971/15213900/2021_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15126088": {
@@ -9123,7 +9123,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-23/78994396257871/15126088/2016_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15245218": {
@@ -9146,7 +9146,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-22/24439322400971/15245218/2022_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-14821965": {
@@ -9169,7 +9169,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2025-11-26/54804593414671/14821965/2018_toyota_prius_c_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15370399": {
@@ -9215,7 +9215,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-07-18/95677609534871/15221352/2020_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15151865": {
@@ -9261,7 +9261,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-16/95769189012971/15206396/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15383320": {
@@ -9307,7 +9307,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/43837676963971/15388694/2021_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15388570": {
@@ -9399,7 +9399,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/37378327824971/15388571/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15392758": {
@@ -9419,10 +9419,10 @@
 "transmission": "Auto",
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15392758/toyota/corolla/nsw/minchinbury/hatchback",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/36097376193971/15392758/2023_toyota_corolla_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/27033167644971/15392758/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15393397": {
@@ -9514,7 +9514,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/05274456624971/15392681/2025_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-14946343": {
@@ -9537,7 +9537,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-02-04/87281221810771/14946343/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15225775": {
@@ -9560,7 +9560,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-06/42234598506871/15225775/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15031966": {
@@ -9583,7 +9583,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-03-26/95739954054771/15031966/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-14846510": {
@@ -9606,7 +9606,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/24627003478871/14846510/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-14970118": {
@@ -9629,7 +9629,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-05-06/31163612408771/14970118/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15195401": {
@@ -9675,7 +9675,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-06/53373398106871/14750535/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-14418954": {
@@ -9928,7 +9928,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/82712653323971/15188928/2020_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15158920": {
@@ -9974,7 +9974,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-02-04/57850921810771/14946344/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15376912": {
@@ -10135,7 +10135,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/98330982478871/15067160/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15095061": {
@@ -10158,7 +10158,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/54325653478871/15095061/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15096581": {
@@ -10181,7 +10181,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/21421433478871/15096581/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15085270": {
@@ -10204,7 +10204,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-03/19384001448871/15085270/2021_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15323107": {
@@ -10227,7 +10227,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-22/95027196800971/15323107/2016_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15105924": {
@@ -10250,7 +10250,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/54236443478871/15105924/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15114359": {
@@ -10273,7 +10273,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/61016613478871/15114359/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15090558": {
@@ -10296,7 +10296,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/88266233478871/15090558/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15130298": {
@@ -10319,7 +10319,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/68166292478871/15130298/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15133978": {
@@ -10342,7 +10342,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/25013023478871/15133978/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15083009": {
@@ -10365,7 +10365,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/70882843478871/15083009/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15352532": {
@@ -10388,7 +10388,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-10/68717203161971/15352532/2021_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15360626": {
@@ -10411,7 +10411,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-15/05120149402971/15360626/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15315697": {
@@ -10434,7 +10434,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-16/53849571459871/15315697/2023_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15119877": {
@@ -10457,7 +10457,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/75718570834971/15119877/2018_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15246484": {
@@ -10526,7 +10526,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-09/86700978151971/15333098/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15234090": {
@@ -10549,7 +10549,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-10/75807016436871/15234090/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15353648": {
@@ -10572,7 +10572,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-10/09309376161971/15353648/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15364993": {
@@ -11216,7 +11216,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-15/56980424402971/15360350/2020_toyota_prius_c_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15278183": {
@@ -11308,7 +11308,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/52782680953971/15385391/2021_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15384373": {
@@ -12389,7 +12389,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/88022013234971/15311174/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15313233": {
@@ -12619,7 +12619,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-01/52656289180971/15331959/2023_toyota_corolla_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15376301": {
@@ -14515,7 +14515,7 @@
 "variant": "Ascent Sport Hybrid",
 "year": 2022,
 "km": 66035,
-"price_aud": 29990,
+"price_aud": 28990,
 "body": "hatch",
 "state": "VIC",
 "suburb": "Ballarat",
@@ -14528,7 +14528,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-06/29804595795871/15251441/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15320730": {
@@ -14574,7 +14574,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-30/65044092433971/15360545/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15251341": {
@@ -14597,7 +14597,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-06/58896425795871/15251341/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15278540": {
@@ -14666,7 +14666,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/42879779853971/15325966/2023_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15390385": {
@@ -14735,7 +14735,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-03/96266814048871/15293016/2022_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15389697": {
@@ -14758,7 +14758,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/37144408583971/15389697/2022_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15387295": {
@@ -14804,7 +14804,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/10832381834971/15380489/2018_toyota_voxy_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15360621": {
@@ -14827,7 +14827,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-15/98063139402971/15360621/2015_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15355059": {
@@ -14873,7 +14873,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-26/28853749992971/15335495/2013_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15380635": {
@@ -14942,7 +14942,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-04/00483786573971/15389520/2015_toyota_voxy_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15374243": {
@@ -15126,7 +15126,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/16061044583971/15391747/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15392668": {
@@ -15149,7 +15149,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/45112880393971/15392668/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15214182": {
@@ -15228,7 +15228,7 @@
 "variant": "S 4WD",
 "year": 2018,
 "km": 81652,
-"price_aud": 22990,
+"price_aud": 19990,
 "body": "hatch",
 "state": "VIC",
 "suburb": "South Geelong",
@@ -15241,7 +15241,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-01/58634185980971/15214201/2018_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15266642": {
@@ -15333,7 +15333,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-27/29853174803971/15376755/2018_toyota_c_hr_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15346791": {
@@ -15356,7 +15356,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-26/76198458792971/15346791/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15255822": {
@@ -15402,7 +15402,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/82747412863971/15376716/2020_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15332891": {
@@ -15527,7 +15527,7 @@
 "variant": "Ascent Sport Hybrid",
 "year": 2021,
 "km": 91161,
-"price_aud": 29888,
+"price_aud": 29490,
 "body": "sedan",
 "state": "VIC",
 "suburb": "Nunawading",
@@ -15537,10 +15537,10 @@
 "transmission": "Auto",
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15286559/toyota/camry/vic/nunawading/sedan",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/80226943853971/15286559/2021_toyota_camry_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-08/61502020814971/15286559/2021_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-06",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15374570": {
@@ -15609,7 +15609,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-03/01204845201971/15322421/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15376753": {
@@ -15862,7 +15862,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-26/72227742277871/15282315/2009_toyota_crown_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15379247": {
@@ -15954,7 +15954,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-12/50917816671971/15351922/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15282314": {
@@ -15964,7 +15964,7 @@
 "variant": "HYBRID GI",
 "year": 2018,
 "km": 100036,
-"price_aud": 27999,
+"price_aud": 26999,
 "body": null,
 "state": "VIC",
 "suburb": "Mordialloc",
@@ -15977,7 +15977,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-01/84762540528871/15282314/2018_toyota_esquire_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15265000": {
@@ -16000,7 +16000,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-14/81694285866871/15265000/2018_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15330850": {
@@ -16023,7 +16023,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-25/08250079230971/15330850/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15368670": {
@@ -16102,7 +16102,7 @@
 "variant": "Ascent Sport Hybrid",
 "year": 2021,
 "km": 24002,
-"price_aud": 29490,
+"price_aud": 28990,
 "body": "hatch",
 "state": "VIC",
 "suburb": "Nunawading",
@@ -16115,7 +16115,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-11/93510629119871/15306583/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15334034": {
@@ -16207,7 +16207,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/66647669393971/15376752/2019_toyota_c_hr_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15277984": {
@@ -16230,7 +16230,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-01/02479604180971/15277984/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15370269": {
@@ -16276,7 +16276,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-10/74969810361971/15334843/2012_toyota_prius_c_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15293977": {
@@ -16483,7 +16483,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/36581669393971/15376717/2018_toyota_c_hr_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15365379": {
@@ -16506,7 +16506,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-19/36328312542971/15365379/2014_toyota_voxy_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15364853": {
@@ -16529,7 +16529,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/74302690623971/15364853/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15332302": {
@@ -16552,7 +16552,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-30/98956484433971/15332302/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15352199": {
@@ -16621,7 +16621,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-18/18925938969871/15300692/2019_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15378290": {
@@ -16690,7 +16690,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-12/96857917481971/15355477/2016_toyota_voxy_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15322412": {
@@ -16759,7 +16759,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-03/78527760473971/15380488/2018_toyota_c_hr_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15264956": {
@@ -16851,7 +16851,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/57759120583971/15381932/2021_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15378243": {
@@ -16884,7 +16884,7 @@
 "variant": "Sx Hybrid",
 "year": 2021,
 "km": 52729,
-"price_aud": 28990,
+"price_aud": 27990,
 "body": "hatch",
 "state": "VIC",
 "suburb": "Hoppers Crossing",
@@ -16897,7 +16897,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-11/07184338909871/15293663/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15345283": {
@@ -16920,7 +16920,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-05/98341562421971/15345283/2014_toyota_voxy_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15283100": {
@@ -16966,7 +16966,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-25/11326077692971/15316627/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15255200": {
@@ -17150,7 +17150,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/54857119524971/15376714/2018_toyota_c_hr_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15383922": {
@@ -17173,7 +17173,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-31/40494447243971/15383922/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15388537": {
@@ -17242,7 +17242,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/16696336163971/15387170/2023_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15387151": {
@@ -17656,7 +17656,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/80591601493971/15393364/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15317342": {
@@ -18021,10 +18021,10 @@
 "transmission": "Auto",
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15380485/toyota/c-hr/vic/mordialloc/suv",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/59786907523971/15380485/2019_toyota_c_hr_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/96213081344971/15380485/2019_toyota_c_hr_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15154533": {
@@ -18438,7 +18438,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-23/99744538472971/15367322/2018_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15339561": {
@@ -19013,7 +19013,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/82582055523971/15380450/2020_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15387863": {
@@ -19105,7 +19105,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-28/11747395813971/15375018/2022_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15325791": {
@@ -19542,7 +19542,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-02/54773025853971/15384158/2022_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15386176": {
@@ -20025,7 +20025,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-10/29782962236871/15255870/2020_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15288648": {
@@ -20048,7 +20048,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-31/67786746318871/15288648/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15382215": {
@@ -20725,7 +20725,7 @@
 "variant": "Ascent Sport Hybrid",
 "year": 2023,
 "km": 33590,
-"price_aud": 29999,
+"price_aud": 28999,
 "body": "hatch",
 "state": "WA",
 "suburb": "Wangara",
@@ -20738,7 +20738,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-05/35538157583971/15391962/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15392901": {
@@ -21093,7 +21093,7 @@
 "variant": "Zr (Hybrid)",
 "year": 2019,
 "km": 112508,
-"price_aud": 26999,
+"price_aud": 26499,
 "body": "hatch",
 "state": "WA",
 "suburb": "Osborne Park",
@@ -21106,7 +21106,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/23327319323971/15186580/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15348928": {
@@ -21267,7 +21267,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-08/84507554214971/15033940/2022_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15337043": {
@@ -21635,7 +21635,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-10/31656996436871/15245946/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15252358": {
@@ -21658,7 +21658,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-07/90109589806871/15252358/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15229966": {
@@ -21681,7 +21681,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-07-24/51797844684871/15229966/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15253558": {
@@ -21704,7 +21704,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-20/02889747742971/15253558/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15370595": {
@@ -21773,7 +21773,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-30/93216913570971/15247327/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15044797": {
@@ -21796,7 +21796,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-24/27395397320971/15044797/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-09",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15394297": {
@@ -21862,10 +21862,10 @@
 "transmission": "Auto",
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15393787/hyundai/ioniq/vic/ferntree-gully/hatchback",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/61105802493971/15393787/2020_hyundai_ioniq_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/25614077444971/15393787/2020_hyundai_ioniq_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15394009": {
@@ -21888,7 +21888,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/88110995493971/15394009/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15343880": {
@@ -21911,7 +21911,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/28771414724971/15343880/2024_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15310771": {
@@ -21921,7 +21921,7 @@
 "variant": "Ascent Sport Hybrid",
 "year": 2021,
 "km": 87462,
-"price_aud": 23290,
+"price_aud": 22690,
 "body": "hatch",
 "state": "NSW",
 "suburb": "Chullora",
@@ -21934,7 +21934,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/07751057493971/15310771/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15314182": {
@@ -22013,7 +22013,7 @@
 "variant": "Ascent Sport Hybrid",
 "year": 2021,
 "km": 87462,
-"price_aud": 23290,
+"price_aud": 22690,
 "body": "hatch",
 "state": "VIC",
 "suburb": "Altona North",
@@ -22026,7 +22026,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/27559217493971/15310650/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-08",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15387190": {
@@ -22141,7 +22141,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-29/53688455823971/15381187/2022_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15106415": {
@@ -22164,7 +22164,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/97345053478871/15106415/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15110713": {
@@ -22187,7 +22187,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-07/34659713478871/15110713/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15126111": {
@@ -22210,7 +22210,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-05-26/26467148779771/15126111/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15244702": {
@@ -22233,7 +22233,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-08-01/43907933955871/15244702/2018_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15394417": {
@@ -22256,7 +22256,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/62335440693971/15394417/2020_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-06"
 },
 "cg-15381185": {
@@ -22325,7 +22325,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-07/69503784204971/15395071/2023_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-08"
 },
 "cg-15395032": {
@@ -22371,7 +22371,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-07/13706374104971/15362529/2022_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-08"
 },
 "cg-15365998": {
@@ -22394,7 +22394,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-20/21216085642971/15365998/2021_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-08"
 },
 "cg-15392783": {
@@ -22417,7 +22417,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/38884727004971/15392783/2011_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-08"
 },
 "cg-15395514": {
@@ -22440,7 +22440,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-08/48324237414971/15395514/2023_toyota_yaris_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-08"
 },
 "cg-15394795": {
@@ -22647,7 +22647,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-20/56388775642971/15365997/2021_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-08"
 },
 "cg-15362583": {
@@ -22670,7 +22670,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/49125296024971/15362583/2023_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-09"
 },
 "cg-15362581": {
@@ -22693,7 +22693,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/34504096024971/15362581/2023_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-09"
 },
 "cg-15363111": {
@@ -22716,7 +22716,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/39202366024971/15363111/2023_gwm_haval_jolion_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-09"
 },
 "cg-15396468": {
@@ -22808,7 +22808,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/28409182024971/15396588/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-09"
 },
 "cg-15395696": {
@@ -22831,7 +22831,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/54737123814971/15395696/2022_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-09"
 },
 "cg-15398053": {
@@ -22854,7 +22854,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/75038374924971/15398053/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15400138": {
@@ -22877,7 +22877,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/56489428634971/15400138/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15400605": {
@@ -22897,10 +22897,10 @@
 "transmission": "Auto",
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15400605/toyota/prius/nsw/saint-marys/hatchback",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/06603425734971/15400605/2020_toyota_prius_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/39717425744971/15400605/2020_toyota_prius_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15359030": {
@@ -22923,7 +22923,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-26/89826338992971/15359030/2020_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15398013": {
@@ -22946,7 +22946,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/54878942634971/15398013/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15398986": {
@@ -22969,7 +22969,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/05113638924971/15398986/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15399172": {
@@ -22992,7 +22992,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/20298279034971/15399172/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15400591": {
@@ -23015,7 +23015,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/06212105734971/15400591/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15399192": {
@@ -23107,7 +23107,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-10-26/21544747992971/15359028/2020_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15396810": {
@@ -23199,7 +23199,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/94516200593971/15388271/2011_toyota_estima_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15320207": {
@@ -23360,7 +23360,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/25820703914971/15395759/2023_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15395593": {
@@ -23403,10 +23403,10 @@
 "transmission": "Auto",
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15396604/toyota/corolla/vic/croydon/hatchback",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/05687303024971/15396604/2022_toyota_corolla_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/38573812044971/15396604/2022_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15395874": {
@@ -23484,7 +23484,7 @@
 "model": "Camry",
 "variant": "Ascent + Sat Nav Hybrid",
 "year": 2023,
-"km": 161062,
+"km": 161070,
 "price_aud": 28888,
 "body": "sedan",
 "state": "VIC",
@@ -23495,10 +23495,10 @@
 "transmission": "Auto",
 "fuel": "Hybrid",
 "url": "https://www.carsguide.com.au/car/15400560/toyota/camry/vic/geelong/sedan",
-"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/70793134734971/15400560/2023_toyota_camry_Used_1.jpg",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/41515409544971/15400560/2023_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15397115": {
@@ -23820,7 +23820,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/21633815024971/15396713/2011_toyota_crown_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15391698": {
@@ -23843,7 +23843,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-06/88694193393971/15391698/2024_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15397045": {
@@ -23866,7 +23866,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-09/40862308124971/15397045/2022_toyota_yaris_cross_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15395758": {
@@ -23889,7 +23889,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/18869673734971/15395758/2020_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15394808": {
@@ -23935,7 +23935,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/02463098824971/15398656/2021_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15398916": {
@@ -23981,7 +23981,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/07177989434971/15399365/2020_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15164341": {
@@ -24050,7 +24050,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/29549675734971/15400625/2004_honda_civic_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15399116": {
@@ -24073,7 +24073,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/82859644034971/15399116/2022_hyundai_ioniq_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15399098": {
@@ -24096,7 +24096,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/22227734034971/15399098/2022_hyundai_ioniq_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15400825": {
@@ -24211,7 +24211,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/74510124534971/15399357/2020_toyota_camry_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15400158": {
@@ -24234,7 +24234,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/72257615734971/15400158/2018_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15313771": {
@@ -24257,7 +24257,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-15/40397976549871/15313771/2021_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15398684": {
@@ -24280,7 +24280,7 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/05912229824971/15398684/2020_toyota_rav4_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
 },
 "cg-15398368": {
@@ -24303,17 +24303,408 @@
 "image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/22480772824971/15398368/2019_toyota_corolla_Used_1.jpg",
 "status": "active",
 "availability": "listed",
-"last_seen": "2026-11-11",
+"last_seen": "2026-11-12",
 "first_seen_at": "2026-11-11"
+},
+"cg-15402350": {
+"id": "cg-15402350",
+"make": "Toyota",
+"model": "Corolla",
+"variant": "Ascent Sport Hybrid",
+"year": 2023,
+"km": 78103,
+"price_aud": 27500,
+"body": "hatch",
+"state": "VIC",
+"suburb": "Narre Warren",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15402350/toyota/corolla/vic/narre-warren/hatchback",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/13428467544971/15402350/2023_toyota_corolla_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15401173": {
+"id": "cg-15401173",
+"make": "Mazda",
+"model": "MX-30",
+"variant": "G20E Evolve Mhev",
+"year": 2021,
+"km": 82809,
+"price_aud": 19990,
+"body": "suv",
+"state": "NSW",
+"suburb": "Alexandria",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15401173/mazda/mx-30/nsw/alexandria/suv",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/59097534934971/15401173/2021_mazda_mx_30_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15397514": {
+"id": "cg-15397514",
+"make": "Mazda",
+"model": "CX-30",
+"variant": "G20E Evolve M Hyb Vision (Fwd)",
+"year": 2023,
+"km": 33024,
+"price_aud": 26950,
+"body": "suv",
+"state": "ACT",
+"suburb": "Belconnen",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15397514/mazda/cx-30/act/belconnen/suv",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/07047087724971/15397514/2023_mazda_cx_30_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15398078": {
+"id": "cg-15398078",
+"make": "Mazda",
+"model": "MX-30",
+"variant": "G20E ASTINA MHEV M30A",
+"year": 2021,
+"km": 101531,
+"price_aud": 18990,
+"body": "suv",
+"state": "VIC",
+"suburb": "West Footscray",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15398078/mazda/mx-30/vic/west-footscray/suv",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-10/96962927724971/15398078/2021_mazda_mx_30_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15401497": {
+"id": "cg-15401497",
+"make": "GWM Haval",
+"model": "Haval Jolion",
+"variant": "Ultra Hybrid",
+"year": 2024,
+"km": 35613,
+"price_aud": 29950,
+"body": "suv",
+"state": "ACT",
+"suburb": "Queanbeyan",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": null,
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15401497/gwm/haval-jolion/act/queanbeyan/suv",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/01485637344971/15401497/2024_gwm_haval_jolion_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15377704": {
+"id": "cg-15377704",
+"make": "GWM Haval",
+"model": "Haval Jolion",
+"variant": "Premium Hybrid",
+"year": 2025,
+"km": 25829,
+"price_aud": 24990,
+"body": "suv",
+"state": "SA",
+"suburb": "Thebarton",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": null,
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15377704/gwm/haval-jolion/sa/thebarton/suv",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/23789369544971/15377704/2025_gwm_haval_jolion_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15401551": {
+"id": "cg-15401551",
+"make": "Toyota",
+"model": "Corolla",
+"variant": "Ascent Sport (Hybrid)",
+"year": 2020,
+"km": 94252,
+"price_aud": 23950,
+"body": "hatch",
+"state": "ACT",
+"suburb": "Greenway",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15401551/toyota/corolla/act/greenway/hatchback",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/04920067344971/15401551/2020_toyota_corolla_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15401469": {
+"id": "cg-15401469",
+"make": "Toyota",
+"model": "RAV4",
+"variant": "Cruiser Awd Hybrid",
+"year": 2019,
+"km": 190243,
+"price_aud": 27990,
+"body": "suv",
+"state": "ACT",
+"suburb": "Greenway",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15401469/toyota/rav4/act/greenway/suv",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-11/58621427344971/15401469/2019_toyota_rav4_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15402854": {
+"id": "cg-15402854",
+"make": "Toyota",
+"model": "Aqua",
+"variant": "NHP10",
+"year": 2021,
+"km": 88638,
+"price_aud": 17990,
+"body": "hatch",
+"state": "NSW",
+"suburb": "Burwood",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15402854/toyota/aqua/nsw/burwood/hatchback",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/95212837644971/15402854/2021_toyota_aqua_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15402192": {
+"id": "cg-15402192",
+"make": "Toyota",
+"model": "Yaris",
+"variant": "Sx Hybrid",
+"year": 2022,
+"km": 28394,
+"price_aud": 27990,
+"body": "hatch",
+"state": "NSW",
+"suburb": "Belmore",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15402192/toyota/yaris/nsw/belmore/hatchback",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/63494362544971/15402192/2022_toyota_yaris_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15278811": {
+"id": "cg-15278811",
+"make": "Toyota",
+"model": "Corolla",
+"variant": "Zr Hybrid",
+"year": 2021,
+"km": 62994,
+"price_aud": 28490,
+"body": "hatch",
+"state": "NSW",
+"suburb": "Chullora",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15278811/toyota/corolla/nsw/chullora/hatchback",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/10689286644971/15278811/2021_toyota_corolla_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15301951": {
+"id": "cg-15301951",
+"make": "Toyota",
+"model": "Corolla",
+"variant": "Ascent Sport Hybrid",
+"year": 2022,
+"km": 17473,
+"price_aud": 29888,
+"body": "hatch",
+"state": "NSW",
+"suburb": "South Hurstville",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15301951/toyota/corolla/nsw/south-hurstville/hatchback",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-08/15294636388871/15301951/2022_toyota_corolla_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15402467": {
+"id": "cg-15402467",
+"make": "Toyota",
+"model": "C-HR",
+"variant": "(2WD)",
+"year": 2018,
+"km": 67000,
+"price_aud": 29990,
+"body": "suv",
+"state": "NSW",
+"suburb": "Five Dock",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15402467/toyota/c-hr/nsw/five-dock/suv",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/01274319544971/15402467/2018_toyota_c_hr_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15402026": {
+"id": "cg-15402026",
+"make": "Toyota",
+"model": "Camry",
+"variant": "Ascent (Hybrid)",
+"year": 2018,
+"km": 88605,
+"price_aud": 24999,
+"body": "sedan",
+"state": "NSW",
+"suburb": "Belmore",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15402026/toyota/camry/nsw/belmore/sedan",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/63371129444971/15402026/2018_toyota_camry_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15401675": {
+"id": "cg-15401675",
+"make": "Toyota",
+"model": "Corolla",
+"variant": "Ascent Sport Hybrid",
+"year": 2023,
+"km": 37457,
+"price_aud": 28990,
+"body": "hatch",
+"state": "NSW",
+"suburb": "Coffs Harbour",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15401675/toyota/corolla/nsw/coffs-harbour/hatchback",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/97040883544971/15401675/2023_toyota_corolla_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15295122": {
+"id": "cg-15295122",
+"make": "Toyota",
+"model": "Corolla",
+"variant": "Ascent Sport Hybrid",
+"year": 2024,
+"km": 33195,
+"price_aud": 29990,
+"body": "hatch",
+"state": "QLD",
+"suburb": "Gympie",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15295122/toyota/corolla/qld/gympie/hatchback",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-09-21/06742848599871/15295122/2024_toyota_corolla_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
+},
+"cg-15402957": {
+"id": "cg-15402957",
+"make": "Toyota",
+"model": "Camry",
+"variant": "Ascent (Hybrid)",
+"year": 2019,
+"km": 95512,
+"price_aud": 24990,
+"body": "sedan",
+"state": "QLD",
+"suburb": "Thorneside",
+"postcode": null,
+"source": "CarsGuide",
+"seller_type": "dealer",
+"transmission": "Auto",
+"fuel": "Hybrid",
+"url": "https://www.carsguide.com.au/car/15402957/toyota/camry/qld/thorneside/sedan",
+"image_url": "https://images.autotrader.com.au/t_listing_grid_cg/inventory/2026-11-12/17280131744971/15402957/2019_toyota_camry_Used_1.jpg",
+"status": "active",
+"availability": "listed",
+"last_seen": "2026-11-12",
+"first_seen_at": "2026-11-12"
 }
 },
-"last_run": "2026-11-11T10:10:19.359067+00:00",
+"last_run": "2026-11-12T10:10:31.163733+00:00",
 "last_stats": {
 "planned": 41,
-"fetched": 42,
-"ok": 38,
-"failed": 4,
-"new_listings": 64,
-"updated": 779
+"fetched": 41,
+"ok": 20,
+"failed": 21,
+"new_listings": 17,
+"updated": 389
 }
 }
