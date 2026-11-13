@@ -40,6 +40,19 @@ class T(unittest.TestCase):
         g, j, m = run([car('a')], {'CarsGuide': {'planned': 100, 'ok': 30}})
         self.assertEqual(g, 'thin')
 
+    def test_one_dealer_down_does_not_thin_the_run(self):
+        src = {'CarsGuide': {'planned': 30, 'ok': 30}}
+        src.update({f'Dealer {i}': {'planned': 1, 'ok': 1} for i in range(11)}); src['Dealer X'] = {'planned': 1, 'ok': 0}
+        g, j, m = run([car('a')], src)
+        self.assertEqual(g, 'complete'); self.assertEqual(j['coverage']['sources_down'], ['Dealer X'])
+
+    def test_many_dealers_down_is_flagged_and_names_them(self):
+        src = {'CarsGuide': {'planned': 30, 'ok': 30}, 'A': {'planned': 1, 'ok': 1}, 'B': {'planned': 1, 'ok': 0}, 'C': {'planned': 1, 'ok': 0}}
+        mem = {'b1': dict(car('b1', src='B'), last_seen='2026-11-06')}
+        g, j, m = run([car('a')], src, mem)
+        self.assertEqual(g, 'thin'); self.assertIn('B: did not load', j['coverage']['message'])
+        self.assertTrue(next(d for d in j['listings'] if d['id'] == 'b1')['stale'])
+
     def test_memory_updated_with_last_seen(self):
         g, j, m = run([car('a')], {'CarsGuide': {'planned': 4, 'ok': 4}})
         self.assertEqual(m['a']['last_seen'], '2026-11-07')

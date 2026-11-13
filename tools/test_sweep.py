@@ -70,3 +70,42 @@ class Normalisers(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
+
+class Cars24(unittest.TestCase):
+    SRC = {'id': 'cars24', 'name': 'Cars24', 'state': 'QLD', 'town': 'Brisbane'}
+
+    def test_results_page_cards(self):
+        cards, total = sweep.parse_cars24((FX / 'cars24_results.html').read_text(encoding='utf-8'))
+        self.assertEqual((len(cards), total), (20, 98))
+        L = {x['id']: x for x in (sweep.listing_from_cars24(c, self.SRC) for c in cards)}
+        d = L['cars24-23775817040704']
+        self.assertEqual((d['make'], d['model'], d['year'], d['km'], d['price_aud']), ('Toyota', 'RAV4', 2021, 119721, 29490))
+        self.assertEqual((d['fuel'], d['body'], d['transmission'], d['state'], d['status']), ('Hybrid', 'suv', 'Auto', 'QLD', 'active'))
+        self.assertEqual(d['url'], 'https://www.cars24.com.au/buy-used-toyota-rav4-car-23775817040704/')
+        self.assertTrue(d['image_url'].startswith('https://'))
+
+    def test_not_a_results_page(self):
+        self.assertEqual(sweep.parse_cars24('<html>nope</html>'), ([], None))
+
+
+class FocusFilter(unittest.TestCase):
+    F = {'makes': ['Toyota', 'GWM Haval'], 'year_min': 2019, 'year_max': 2027}
+
+    def test_only_focus_makes_and_years_are_opened(self):
+        w = lambda slug: sweep.wanted_url('https://d.example/cars/' + slug, self.F)
+        self.assertTrue(w('used-white-2021-toyota-rav4-u1')); self.assertTrue(w('used-grey-2023-haval-jolion-u2')); self.assertTrue(w('used-grey-2023-gwm-haval-h6-u3'))
+        self.assertFalse(w('used-white-2024-ford-everest-u226303')); self.assertFalse(w('used-white-2017-toyota-rav4-u4'))
+
+    def test_no_focus_keeps_everything(self):
+        self.assertTrue(sweep.wanted_url('https://d.example/cars/used-white-2010-ford-falcon-u5', {}))
+
+
+class SkipForever(unittest.TestCase):
+    F = {'fuel': ['Hybrid'], 'km_max': 50000, 'year_min': 2019}
+
+    def test_only_permanent_mismatches_are_skipped(self):
+        n = lambda **k: sweep.never_in_focus(dict({'fuel': 'Hybrid', 'km': 30000, 'year': 2022, 'price_aud': 99000}, **k), self.F)
+        self.assertFalse(n())                                  # price is over any limit, but prices move
+        self.assertTrue(n(fuel='Diesel')); self.assertTrue(n(km=80000)); self.assertTrue(n(year=2015))
+        self.assertFalse(n(fuel=None)); self.assertFalse(sweep.never_in_focus({'fuel': 'Diesel'}, {}))

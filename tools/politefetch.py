@@ -5,7 +5,7 @@ Rules it NEVER breaks: one honest User-Agent, no header tricks, no proxies, no U
 no attempt to defeat a bot check. It only does what a considerate crawler does when a site says
 "not right now": wait longer, try again a few times, cool the host down, then give up and report.
 
-CLI:  python3 tools/politefetch.py --out DIR [--rounds 3 --round-wait 300] URL [URL ...]
+CLI:  python3 tools/politefetch.py --out DIR [--rounds 3 --round-wait 300] [--min-interval 12 --no-backoff] URL [URL ...]
       python3 tools/politefetch.py --out DIR --list urls.txt
 Prints one JSON line per URL: {"u","code","attempts","f","round"} and a final {"stats":...} line.
 """
@@ -129,7 +129,10 @@ if __name__ == "__main__":
     ap = argparse.ArgumentParser()
     ap.add_argument("--out", required=True); ap.add_argument("--list")
     ap.add_argument("--rounds", type=int, default=3); ap.add_argument("--round-wait", type=int, default=300)
+    ap.add_argument("--min-interval", type=float, default=1.5, help="seconds between requests to one host")
+    ap.add_argument("--no-backoff", action="store_true", help="one try per round; let --rounds do the retrying")
     ap.add_argument("urls", nargs="*")
     a = ap.parse_args()
     urls = a.urls + (Path(a.list).read_text().split() if a.list else [])
-    run(urls, a.out, a.rounds, a.round_wait)
+    fx = Fetcher(min_interval=a.min_interval, backoffs=() if a.no_backoff else (20, 60, 180))
+    run(urls, a.out, a.rounds, a.round_wait, fetcher=fx, log=lambda m: print(m, flush=True))

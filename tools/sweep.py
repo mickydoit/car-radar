@@ -7,7 +7,7 @@ data/sweep.json with listings in the site's schema. Honest single User-Agent,
 
 Usage: python3 tools/sweep.py [--deadline 540] [--out data/sweep.json] [--only id,id]
 """
-import argparse, json, re, sys, time, threading, datetime, urllib.request, urllib.error
+import argparse, gzip, json, re, sys, time, threading, datetime, urllib.request, urllib.error
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
@@ -174,6 +174,104 @@ def listing_from_imotor(h, src):
     }
 
 
+# ---------- Cars24 (online retailer; robots: Allow /, Crawl-delay 2) ----------
+C24 = 'https://www.cars24.com.au/'
+C24_HUBS = {'brisbane': 'QLD', 'gold coast': 'QLD', 'sydney': 'NSW', 'newcastle': 'NSW', 'melbourne': 'VIC', 'geelong': 'VIC',
+            'adelaide': 'SA', 'perth': 'WA', 'canberra': 'ACT', 'hobart': 'TAS', 'darwin': 'NT'}
+
+
+def parse_cars24(html):
+    """Results page -> (car cards, total or None). Cards sit in the Next.js flight payload as
+    `id:{json}` records whose nested values are "$id" references to other records."""
+    chunks = re.findall(r'self\.__next_f\.push\(\[1,("(?:[^"\\]|\\.)*")\]\)', html)
+    try:
+        txt = ''.join(json.loads(c) for c in chunks)
+    except json.JSONDecodeError:
+        return [], None
+    recs = {}
+    for m in re.finditer(r'(?:^|\n)([0-9a-f]+):([\[{].*?)(?=\n[0-9a-f]+:|\Z)', txt, re.S):
+        try:
+            recs[m.group(1)] = json.loads(m.group(2))
+        except json.JSONDecodeError:
+            pass
+
+    def ref(v):
+        return recs.get(v[1:], v) if isinstance(v, str) and v.startswith('$') and len(v) < 9 else v
+    cards, total = [], None
+    for v in recs.values():
+        if not isinstance(v, dict):
+            continue
+        if isinstance(v.get('totalElements'), int) and 'hasMore' in v:
+            total = v['totalElements']
+        if v.get('appointmentId') and v.get('make') and v.get('year'):
+            cards.append({k: ref(x) for k, x in v.items()})
+    return cards, total
+
+
+def listing_from_cars24(c, src):
+    price = c.get('listingPriceV2') or c.get('listingPrice') or {}
+    odo = c.get('odometer') or {}
+    img = c.get('listingImage') or {}
+    loc = c.get('location') or {}
+    price = num(price.get('value')) if isinstance(price, dict) else None
+    if not price:
+        return None
+    hub = loc.get('hubName') if isinstance(loc, dict) else None
+    alt = img.get('altText') if isinstance(img, dict) else ''
+    make = str(c.get('make') or '')
+    return {
+        'id': f"cars24-{c['appointmentId']}", 'make': make.title() if make.islower() else make, 'model': c.get('model'),
+        'variant': c.get('variant') or c.get('subtitle') or None, 'year': num(c.get('year')),
+        'km': num(odo.get('value')) if isinstance(odo, dict) else None, 'price_aud': price, 'price_type': None,
+        'body': norm_body(alt), 'transmission': norm_trans('manual' if 'manual' in (alt or '').lower() else 'auto' if alt else ''),
+        'fuel': norm_fuel(c.get('fuelType')), 'colour': None,
+        'state': C24_HUBS.get((hub or '').lower()) or src.get('state'), 'suburb': hub or src.get('town'), 'postcode': '',
+        'source': src['name'], 'seller_type': 'dealer', 'url': C24 + str(c.get('cdpRelativeUrl') or '').lstrip('/'),
+        'image_url': img.get('uri') if isinstance(img, dict) else None,
+        'status': 'active' if c.get('status') in (None, 'AVAILABLE') else 'removed', 'stock_no': str(c['appointmentId']),
+    }
+
+
+# ---------- focus (only fetch what the saved search can use) ----------
+MAKE_TOKENS = {'GWM Haval': ['gwm', 'haval'], 'Mercedes-Benz': ['mercedes-benz', 'mercedes']}
+
+
+def make_tokens(focus):
+    out = []
+    for m in (focus or {}).get('makes') or []:
+        out += MAKE_TOKENS.get(m) or [re.sub(r'[^a-z0-9]+', '-', m.lower()).strip('-')]
+    return out
+
+
+def never_in_focus(L, focus):
+    """True when a cached car can never match the saved search (wrong fuel, body, make, year, or already
+    over the km limit: none of those come back), so its page need not be opened again while it stays
+    in the dealer's sitemap. Price is NOT in this list: prices move."""
+    f = focus or {}
+    if f.get('fuel') and L.get('fuel') and L['fuel'] not in f['fuel']: return True
+    if f.get('body_types') and L.get('body') and L['body'] not in f['body_types']: return True
+    if f.get('km_max') and L.get('km') and L['km'] > f['km_max']: return True
+    if f.get('year_min') and L.get('year') and L['year'] < f['year_min']: return True
+    if f.get('year_max') and L.get('year') and L['year'] > f['year_max']: return True
+    if f.get('transmission') and L.get('transmission') and L['transmission'] != f['transmission']: return True
+    return False
+
+
+def wanted_url(u, focus):
+    """Dealer Studio detail URLs read /cars/used-<colour>-<year>-<make>-<model>-<stock>: skip makes and
+    years the saved search cannot use. Anything that does not parse is kept."""
+    toks = make_tokens(focus)
+    slug = u.rsplit('/', 1)[-1].lower()
+    if toks and not any(f'-{t}-' in slug for t in toks):
+        return False
+    m = re.search(r'-((?:19|20)\d\d)-', slug)
+    if m:
+        y = int(m.group(1))
+        if (focus.get('year_min') and y < focus['year_min']) or (focus.get('year_max') and y > focus['year_max']):
+            return False
+    return True
+
+
 # ---------- fetching ----------
 
 class Fetcher:
@@ -183,7 +281,7 @@ class Fetcher:
         self.lock = threading.Lock()
         self.count = 0
 
-    def get(self, url, timeout=25):
+    def get(self, url, timeout=25, ok_500=False):
         if time.time() > self.deadline:
             raise TimeoutError('deadline')
         host = url.split('/')[2]
@@ -194,19 +292,33 @@ class Fetcher:
         with self.lock:
             self.last[host] = time.time()
             self.count += 1
-        req = urllib.request.Request(url, headers={'User-Agent': self.ua, 'Accept': 'text/html,application/xml'})
-        with urllib.request.urlopen(req, timeout=timeout) as r:
-            return r.status, r.read().decode('utf-8', 'replace')
+        req = urllib.request.Request(url, headers={'User-Agent': self.ua, 'Accept': 'text/html,application/xml', 'Accept-Encoding': 'gzip'})
+        try:
+            r = urllib.request.urlopen(req, timeout=timeout)
+        except urllib.error.HTTPError as e:
+            if not (e.code == 500 and ok_500):   # Cars24 serves its full results page with status 500
+                raise
+            r = e
+        with r:
+            raw = r.read()
+            if (r.headers.get('Content-Encoding') or '').lower() == 'gzip':
+                raw = gzip.decompress(raw)
+            return r.status if hasattr(r, 'status') else r.code, raw.decode('utf-8', 'replace')
 
 
-def sweep_dealerstudio(src, f, cache, today, log):
+def sweep_dealerstudio(src, f, cache, today, log, focus=None):
     base = src['url'].rstrip('/')
     st, xml = f.get(base + '/sitemap-vehicles.xml')
-    urls = parse_dealerstudio_sitemap(xml)
+    every = parse_dealerstudio_sitemap(xml)
+    urls = [u for u in every if wanted_url(u, focus or {})]
+    # never-seen pages first, then the stalest, so a deadline costs the least
+    urls.sort(key=lambda u: (cache.get(u) or {}).get('checked') or '')
     out, fetched = [], 0
     for u in urls:
         c = cache.get(u)
-        if c and c.get('checked') == today:
+        if c:
+            c['listing'].setdefault('checked', c.get('checked'))
+        if c and (c.get('checked') == today or (c['listing'].get('status') == 'active' and never_in_focus(c['listing'], focus))):
             out.append(c['listing'])
             continue
         try:
@@ -225,13 +337,56 @@ def sweep_dealerstudio(src, f, cache, today, log):
         L = listing_from_carssr(d, src, u)
         if L:
             L['first_seen_at'] = (c or {}).get('listing', {}).get('first_seen_at') or today
+            L['checked'] = today
             cache[u] = {'checked': today, 'listing': L}
             out.append(L)
-    log(f"{src['id']}: {len(urls)} used urls, {fetched} fetched, {len(out)} listings")
+    log(f"{src['id']}: {len(every)} used urls, {len(urls)} in focus, {fetched} fetched, {len(out)} listings")
     return out
 
 
-def sweep_imotor(src, f, cache, today, log):
+def sweep_cars24(src, f, cache, today, log, focus=None):
+    """One results page per focus make (the hybrid page when the search is hybrid-only); when a make has
+    more cars than one page shows, its model pages from the sitemap as well. No API calls (robots)."""
+    focus = focus or {}
+    toks = make_tokens(focus)
+    hybrid = focus.get('fuel') == ['Hybrid']
+    st, xml = f.get(C24 + 'sitemaps/buy-sitemap.xml')
+    pages = set(re.findall(r'<loc>https://www\.cars24\.com\.au/(buy-used-[a-z0-9-]+)/</loc>', xml))
+    seen, pending, shown, total_all = {}, [], 0, 0
+    for t in toks or ['']:
+        first = f'buy-used-{t}-hybrid' if hybrid and f'buy-used-{t}-hybrid' in pages else f'buy-used-{t}' if t else 'buy-used-cars'
+        if t and first not in pages:
+            continue
+        pending.append((first, t, True))
+    done = set()
+    while pending and len(done) < 60:
+        page, t, top = pending.pop(0)
+        if page in done:
+            continue
+        done.add(page)
+        time.sleep(1)                      # their Crawl-delay is 2 s; the fetcher already waits 1
+        st, html = f.get(C24 + page + '/', ok_500=True)
+        cards, total = parse_cars24(html)
+        for c in cards:
+            L = listing_from_cars24(c, src)
+            if L:
+                seen[L['id']] = L
+        if top:
+            total_all += total or len(cards)
+            if total and total > len(cards) and t:   # page is capped: add this make's model pages
+                pending += [(p, t, False) for p in sorted(pages) if p.startswith(f'buy-used-{t}-') and not re.search(r'-(hybrid|electric|petrol|diesel|under-.*|suv|sedan|hatchback|ute|wagon|van)$', p)]
+    out = []
+    for L in seen.values():
+        c = cache.get(L['url'])
+        L['first_seen_at'] = (c or {}).get('listing', {}).get('first_seen_at') or today
+        L['checked'] = today
+        cache[L['url']] = {'checked': today, 'listing': L}
+        out.append(L)
+    log(f"{src['id']}: {len(done)} pages, {len(out)} listings (site reports {total_all} across the first pages)")
+    return out
+
+
+def sweep_imotor(src, f, cache, today, log, focus=None):
     base = src['url'].rstrip('/')
     path = src.get('list_path', '/pre-owned/')
     out, page, pages = [], 1, 1
@@ -243,11 +398,15 @@ def sweep_imotor(src, f, cache, today, log):
             if L:
                 c = cache.get(L['url'])
                 L['first_seen_at'] = (c or {}).get('listing', {}).get('first_seen_at') or today
+                L['checked'] = today
                 cache[L['url']] = {'checked': today, 'listing': L}
                 out.append(L)
         page += 1
     log(f"{src['id']}: {pages} pages, {len(out)} used listings")
     return out
+
+
+SWEEPERS = {'dealerstudio': sweep_dealerstudio, 'imotor': sweep_imotor, 'cars24': sweep_cars24}
 
 
 def main():
@@ -256,7 +415,12 @@ def main():
     ap.add_argument('--out', default=str(ROOT / 'data' / 'sweep.json'))
     ap.add_argument('--cache', default=str(ROOT / 'data' / 'sweep-cache.json'))
     ap.add_argument('--only', default='')
+    ap.add_argument('--focus', default=str(ROOT / 'data' / 'focus.json'))
     a = ap.parse_args()
+    try:
+        focus = json.loads(Path(a.focus).read_text())
+    except (OSError, json.JSONDecodeError):
+        focus = {}
     reg = json.loads((ROOT / 'data' / 'sources.json').read_text())
     try:
         cache = json.loads(Path(a.cache).read_text())
@@ -265,7 +429,7 @@ def main():
     today = datetime.datetime.now(datetime.timezone(datetime.timedelta(hours=10))).date().isoformat()
     f = Fetcher(reg.get('user_agent', 'car-radar research bot'), time.time() + a.deadline)
     only = set(x for x in a.only.split(',') if x)
-    srcs = [s for s in reg['sources'] if s.get('status') == 'active' and s.get('platform') in ('dealerstudio', 'imotor') and (not only or s['id'] in only)]
+    srcs = [s for s in reg['sources'] if s.get('status') == 'active' and s.get('platform') in SWEEPERS and (not only or s['id'] in only)]
     results, coverage, lock = [], {}, threading.Lock()
     lines = []
 
@@ -275,9 +439,9 @@ def main():
         print(m, file=sys.stderr, flush=True)
 
     def run(src):
-        fn = sweep_dealerstudio if src['platform'] == 'dealerstudio' else sweep_imotor
+        fn = SWEEPERS[src['platform']]
         try:
-            L = fn(src, f, cache, today, log)
+            L = fn(src, f, cache, today, log, focus)
             with lock:
                 results.extend(L)
                 coverage[src['id']] = {'ok': True, 'listings': len(L)}

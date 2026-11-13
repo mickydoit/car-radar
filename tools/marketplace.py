@@ -2,18 +2,22 @@
 """CarsGuide marketplace crawler: deterministic, polite, cache-based (stdlib only).
 
 Usage
-  python3 tools/marketplace.py --budget 60 [--min-interval 12] [--fresh-hours 6] [--focus data/focus.json]
-      Plans the result-page URLs the focus needs, fetches the stalest ones through politefetch
-      (honest UA, retry/back-off/circuit breaker), parses the page's embedded JSON, and merges
-      listings into data/market-cache.json. Small budgets run often (GitHub Actions cron);
-      the daily routine reads the cache instead of crawling.
+  python3 tools/marketplace.py --budget 150 [--min-interval 12] [--deadline 1200] [--fresh-hours 6]
+      Plans the result-page URLs the focus needs (as tightly filtered as the site's clean paths
+      allow: make / state / over-YEAR / fuel / price bucket), fetches them through politefetch
+      (honest UA, one request per interval, circuit breaker), parses the page's embedded JSON and
+      merges listings into data/market-cache.json. A refused page goes to the back of the queue
+      and is tried again later (3 tries), so the crawl keeps moving instead of sleeping.
+      The cache is saved every few pages, so a stopped run keeps what it fetched.
   python3 tools/marketplace.py --stats          -> coverage summary for latest.json
-  python3 tools/marketplace.py --export         -> in-focus listings as JSON on stdout
+  python3 tools/marketplace.py --export         -> in-focus listings as JSON on stdout; rows not
+      re-seen in the last 6 h carry "recheck": true (open those pages to see if they sold)
+  python3 tools/marketplace.py --mark-removed cg-1,cg-2   -> record listings a page-check found gone
 
 Robots: only clean paths plus ?page=N (CarsGuide disallows specific query params, not page).
 Same inventory as Autotrader, so one door is enough; ids are the shared listing ids.
 """
-import argparse, datetime, json, re, sys
+import argparse, datetime, json, os, re, sys, time
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -28,6 +32,8 @@ STATES = ['qld', 'nsw', 'vic', 'sa', 'wa', 'tas', 'act', 'nt']
 MAKE_NAME = {'GWM': 'GWM Haval', 'Haval': 'GWM Haval', 'Great Wall': 'GWM Haval', 'Mercedes': 'Mercedes-Benz', 'VW': 'Volkswagen'}  # site name -> focus name
 MAKE_SLUG = {'GWM Haval': 'gwm', 'Mercedes-Benz': 'mercedes-benz', 'Land Rover': 'land-rover', 'Alfa Romeo': 'alfa-romeo'}
 FUEL_SLUG = {'Hybrid': 'hybrid', 'Petrol': 'petrol', 'Diesel': 'diesel', 'Electric': 'electric', 'Plug-in hybrid': 'hybrid'}
+PRICE_BUCKETS = {(5000, 10000), (10000, 15000), (15000, 20000), (20000, 30000), (30000, 40000), (50000, 60000), (60000, 70000)}  # the site's own price facets
+SEEN_FRESH_HOURS = 6   # a listing on a results page fetched this recently is live: no page-check needed
 PAGE_CAP = 10          # pages followed per URL before splitting by state
 PER_PAGE = 26
 TAGS = {'Reactive', 'ShallowReactive', 'Ref', 'ShallowRef', 'Set', 'Map', 'Date', 'RegExp', 'Error', 'BigInt', 'NuxtError', 'EmptyShallowRef', 'EmptyRef'}
@@ -118,14 +124,16 @@ def slug(s):
 def base_urls(focus):
     makes = focus.get('makes') or ['Toyota', 'Mazda', 'Hyundai', 'Ford', 'Subaru', 'Volkswagen', 'Kia', 'Mitsubishi']
     fuels = sorted({FUEL_SLUG.get(f) for f in (focus.get('fuel') or []) if FUEL_SLUG.get(f)}) or [None]
-    pmax = focus.get('price_max_aud')
+    pmin, pmax = focus.get('price_min_aud'), focus.get('price_max_aud')
+    price = f'${int(pmin)}-${int(pmax)}' if pmin and pmax and (int(pmin), int(pmax)) in PRICE_BUCKETS else f'under-${int(pmax)}' if pmax else None
+    year = f"over-{int(focus['year_min']) - 1}" if focus.get('year_min') else None   # over-2018 lists 2018 and newer
     state = (focus.get('state') or '').lower() or None
     out = []
     for m in makes:
         models = (focus.get('models') or {}).get(m) or [None]
         for mo in models:
             for fu in fuels:
-                parts = [slug(m)] + ([slug(mo)] if mo else []) + ([state] if state else []) + ([fu] if fu else []) + ([f'under-${int(pmax)}'] if pmax else [])
+                parts = [slug(m)] + ([slug(mo)] if mo else []) + ([state] if state else []) + ([year] if year else []) + ([fu] if fu else []) + ([price] if price else [])
                 out.append(BASE + '/'.join(parts))
     return out
 
@@ -133,7 +141,7 @@ def base_urls(focus):
 def with_states(url):
     """Split a too-big URL by state: insert the state after make[/model]."""
     tail = url[len(BASE):].split('/')
-    fixed = [t for t in tail if t in STATES or t.startswith('under-') or t in FUEL_SLUG.values()]
+    fixed = [t for t in tail if t in STATES or t.startswith(('under-', 'over-')) or '$' in t or t in FUEL_SLUG.values()]
     head = [t for t in tail if t not in fixed]
     if any(t in STATES for t in tail):
         return []
@@ -171,8 +179,13 @@ def load_cache(path=CACHE):
     return {'urls': {}, 'listings': {}}
 
 
-def save_cache(c, path=CACHE):
-    Path(path).write_text(json.dumps(c, ensure_ascii=False, indent=0))
+def save_cache(c, path=CACHE, now=None):
+    now = now or datetime.datetime.now(datetime.timezone.utc)
+    cutoff = (now.date() - datetime.timedelta(days=30)).isoformat()
+    c['listings'] = {i: d for i, d in c['listings'].items() if d.get('last_seen', '9999') >= cutoff}
+    tmp = Path(str(path) + '.tmp')
+    tmp.write_text(json.dumps(c, ensure_ascii=False, indent=0))
+    os.replace(tmp, path)        # atomic: a killed run never leaves half a file
 
 
 def hours_since(iso, now):
@@ -181,31 +194,50 @@ def hours_since(iso, now):
     return (now - datetime.datetime.fromisoformat(iso)).total_seconds() / 3600
 
 
-def crawl(focus, cache, budget, fetcher, now=None, fresh_hours=6, log=print):
+def crawl(focus, cache, budget, fetcher, now=None, fresh_hours=6, log=print, deadline=None, clock=time.monotonic,
+          save=None, save_every=5, max_tries=3):
+    """Fetch every planned page that is not fresh. `budget` counts requests. A refused page is queued
+    again behind the pages not tried yet, up to max_tries; the fetcher's circuit breaker ends the run
+    if the host refuses everything. `deadline` is a clock() value; `save()` is called every few pages."""
     now = now or datetime.datetime.now(datetime.timezone.utc)
     today = now.date().isoformat()
-    stats = {'planned': 0, 'fetched': 0, 'ok': 0, 'failed': 0, 'new_listings': 0, 'updated': 0}
-    done = set()
-    while budget > 0:
-        todo = [u for u in plan(focus, cache) if u not in done and hours_since(cache['urls'].get(u, {}).get('last_ok'), now) > fresh_hours]
-        stats['planned'] = len(plan(focus, cache))
+    stats = {'planned': 0, 'fetched': 0, 'ok': 0, 'failed': 0, 'retried_ok': 0, 'new_listings': 0, 'updated': 0, 'stopped': None}
+    done, tries, unsaved = set(), {}, 0
+    while True:
+        urls = plan(focus, cache)
+        stats['planned'] = len(urls)
+        todo = [u for u in urls if u not in done and hours_since(cache['urls'].get(u, {}).get('last_ok'), now) > fresh_hours]
         if not todo:
             break
-        todo.sort(key=lambda u: (-hours_since(cache['urls'].get(u, {}).get('last_ok'), now), u))
-        u = todo[0]; done.add(u); budget -= 1
+        if budget <= 0:
+            stats['stopped'] = 'budget'; break
+        if deadline is not None and clock() > deadline:
+            stats['stopped'] = 'deadline'; break
+        todo.sort(key=lambda u: (tries.get(u, 0), -hours_since(cache['urls'].get(u, {}).get('last_ok'), now), u))
+        u = todo[0]; budget -= 1
         r = fetcher.get(u)
+        tries[u] = tries.get(u, 0) + 1
         rec = cache['urls'].setdefault(u, {})
         rec['last_try'] = now.isoformat(); rec['last_code'] = r.code
         stats['fetched'] += 1
         if not r.ok:
-            stats['failed'] += 1; log(f'{r.code} {u}'); continue
+            log(f'{r.code} {u} (try {tries[u]})')
+            if r.attempts == 0:                       # circuit breaker: the host is refusing everything
+                stats['stopped'] = 'host gave up'; break
+            if tries[u] >= max_tries or r.code in politefetch.GONE_CODES:
+                done.add(u)
+            continue
         meta, rows = parse_results(r.body)
         if meta is None:
-            rec['last_code'] = 'noparse'; stats['failed'] += 1; log(f'noparse {u}'); continue
+            rec['last_code'] = 'noparse'; done.add(u); log(f'noparse {u}'); continue
+        done.add(u)
         rec['last_ok'] = now.isoformat(); rec.update({k: meta[k] for k in ('total', 'last_page') if meta.get(k) is not None})
         stats['ok'] += 1
+        if tries[u] > 1:
+            stats['retried_ok'] += 1
         for src in rows:
             L = to_listing(src, today)
+            L['seen_at'] = now.isoformat()
             old = cache['listings'].get(L['id'])
             if old:
                 L['first_seen_at'] = old.get('first_seen_at', today); stats['updated'] += 1
@@ -213,6 +245,10 @@ def crawl(focus, cache, budget, fetcher, now=None, fresh_hours=6, log=print):
                 L['first_seen_at'] = today; stats['new_listings'] += 1
             cache['listings'][L['id']] = L
         log(f"200 {u} total={meta['total']} page={meta['current_page']}/{meta['last_page']} rows={len(rows)}")
+        unsaved += 1
+        if save and unsaved >= save_every:
+            save(); unsaved = 0
+    stats['failed'] = sum(1 for u in plan(focus, cache) if hours_since(cache['urls'].get(u, {}).get('last_ok'), now) > fresh_hours)
     cache['last_run'] = now.isoformat(); cache['last_stats'] = stats
     return stats
 
@@ -252,7 +288,25 @@ def export(focus, cache, max_age_days=3, now=None):
     now = now or datetime.datetime.now(datetime.timezone.utc)
     normalise(cache)
     cutoff = (now.date() - datetime.timedelta(days=max_age_days)).isoformat()
-    return [d for d in cache['listings'].values() if d.get('status') == 'active' and d.get('last_seen', '') >= cutoff and in_focus(d, focus)]
+    out = []
+    for d in cache['listings'].values():
+        if d.get('status') != 'active' or d.get('last_seen', '') < cutoff or not in_focus(d, focus):
+            continue
+        d = dict(d)
+        if hours_since(d.pop('seen_at', None), now) <= SEEN_FRESH_HOURS:
+            d['availability'] = 'verified'       # on a results page fetched this run: live, price current
+        else:
+            d['availability'] = 'listed'; d['recheck'] = True
+        out.append(d)
+    return out
+
+
+def mark_removed(cache, ids):
+    n = 0
+    for i in ids:
+        if i in cache['listings'] and cache['listings'][i].get('status') != 'removed':
+            cache['listings'][i]['status'] = 'removed'; n += 1
+    return n
 
 
 def main(argv=None):
@@ -260,14 +314,20 @@ def main(argv=None):
     ap.add_argument('--budget', type=int, default=0); ap.add_argument('--min-interval', type=float, default=12)
     ap.add_argument('--fresh-hours', type=float, default=6); ap.add_argument('--focus', default=str(ROOT / 'data/focus.json'))
     ap.add_argument('--cache', default=str(CACHE)); ap.add_argument('--stats', action='store_true'); ap.add_argument('--export', action='store_true')
+    ap.add_argument('--deadline', type=float, default=0, help='stop after this many seconds and save'); ap.add_argument('--mark-removed', default='')
     a = ap.parse_args(argv)
     focus = json.loads(Path(a.focus).read_text()) if Path(a.focus).exists() else {}
     cache = load_cache(a.cache)
     if a.budget:
-        fx = politefetch.Fetcher(min_interval=a.min_interval, backoffs=(45, 120), breaker_after=6, cooldown=240, max_cooldowns=1)
-        st = crawl(focus, cache, a.budget, fx, fresh_hours=a.fresh_hours)
+        # one try per request (retries are queued by crawl); 8 refusals in a row = cool down 3 min, twice, then stop
+        fx = politefetch.Fetcher(min_interval=a.min_interval, backoffs=(), breaker_after=8, cooldown=180, max_cooldowns=2)
+        st = crawl(focus, cache, a.budget, fx, fresh_hours=a.fresh_hours, log=lambda m: print(m, flush=True),
+                   deadline=(time.monotonic() + a.deadline) if a.deadline else None, save=lambda: save_cache(cache, a.cache))
         save_cache(cache, a.cache)
         print(json.dumps({'run': st, 'coverage': coverage(focus, cache), 'hosts': fx.stats}))
+    if a.mark_removed:
+        n = mark_removed(cache, [x for x in a.mark_removed.split(',') if x])
+        save_cache(cache, a.cache); print(json.dumps({'marked_removed': n}))
     if a.stats:
         print(json.dumps(coverage(focus, cache)))
     if a.export:

@@ -1,5 +1,5 @@
 name: market top-up
-# Small, polite CarsGuide crawl every 4 hours into data/market-cache.json (no Claude usage).
+# Manual-only CarsGuide crawl into data/market-cache.json (no Claude usage). The routine runs the same script itself.
 # The 08:00 Brisbane routine assembles latest.json from this cache instead of crawling in one burst,
 # which is what triggered the Peakhour challenge pages (HTTP 403) on ~45% of requests.
 # SCHEDULE DISABLED 6 Nov 2026: GitHub runner addresses are challenged on 100% of requests (0/12 test run),

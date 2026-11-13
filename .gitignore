@@ -1,2 +1,4 @@
 data/sweep.json
 __pycache__/
+data/recheck.txt
+data/*.tmp

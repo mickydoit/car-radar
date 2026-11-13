@@ -1,5 +1,5 @@
 {
- "_comment": "Dealer/site registry for tools/sweep.py. Never delete an entry; set status. platform: dealerstudio = Titan Dealer Studio (sitemap-vehicles.xml -> /cars/used-* detail pages with carSSR JSON); imotor = i-Motor Gatsby stock pages with window.pageData; search = html search pages the routine reads itself with WebFetch; blocked = returns 403 to the honest research UA, never retry with tricks. Probed 5 Nov 2026.",
+ "_comment": "Dealer/site registry for tools/sweep.py. Never delete an entry; set status. platform: dealerstudio = Titan Dealer Studio (sitemap-vehicles.xml -> /cars/used-* detail pages with carSSR JSON; the sweep only opens the makes and years in the saved search); imotor = i-Motor Gatsby stock pages with window.pageData; cars24 = Cars24 results pages (flight payload, robots Allow /, crawl-delay 2); search = marketplace handled by tools/marketplace.py; blocked = returns 403 to the honest research UA, never retry with tricks. Probed 5 Nov 2026; national dealer groups + Cars24 added 13 Nov 2026.",
  "user_agent": "car-radar research bot (contact: site owner)",
  "sources": [
   {"id":"cricks-maroochydore","name":"Cricks Sunshine Coast","town":"Maroochydore","state":"QLD","postcode":"4558","url":"https://www.cricks.com.au","platform":"dealerstudio","status":"active","brands":["Hyundai","Mitsubishi","Subaru","Volkswagen","Nissan","Kia","Suzuki","MG","KGM SsangYong","Renault"]},
@@ -15,14 +15,28 @@
   {"id":"keystar","name":"Keystar Group","town":"Morayfield","state":"QLD","postcode":"4506","url":"https://www.keystar.com.au","platform":"dealerstudio","status":"active","brands":["Kia","Mitsubishi","Mazda","Hyundai","Volkswagen","Subaru"]},
   {"id":"grand-prix-hyundai","name":"Grand Prix Hyundai","town":"Caboolture","state":"QLD","postcode":"4510","url":"https://www.grandprixhyundai.com.au","platform":"dealerstudio","status":"active","brands":["Hyundai","Mazda","Mitsubishi"]},
   {"id":"torque-toyota","name":"Torque Toyota","town":"North Lakes","state":"QLD","postcode":"4509","url":"https://www.torquetoyota.com.au","platform":"mattaki","status":"todo","brands":["Toyota"],"note":"Different platform (Mattaki/AdTorque): /used-car/list/ has a <noscript> list of detail links, detail pages are server-rendered. No parser yet."},
-  {"id":"bartons","name":"Bartons Motor Group","town":"Wynnum","state":"QLD","postcode":"4178","url":"https://www.bartons.net.au","platform":"dealerstudio","status":"inactive","brands":["GWM Haval"],"note":"Works, ~120 km from 4560; switch to active if the owner widens the radius."},
+  {"id":"bartons","name":"Bartons Motor Group","town":"Wynnum","state":"QLD","postcode":"4178","url":"https://www.bartons.net.au","platform":"dealerstudio","status":"active","brands":["GWM Haval"],"note":"Activated 13 Nov 2026: the saved search is Australia-wide now."},
   {"id":"easyauto123","name":"easyauto123","town":"Hendra","state":"QLD","postcode":"4011","url":"https://easyauto123.com.au","platform":"unknown","status":"unusable","note":"Client-rendered, sitemap 404."},
   {"id":"sunshine-coast-mazda","name":"Sunshine Coast Mazda","town":"Maroochydore","state":"QLD","postcode":"4558","url":"https://sunshinecoastmazda.com.au","platform":"sitedynamic","status":"blocked"},
   {"id":"pacific-motor-group","name":"Pacific Motor Group (Ford/Kia/Hyundai/Isuzu)","town":"Caloundra","state":"QLD","postcode":"4551","url":"https://www.pacificmotorgroup.com.au","platform":"sitedynamic","status":"blocked"},
   {"id":"sunco-motors","name":"Sunco Motors","town":"Maroochydore","state":"QLD","postcode":"4558","url":"https://www.suncomotors.com.au","platform":"sitedynamic","status":"blocked"},
-  {"id":"autotrader","name":"Autotrader","url":"https://www.autotrader.com.au","platform":"search","status":"active","note":"Routine reads search pages with WebFetch."},
-  {"id":"carsguide","name":"CarsGuide","url":"https://www.carsguide.com.au","platform":"search","status":"active","note":"Clean paths only, e.g. /buy-a-car/used/toyota/rav4/qld (query strings are robots-disallowed). Crawl-delay 1 s."},
+  {"id":"autotrader","name":"Autotrader","url":"https://www.autotrader.com.au","platform":"search","status":"blocked","note":"Same pool as CarsGuide and 403s everything: not fetched."},
+  {"id":"carsguide","name":"CarsGuide","url":"https://www.carsguide.com.au","platform":"search","status":"active","note":"Crawled by tools/marketplace.py on clean filter paths (make/state/over-YEAR/fuel/price bucket) plus ?page=N."},
   {"id":"carsales","name":"Carsales","url":"https://www.carsales.com.au","platform":"search","status":"blocked","note":"DataDome 403 on every /cars/ page; terms prohibit automated access."},
-  {"id":"gumtree","name":"Gumtree","url":"https://www.gumtree.com.au","platform":"search","status":"blocked","note":"Peakhour WAF 403 on everything incl. robots.txt."}
+  {"id":"gumtree","name":"Gumtree","url":"https://www.gumtree.com.au","platform":"search","status":"blocked","note":"Peakhour WAF 403 on everything incl. robots.txt."},
+  {"id":"motorama","name":"Motorama","town":"Moorooka","state":"QLD","postcode":"4105","url":"https://www.motorama.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"sci-fleet-toyota","name":"Sci-Fleet Toyota","town":"Albion","state":"QLD","postcode":"4010","url":"https://www.scifleettoyota.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"grand-motors-toyota","name":"Grand Motors Toyota","town":"Southport","state":"QLD","postcode":"4215","url":"https://www.grandmotorstoyota.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"von-bibra","name":"von Bibra","town":"Robina","state":"QLD","postcode":"4226","url":"https://www.vonbibra.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"keema","name":"Keema Automotive Group","town":"Hillcrest","state":"QLD","postcode":"4118","url":"https://www.keema.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"peter-warren","name":"Peter Warren Automotive","town":"Warwick Farm","state":"NSW","postcode":"2170","url":"https://www.peterwarren.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"sydney-city-toyota","name":"Sydney City Toyota","town":"Waterloo","state":"NSW","postcode":"2017","url":"https://www.sydneycitytoyota.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"tynan","name":"Tynan Motors","town":"Kirrawee","state":"NSW","postcode":"2232","url":"https://www.tynan.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"melbourne-city-toyota","name":"Melbourne City Toyota","town":"Port Melbourne","state":"VIC","postcode":"3207","url":"https://www.melbournecitytoyota.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"brighton-toyota","name":"Brighton Toyota","town":"Brighton","state":"VIC","postcode":"3186","url":"https://www.brightontoyota.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"patterson-cheney-toyota","name":"Patterson Cheney Toyota","town":"Dandenong","state":"VIC","postcode":"3175","url":"https://www.pattersoncheneytoyota.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"maughan-thiem","name":"Maughan Thiem","town":"Cheltenham","state":"SA","postcode":"5014","url":"https://www.maughanthiem.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"john-hughes","name":"John Hughes","town":"Victoria Park","state":"WA","postcode":"6100","url":"https://www.johnhughes.com.au","platform":"dealerstudio","status":"active","brands":[]},
+  {"id":"cars24","name":"Cars24","town":"Brisbane","state":"QLD","postcode":"","url":"https://www.cars24.com.au","platform":"cars24","status":"active","note":"Online used-car retailer with its own stock. One results page per make shows 20 cars; more need its API, which robots.txt disallows, so the sweep adds the model pages instead."}
  ]
 }

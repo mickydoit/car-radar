@@ -32,19 +32,33 @@ def in_scope(d, f):
     return True
 
 
+SMALL = 'Dealers and small sources'
+
+
 def gate(sources):
+    """One dealer site being down must not paint the whole run thin: single-page sources are judged
+    together, as one pooled source; anything with several pages (the marketplace) is judged on its own."""
     rated = {s: v for s, v in sources.items() if v.get('planned')}
     for v in rated.values():
         v['rate'] = round(v.get('ok', 0) / v['planned'], 2)
-    bad = [s for s, v in rated.items() if v['rate'] < OK_RATE]
-    thin = [s for s, v in rated.items() if v['rate'] < THIN_RATE]
+    big = {s: v for s, v in rated.items() if v['planned'] > 2}
+    small = {s: v for s, v in rated.items() if v['planned'] <= 2}
+    judged = dict(big)
+    if small:
+        ok = sum(1 for v in small.values() if v.get('ok', 0) >= v['planned'])
+        judged[SMALL] = {'planned': len(small), 'ok': ok, 'rate': round(ok / len(small), 2)}
+    bad = [s for s, v in judged.items() if v['rate'] < OK_RATE]
+    thin = [s for s, v in judged.items() if v['rate'] < THIN_RATE]
     g = 'thin' if thin else 'degraded' if bad else 'complete'
-    return g, bad, rated
+    if SMALL in bad:      # carry-forward works per listing source, so name the ones that failed
+        bad = [s for s in bad if s != SMALL] + [s for s, v in small.items() if v.get('ok', 0) < v['planned']]
+        judged.update(small)
+    return g, bad, judged
 
 
 def message(g, bad, rated, carried):
     if g == 'complete': return ''
-    parts = [f"{s}: {rated[s].get('ok', 0)} of {rated[s]['planned']} pages loaded" for s in bad]
+    parts = [f"{s}: {rated[s].get('ok', 0)} of {rated[s]['planned']} pages loaded" if rated[s]['planned'] > 2 else f"{s}: did not load" for s in bad]
     m = 'Some sources refused part of today\'s search (' + '; '.join(parts) + ').'
     if carried: m += f' {carried} listings are carried over from a recent run and marked "last seen".'
     return m + ' Results may under-represent those sources.'
@@ -64,6 +78,8 @@ def main(latest=ROOT / 'data/latest.json', memory=ROOT / 'data/memory.json', foc
         cov.setdefault('sources', {})['CarsGuide'] = {'planned': mc['planned'], 'ok': mc['ok']}
         cov['market_cache_last_run'] = mc['last_run']
     g, bad, rated = gate(cov.setdefault('sources', {}))
+    down = sorted(n for n, v in cov['sources'].items() if v.get('planned') and v.get('ok', 0) < v['planned'] and v['planned'] <= 2)
+    cov['sources_down'] = down
     cur = {d['id'] for d in j['listings']}
     for d in j['listings']:
         d['last_seen'] = today; d.pop('stale', None)
