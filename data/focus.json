@@ -1,21 +1,26 @@
 {
  "fuel": [
-  "Hybrid"
+  "Electric",
+  "Hybrid",
+  "Plug-in hybrid"
  ],
  "near": null,
  "makes": [
+  "BYD",
   "GWM Haval",
   "Honda",
   "Hyundai",
   "Kia",
   "Mazda",
+  "Polestar",
+  "Tesla",
   "Toyota"
  ],
  "state": null,
  "km_max": 50000,
  "km_min": null,
  "models": {},
- "saved_at": "2026-11-06T03:36:27.314Z",
+ "saved_at": "2026-11-13T05:00:57.690Z",
  "year_max": 2027,
  "year_min": 2019,
  "radius_km": null,

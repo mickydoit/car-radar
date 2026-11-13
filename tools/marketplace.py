@@ -31,7 +31,7 @@ IMG = 'https://images.autotrader.com.au/t_listing_grid_cg/'
 STATES = ['qld', 'nsw', 'vic', 'sa', 'wa', 'tas', 'act', 'nt']
 MAKE_NAME = {'GWM': 'GWM Haval', 'Haval': 'GWM Haval', 'Great Wall': 'GWM Haval', 'Mercedes': 'Mercedes-Benz', 'VW': 'Volkswagen'}  # site name -> focus name
 MAKE_SLUG = {'GWM Haval': 'gwm', 'Mercedes-Benz': 'mercedes-benz', 'Land Rover': 'land-rover', 'Alfa Romeo': 'alfa-romeo'}
-FUEL_SLUG = {'Hybrid': 'hybrid', 'Petrol': 'petrol', 'Diesel': 'diesel', 'Electric': 'electric', 'Plug-in hybrid': 'hybrid'}
+FUEL_SLUG = {'Hybrid': 'hybrid', 'Petrol': 'petrol', 'Diesel': 'diesel', 'Electric': 'electric-vehicle', 'Plug-in hybrid': 'hybrid'}   # the site has no separate plug-in facet
 PRICE_BUCKETS = {(5000, 10000), (10000, 15000), (15000, 20000), (20000, 30000), (30000, 40000), (50000, 60000), (60000, 70000)}  # the site's own price facets
 SEEN_FRESH_HOURS = 6   # a listing on a results page fetched this recently is live: no page-check needed
 PAGE_CAP = 10          # pages followed per URL before splitting by state
@@ -231,6 +231,10 @@ def crawl(focus, cache, budget, fetcher, now=None, fresh_hours=6, log=print, dea
         if meta is None:
             rec['last_code'] = 'noparse'; done.add(u); log(f'noparse {u}'); continue
         done.add(u)
+        want = u[len(BASE):].split('?')[0].split('/')[0]
+        if rows and not any(slug(to_listing(src, today).get('make') or '') == want for src in rows):
+            # the site ignores a path token it does not know and answers with every used car
+            rec['last_code'] = 'filter ignored'; log(f'filter ignored {u} total={meta.get("total")}'); continue
         rec['last_ok'] = now.isoformat(); rec.update({k: meta[k] for k in ('total', 'last_page') if meta.get(k) is not None})
         stats['ok'] += 1
         if tries[u] > 1:
